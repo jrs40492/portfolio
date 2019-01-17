@@ -1,8 +1,4 @@
 $(document).ready(() => {
-  $.scrollify({
-    section: ".section",
-  });
-
   $('#tech-btn').click(() => {
     $.scrollify.move('#tech-section');
   });

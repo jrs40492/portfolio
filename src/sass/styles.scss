@@ -14,13 +14,13 @@ ul {
 .section {
   width: 100vw;
   min-height: 100vh;
-  height: 100vh;
   display: block;
   background-size: cover;
 }
 
 #introduction {
   background-image: url('/images/night_sky.jpg');
+  height: 100vh;
 
   #header {
     color: white;
