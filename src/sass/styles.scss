@@ -1,0 +1,141 @@
+@import 'bootstrap/functions';
+@import 'bootstrap/variables';
+@import 'bootstrap/mixins';
+
+* {
+  font-size: 2vh;
+}
+
+ol,
+ul {
+  list-style: inside;
+}
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  display: block;
+  background-size: cover;
+}
+
+#introduction {
+  background-image: url('/images/night_sky.jpg');
+
+  #header {
+    color: white;
+  }
+
+  .row {
+    height: 33%;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+
+    a {
+      &.icon {
+        color: white;
+        padding-right: 10px;
+
+        &:hover {
+          color: #e2e6ea;
+        }
+      }
+    }
+  }
+
+  .btn {
+    margin-right: 10px;
+  }
+}
+
+#tech {
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.jpg') no-repeat;
+  background-size: cover;
+  z-index: -100;
+
+  #tech-header {
+    color: white;
+    text-align: center;
+  }
+
+  .row {
+    z-index: 50;
+  }
+
+  .card {
+    margin-top: 10px;
+  }
+}
+
+#projects {
+  .carousel-indicators {
+    &:hover {
+      background-color: rgba(0, 0, 0, .4);
+    }
+  }
+
+  .carousel-inner {
+    // min-height: 100vh;
+    background-color: rgba(gray, .3);
+
+    .project-item {
+      min-height: 100vh;
+      padding: 30px;
+
+      .project-column {
+        flex: 1 0 50%;
+        z-index: 50;
+
+        .project-header {
+          flex: 0 1 auto;
+          text-decoration: underline;
+        }
+      }
+
+      .project-image {
+        position: absolute;
+        bottom: -15vh;
+        right: -5vw;
+        width: 75vw;
+        height: auto;
+        z-index: 1;
+      }
+
+      .project-image {
+        @include media-breakpoint-down(sm) {
+          position: initial;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .carousel-arrow {
+    &:hover {
+      background-color: rgba(gray, .4);
+    }
+  }
+}
+
+.carousel-bg-default {
+  color: white;
+  background-color: rgba(17, 22, 28, .8);
+}
+
+.carousel-bg-ufsports {
+  color: white;
+  background-color: #0960a5;
+}
+
+.carousel-bg-lucylane {
+  color: white;
+  background-color: lighten(#1a2255, 10%);
+}
+
+.carousel-bg-blackjack {
+  color: white;
+  background-color: darken(#1d6808, 5%);
+}

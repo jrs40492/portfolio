@@ -1,0 +1,16 @@
+#introduction.container-fluid.section
+  .row.justify-content-center.align-items-center
+    #header.col
+      h1 Hello, I'm #{dev_name}
+      h3 #{tag_line}
+  .row.justify-content-center.align-items-center
+    .col.links.justify-content-center.align-items-center
+      a.btn.btn-light(href=`${resume_url}`, role="button", target="_blank") Resume
+      a.icon(href=`${twitter_url}`, target="_blank")
+        i.fab.fa-twitter-square.fa-3x
+      a.icon(href=`${github_url}`, target="_blank")
+        i.fab.fa-github-square.fa-3x
+  .row.justify-content-center.align-items-center
+    .col
+      #tech-btn.btn.btn-light Tech <i class="fas fa-angle-down"></i>
+      #projects-btn.btn.btn-light Projects <i class="fas fa-angle-down"></i>

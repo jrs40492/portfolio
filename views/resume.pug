@@ -1,0 +1,21 @@
+#resume.container-fluid.section
+  .row.justify-content-center.align-items-center
+    .col.col-12
+      #resume_carousel.carousel.slide
+        ol.carousel-indicators
+          li.active(data-slide-to="0",data-target="resume_carousel")
+          li(data-slide-to="1",data-target="resume_carousel")
+          li(data-slide-to="2",data-target="resume_carousel")
+        .carousel-inner
+          .carousel-item.active.text-center.p-4
+            h1 Test
+          .carousel-item.text-center.p-4
+            h1 Test2
+          .carousel-item.text-center.p-4
+            h1 Test3
+        a.carousel-control-prev(href="#resume_carousel",role="button",date-slide="prev")
+          span.carousel-control-prev-icon(aria-hidden="true")
+          span.sr-only Previous
+        a.carousel-control-next(href="#resume_carousel",role="button",date-slide="next")
+          span.carousel-control-next-icon(aria-hidden="true")
+          span.sr-only Next

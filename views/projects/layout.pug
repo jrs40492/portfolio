@@ -1,0 +1,19 @@
+block vars
+  // Override these variables by using block append vars in a file that extends project_layout.pug
+  -var isActive = false;
+  -var image = '';
+  -var backgroundClass = 'carousel-bg-default';
+  -var title = '';
+
+#this-website.project-item.carousel-item.container-fluid(class=`${isActive ? 'active' : ''} ${backgroundClass}`,data-interval="false")
+  .row
+    .col-12
+      h1 #{title}
+    .col-12.col-sm-6.project-column
+      h1.project-header Technology
+      ul
+        block techUsed
+    .col-12.col-sm-6.project-column
+      h1.project-header Description
+      block desc
+  img.project-image(src=`images/${image}`, alt="")
