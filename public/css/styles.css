@@ -55,6 +55,8 @@ ul {
     height: 100%; }
 #projects .project-title {
   text-decoration: underline; }
+#projects .project-image {
+  width: 100%; }
 #projects .bg-default {
   color: white;
   background-color: rgba(17, 22, 28, 0.8); }

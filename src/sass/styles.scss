@@ -97,6 +97,12 @@ ul {
     text-decoration: underline;
   }
 
+  .project-image {
+    @include media-breakpoint-down(xl) {
+      width: 100%;
+    }
+  }
+
   .bg-default {
     color: white;
     background-color: rgba(17, 22, 28, .8);
