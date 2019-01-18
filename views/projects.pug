@@ -1,18 +1,14 @@
-#projects.section(data-section-name="projects-section")
-  #projects_carousel.carousel.slide
-    ol.carousel-indicators
-      li.active(data-slide-to="0",data-target="#projects_carousel")
-      li(data-slide-to="1",data-target="#projects_carousel")
-      li(data-slide-to="2",data-target="#projects_carousel")
-      li(data-slide-to="3",data-target="#projects_carousel")
-    .carousel-inner
-      include projects/jacobrswanson.pug
-      include projects/ufsports.pug
-      include projects/59lucylane.pug
-      include projects/blackjack.pug
-    a.carousel-control-prev.carousel-arrow(href="#projects_carousel",role="button",data-slide="prev")
-      span.carousel-control-prev-icon(aria-hidden="true")
-      span.sr-only Previous
-    a.carousel-control-next.carousel-arrow(href="#projects_carousel",role="button",data-slide="next")
-      span.carousel-control-next-icon(aria-hidden="true")
-      span.sr-only Next
+#projects.section
+  .row
+    .col-12.col-sm-2.px-0
+      .list-group.list-group-flush(role="tablist")
+        a.list-group-item.list-group-item-action.active(data-toggle="list",href="#project-jacobrswanson",role="tab",aria-controls="jacobrswanson") Jacob R Swanson
+        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-ufsports",role="tab",aria-controls="ufsports") Ultimate Fantasy Sports
+        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-59lucylane",role="tab",aria-controls="59lucylane") 59 Lucy Lane
+        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-blackjack",role="tab",aria-controls="blackjack") Blackjack
+    .col-12.col-sm-10.px-0
+      .tab-content
+        include projects/jacobrswanson.pug
+        include projects/ufsports.pug
+        include projects/59lucylane.pug
+        include projects/blackjack.pug

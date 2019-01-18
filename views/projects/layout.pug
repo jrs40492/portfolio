@@ -1,14 +1,18 @@
 block vars
   // Override these variables by using block append vars in a file that extends project_layout.pug
-  -var isActive = false;
-  -var image = '';
-  -var backgroundClass = 'carousel-bg-default';
-  -var title = '';
+  - var projectId = ''
+  - var isActive = false;
+  - var image = '';
+  - var backgroundClass = 'bg-default';
+  - var title = '';
+  - var link = '';
 
-#this-website.project-item.carousel-item.container-fluid(class=`${isActive ? 'active' : ''} ${backgroundClass}`,data-interval="false")
+.tab-pane.fade.show.container-fluid(id=`project-${projectId}`,class=`${isActive ? 'active' : ''} ${backgroundClass}`)
   .row
     .col-12
-      h1 #{title}
+      h1.project-title #{title}
+      if link !== ''
+        //- a.btn.btn-light(href=link, target="_blank") Visit
     .col-12.col-sm-6.project-column
       h1.project-header Technology
       ul
@@ -16,4 +20,6 @@ block vars
     .col-12.col-sm-6.project-column
       h1.project-header Description
       block desc
-  img.project-image(src=`images/${image}`, alt="")
+    .col-12
+      if image !== ''
+        img.project-image(src=`images/${image}`, alt="")

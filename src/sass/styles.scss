@@ -71,71 +71,37 @@ ul {
 }
 
 #projects {
-  .carousel-indicators {
-    &:hover {
-      background-color: rgba(0, 0, 0, .4);
-    }
-  }
-
-  .carousel-inner {
-    // min-height: 100vh;
-    background-color: rgba(gray, .3);
-
-    .project-item {
+  .tab-content {
+    .tab-pane {
       min-height: 100vh;
-      padding: 30px;
-
-      .project-column {
-        flex: 1 0 50%;
-        z-index: 50;
-
-        .project-header {
-          flex: 0 1 auto;
-          text-decoration: underline;
-        }
-      }
-
-      .project-image {
-        position: absolute;
-        bottom: -15vh;
-        right: -5vw;
-        width: 75vw;
-        height: auto;
-        z-index: 1;
-      }
-
-      .project-image {
-        @include media-breakpoint-down(sm) {
-          position: initial;
-          width: 100%;
-        }
-      }
     }
   }
 
-  .carousel-arrow {
-    &:hover {
-      background-color: rgba(gray, .4);
-    }
+  .project-title {
+    text-decoration: underline;
   }
-}
 
-.carousel-bg-default {
-  color: white;
-  background-color: rgba(17, 22, 28, .8);
-}
+  .project-image {
+    width: 100%;
+  }
 
-.carousel-bg-ufsports {
-  color: white;
-  background-color: #0960a5;
-}
+  .bg-default {
+    color: white;
+    background-color: rgba(17, 22, 28, .8);
+  }
 
-.carousel-bg-lucylane {
-  color: white;
-  background-color: lighten(#1a2255, 10%);
-}
+  .bg-ufsports {
+    color: white;
+    background-color: #0960a5;
+  }
 
-.carousel-bg-blackjack {
-  color: white;
-  background-color: darken(#1d6808, 5%);
+  .bg-lucylane {
+    color: white;
+    background-color: lighten(#1a2255, 10%);
+  }
+
+  .bg-blackjack {
+    color: white;
+    background-color: darken(#1d6808, 5%);
+  }
 }

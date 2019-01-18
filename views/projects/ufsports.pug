@@ -1,9 +1,11 @@
 extends layout.pug
 
 block append vars
+  - var projectId = 'ufsports'
   - var title = 'Ultimate Fantasy Sports'
   - var image = 'ufsports.png'
-  - var backgroundClass = 'carousel-bg-ufsports'
+  - var backgroundClass = 'bg-ufsports'
+  - var link = 'https://ufsports.com'
 
 block techUsed
   li HTML5
@@ -24,4 +26,3 @@ block desc
     | stats/standings were being calculated by hand. Quickly realizing there must be a better way, this website was born. Over
     | the past 8 years, it's gone through 6 different redesigns along with hundreds (maybe thousands) of improvements
     | and changes.
-    a(href="https://ufsports.com",target="_blank") Visit the site.
