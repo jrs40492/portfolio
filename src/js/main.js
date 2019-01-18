@@ -1,9 +1,12 @@
 $(document).ready(() => {
-  $('#tech-btn').click(() => {
-    $.scrollify.move('#tech-section');
-  });
-
-  $('#projects-btn').click(() => {
-    $.scrollify.move('#projects-section');
+  $('.scroll-btn').click((e) => {
+    const target = $(e.target);
+    scrollTo(target.data('id'));
   });
 });
+
+const scrollTo = (element) => {
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $(`#${element}`).offset().top
+  }, 1000);
+};
