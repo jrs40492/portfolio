@@ -19,7 +19,7 @@ ul {
 }
 
 #introduction {
-  background-image: url('/images/night_sky.jpg');
+  background-image: url('/images/night_sky.jpeg');
   height: 100vh;
 
   #header {
@@ -52,7 +52,7 @@ ul {
 }
 
 #tech {
-  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.jpg') no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.jpeg') no-repeat;
   background-size: cover;
   z-index: -100;
 

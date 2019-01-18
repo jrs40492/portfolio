@@ -12,7 +12,7 @@ ul {
   background-size: cover; }
 
 #introduction {
-  background-image: url("/images/night_sky.jpg");
+  background-image: url("/images/night_sky.jpeg");
   height: 100vh; }
   #introduction #header {
     color: white; }
@@ -30,7 +30,7 @@ ul {
     margin-right: 10px; }
 
 #tech {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("/images/computer.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("/images/computer.jpeg") no-repeat;
   background-size: cover;
   z-index: -100; }
   #tech #tech-header {
