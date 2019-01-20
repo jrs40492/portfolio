@@ -15,8 +15,8 @@ block vars
     .col-12.col-sm-6.project-column
       h1.project-header Description
       block desc
+      if link !== ''
+        a.btn.btn-light(href=link, target="_blank") Visit
     .col-12
       if image !== ''
         img.project-image(src=`images/${image}`, alt="")
-      if link !== ''
-        //- a.btn.btn-light(href=link, target="_blank") Visit
