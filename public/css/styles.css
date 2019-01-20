@@ -42,31 +42,33 @@ ul {
   #tech .card {
     margin-top: 10px; }
 
-#projects .row {
+#portfolio .row {
   width: 100%; }
-#projects .header {
+#portfolio .header {
   text-decoration: underline;
   text-align: center; }
-#projects .list-group {
-  height: 100%; }
-#projects .tab-content {
-  height: 100vh; }
-  #projects .tab-content .tab-pane {
-    height: 100%; }
-#projects .project-title {
+#portfolio .tab-content {
+  min-height: 100vh; }
+  #portfolio .tab-content .tab-pane {
+    min-height: 100vh; }
+    #portfolio .tab-content .tab-pane .row {
+      min-height: 100%;
+      max-height: 100%; }
+#portfolio .project-title {
   text-decoration: underline; }
-#projects .project-image {
-  width: 100%; }
-#projects .bg-default {
+@media (max-width: 1199.98px) {
+  #portfolio .project-image {
+    width: 100%; } }
+#portfolio .bg-default {
   color: white;
   background-color: rgba(17, 22, 28, 0.8); }
-#projects .bg-ufsports {
+#portfolio .bg-ufsports {
   color: white;
   background-color: #0960a5; }
-#projects .bg-lucylane {
+#portfolio .bg-lucylane {
   color: white;
   background-color: #26327c; }
-#projects .bg-blackjack {
+#portfolio .bg-blackjack {
   color: white;
   background-color: #165006; }
 

@@ -4,6 +4,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('index', {
+    page_title: process.env.PAGE_TITLE,
     dev_name: process.env.DEV_NAME,
     tag_line: process.env.TAG_LINE,
     node_env: process.env.NODE_ENV,
