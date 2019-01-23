@@ -2,6 +2,12 @@
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
 
+$primary-color: #0960a5;
+$primary-font: white;
+
+$secondary-color: lighten(#0960a5, 20%);
+$secondary-font: $primary-color;
+
 * {
   font-size: 2vh;
 }
@@ -19,7 +25,8 @@ ul {
 }
 
 #introduction {
-  background-image: url('/images/night_sky.jpeg');
+  // background-image: url('/images/night_sky.jpeg');
+  background-image: radial-gradient($secondary-color, $primary-color);
   height: 100vh;
 
   #header {

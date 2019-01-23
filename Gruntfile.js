@@ -38,7 +38,8 @@ module.exports = (grunt) => {
           compass: true
         },
         files: {
-          "public/css/styles.css": "src/sass/styles.scss"
+          "public/css/styles.css": "src/sass/styles.scss",
+          "public/css/resume.css": "src/sass/resume.scss"
         }
       }
     },

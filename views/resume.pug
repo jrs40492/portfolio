@@ -1,21 +1,192 @@
-#resume.container-fluid.section
-  .row.justify-content-center.align-items-center
-    .col.col-12
-      #resume_carousel.carousel.slide
-        ol.carousel-indicators
-          li.active(data-slide-to="0",data-target="resume_carousel")
-          li(data-slide-to="1",data-target="resume_carousel")
-          li(data-slide-to="2",data-target="resume_carousel")
-        .carousel-inner
-          .carousel-item.active.text-center.p-4
-            h1 Test
-          .carousel-item.text-center.p-4
-            h1 Test2
-          .carousel-item.text-center.p-4
-            h1 Test3
-        a.carousel-control-prev(href="#resume_carousel",role="button",date-slide="prev")
-          span.carousel-control-prev-icon(aria-hidden="true")
-          span.sr-only Previous
-        a.carousel-control-next(href="#resume_carousel",role="button",date-slide="next")
-          span.carousel-control-next-icon(aria-hidden="true")
-          span.sr-only Next
+extends layout.pug
+
+block styles
+  link(rel='stylesheet', type="text/css", href='css/resume.min.css')
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600")
+
+block content
+  #resume-wrapper
+    #resume
+      #column-left
+        #intro.section
+          #personal-info
+            h1 #{dev_name}
+            h4 Full Stack Developer
+          #contact-info
+            .contact-line
+              i.icon.fas.fa-envelope
+              a.text(href=`mailto:${email}`) #{email}
+            .contact-line
+              i.icon.fab.fa-linkedin-in
+              a.text(href=`https://${linkedin_url}` target="_blank") #{linkedin_url}
+            .contact-line
+              i.icon.fab.fa-github
+              a.text(href=`https://${github_url}` target="_blank") #{github_url}
+            .contact-line
+              i.icon.fas.fa-link
+              a.text(href=`http://${website_url}` target="_blank") #{website_url}
+            .contact-line
+              i.icon.fas.fa-map-marker-alt
+              .text Chautauqua, NY
+        #about.section
+          h3.header About Me
+          p
+            | Hello, my name is Jacob. I am a software developer with 8+ years of experience developing complex
+            | applications and websites. Over the years, I have jumped head first into anything that was thrown
+            | at me. I'm always excited to learn a new programming language or work with a technology that I
+            | haven't seen before.
+        #professional-interests.section
+          h3.header Professional Interests
+        #personal-interests.section
+          h3.header Personal Interests
+          .interest-wrapper
+            .interest-group
+              .circle
+                i.fas.fa-power-off.fa-lg
+              .interest Tech
+            .interest-group
+              .circle
+                i.fas.fa-football-ball.fa-lg
+              .interest Football
+            .interest-group
+              .circle
+                i.fas.fa-golf-ball.fa-lg
+              .interest Golf
+            .interest-group
+              .circle
+                i.fab.fa-apple.fa-lg
+              .interest Apple
+            .interest-group
+              .circle
+                i.fas.fa-film.fa-lg
+              .interest Movies
+            .interest-group
+              .circle
+                i.fas.fa-car.fa-lg
+              .interest Subaru
+      #column-right
+        #work.section
+          h2.header Work Experience
+          .employment.bottom-border
+            .position Senior Software Engineer
+            .company-line
+              span.company Libera, Inc.
+              span.dates - 2015 to 2018
+            .tools-line
+              label Tools:
+              span.tools
+                | C#, .NET, VB.NET, Node.js, Angular, T-SQL, Oracle, MongoDB, Postgres, Javascript, jQuery,
+                | Bootstrap, Webpack
+            ul.duties
+              li
+                | Webite and software maintenance and developement across 30 different applications.
+              li
+                | Develop enhancements and corrections in two-week sprints, including thorough development testing
+                | and documentation of work.
+              li Develop technical designs, complete with proof of concept, and/or prototype, and documentation.
+              li
+                | Work with team members and customers to ensure that requirements are well understood and capture
+                | the customers' expectations.
+          .employment.bottom-border
+            .position IT Manager & Software Developer
+            .company-line
+              span.company Self Employed
+              span.dates - 2013 to 2015
+            .tools-line
+              label Tools:
+              span.tools PHP, Javascript, jQuery, Joomla, Wordpress
+            ul.duties
+              li Designed, built, and assisted with development of websites for several clients.
+              li
+                | Troubleshoot and repaired personal computer problems for clients; including replacement of computer
+                | parts, virus removal, computer backup, and installation of new software.
+          .employment
+            .position Software Developer
+            .company-line
+              span.company Juju Inc.
+              span.dates - 2013 to 2014
+            .tools-line
+              label Tools:
+              span.tools Python, Javascript, Regex
+            ul.duties
+              li Worked with others to develop code that scraped information.
+              li Inserted scraped info into backend database to populate website.
+        #certificates.section
+          h2.header Certificates
+          .certificate Programming in HTML5 with JavaScript and CSS3 - Microsoft
+        #education.section
+          h2.header Education
+          .degree Associates of Science in Individual Studies with a focus on Computer Science
+          span.college Jamestown Community College
+          span.dates - 2012
+        #skills.section
+          h2.header Skills
+          .skills-wrapper
+            .skills-group
+              .skill-line
+                .skill HTML
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+              .skill-line
+                .skill CSS/SASS
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+              .skill-line
+                .skill JS/jQuery
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+              .skill-line
+                .skill Node.js
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+                i.far.fa-circle
+              .skill-line
+                .skill SQL
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+            .skills-group
+              .skill-line
+                .skill PHP
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+              .skill-line
+                .skill C#/.NET
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+                i.far.fa-circle
+              .skill-line
+                .skill UI/UX
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+                i.far.fa-circle
+                i.far.fa-circle
+              .skill-line
+                .skill MongoDB
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.fas.fa-circle
+                i.far.fa-circle
+                i.far.fa-circle
+
+
+block scripts

@@ -2,8 +2,11 @@ const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
 const routes = require('./routes/index');
+const dotenv = require('dotenv');
+const dotenvExpand = require('dotenv-expand');
 
-require('dotenv').load();
+const myEnv = dotenv.config();
+dotenvExpand(myEnv);
 
 const app = express();
 

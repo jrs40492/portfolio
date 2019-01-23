@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  word-wrap: initial;
+  font-size: .9rem;
+  box-sizing: border-box; }
+
+h1 {
+  font-size: 1.8em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.2em; }
+
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+p {
+  padding: 0 0 .4rem 0; }
+
+#resume-wrapper {
+  display: flex;
+  justify-content: center;
+  background-image: radial-gradient(#ffffff, #0960a5);
+  padding: 3rem 0; }
+  #resume-wrapper #resume {
+    display: flex;
+    width: 8.5in;
+    height: 11in;
+    background-color: white; }
+    #resume-wrapper #resume #column-left,
+    #resume-wrapper #resume #column-right {
+      display: flex;
+      flex-direction: column; }
+    #resume-wrapper #resume #column-left {
+      flex: 0 0 35%; }
+      #resume-wrapper #resume #column-left .header {
+        color: #0960a5;
+        border-bottom: 1px solid #0960a5;
+        margin: 0 0 .7rem 0;
+        padding: 0 0 .5rem 0; }
+      #resume-wrapper #resume #column-left .section {
+        flex: 0 0 auto;
+        padding: 1rem 2rem; }
+      #resume-wrapper #resume #column-left #intro {
+        background-color: #0960a5;
+        color: white; }
+        #resume-wrapper #resume #column-left #intro #personal-info {
+          padding: 0 0 12px 0; }
+        #resume-wrapper #resume #column-left #intro #contact-info .contact-line {
+          display: flex;
+          padding: 6px 0;
+          align-items: center; }
+          #resume-wrapper #resume #column-left #intro #contact-info .contact-line .icon {
+            flex: 0 1 auto;
+            padding: 0 8px 0 0; }
+          #resume-wrapper #resume #column-left #intro #contact-info .contact-line .text {
+            flex: 1 0 auto; }
+      #resume-wrapper #resume #column-left #about,
+      #resume-wrapper #resume #column-left #professional-interests,
+      #resume-wrapper #resume #column-left #personal-interests {
+        background-color: #cae6fc; }
+      #resume-wrapper #resume #column-left #personal-interests {
+        flex: 1 0 auto; }
+      #resume-wrapper #resume #column-left .interest-wrapper {
+        display: flex;
+        flex-wrap: wrap; }
+        #resume-wrapper #resume #column-left .interest-wrapper .interest-group {
+          display: flex;
+          flex: 1 0 auto;
+          flex-direction: column;
+          align-items: center; }
+          #resume-wrapper #resume #column-left .interest-wrapper .interest-group .circle {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            align-items: center;
+            background-color: #0960a5;
+            margin: .5rem 0 .3rem 0; }
+            #resume-wrapper #resume #column-left .interest-wrapper .interest-group .circle i {
+              width: 100%;
+              color: white; }
+          #resume-wrapper #resume #column-left .interest-wrapper .interest-group .interest {
+            font-weight: 600; }
+    #resume-wrapper #resume #column-right {
+      flex: 0 0 65%; }
+      #resume-wrapper #resume #column-right .header {
+        color: #0960a5;
+        border-bottom: 1px solid #0960a5;
+        margin: 0 0 .5rem 0;
+        padding: 0 0 .5rem 0; }
+      #resume-wrapper #resume #column-right .section {
+        flex: 0 0 auto;
+        padding: 1rem 1.5rem; }
+      #resume-wrapper #resume #column-right .employment {
+        padding: .5rem 0 .5rem 1rem; }
+        #resume-wrapper #resume #column-right .employment.bottom-border {
+          border-bottom: 1px solid #cae6fc; }
+        #resume-wrapper #resume #column-right .employment .position {
+          font-size: 1.2em;
+          font-weight: 600;
+          color: #0960a5;
+          padding: 0 0 .2rem 0; }
+        #resume-wrapper #resume #column-right .employment .company-line {
+          padding: 0 0 .2rem 0; }
+          #resume-wrapper #resume #column-right .employment .company-line .company {
+            font-weight: 600; }
+          #resume-wrapper #resume #column-right .employment .company-line .dates {
+            padding: 0 0 0 .3rem; }
+        #resume-wrapper #resume #column-right .employment .tools-line label {
+          font-weight: 600; }
+        #resume-wrapper #resume #column-right .employment .tools-line .tools {
+          padding: 0 0 0 .3rem; }
+        #resume-wrapper #resume #column-right .employment .duties {
+          padding: 0 0 0 1.2rem; }
+          #resume-wrapper #resume #column-right .employment .duties li {
+            padding: .7rem 0 0 0; }
+      #resume-wrapper #resume #column-right #education .college {
+        font-weight: 600; }
+      #resume-wrapper #resume #column-right #education .dates {
+        padding: 0 0 0 3px; }
+      #resume-wrapper #resume #column-right #skills .skills-wrapper {
+        display: flex;
+        padding: 1rem 0 0 0; }
+        #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 50%; }
+          #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group:first-child {
+            padding: 0 1rem 0 0; }
+          #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line {
+            display: flex;
+            width: 100%;
+            margin: 0 0 .5rem 0;
+            align-items: center; }
+            #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line .skill {
+              flex: 1 0 auto;
+              font-weight: 600; }
+            #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line i {
+              flex: 0 0 auto;
+              padding: 0 .3rem 0 0;
+              color: #0960a5; }
+
+@media only screen and (max-width: 8.5in) {
+  #resume-wrapper {
+    padding: 0; }
+    #resume-wrapper #resume {
+      width: 100%;
+      flex-direction: column; }
+      #resume-wrapper #resume #column-left,
+      #resume-wrapper #resume #column-right {
+        flex: 1 0 auto; }
+      #resume-wrapper #resume #column-left #personal-interests {
+        flex: 0 0 auto; } }
+@media only screen and (max-width: 600px) {
+  #resume-wrapper {
+    padding: 0; }
+    #resume-wrapper #resume {
+      width: 100%;
+      flex-direction: column; }
+      #resume-wrapper #resume #column-left,
+      #resume-wrapper #resume #column-right {
+        flex: 1 0 auto; }
+      #resume-wrapper #resume #column-left #personal-interests {
+        flex: 0 0 auto; }
+      #resume-wrapper #resume #column-right #skills .skills-wrapper {
+        flex-direction: column; }
+        #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group:first-child {
+          padding: 0; }
+        #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line .skill {
+          flex: 0 0 35%; } }
+
+/*# sourceMappingURL=resume.css.map */
