@@ -7,7 +7,7 @@
   box-sizing: border-box; }
 
 h1 {
-  font-size: 1.8em; }
+  font-size: 2em; }
 
 h2 {
   font-size: 1.6em; }
@@ -30,30 +30,36 @@ p {
 #resume-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: radial-gradient(#ffffff, #0960a5);
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  min-height: 100vh; }
   #resume-wrapper #resume {
     display: flex;
     width: 8.5in;
     height: 11in;
-    background-color: white; }
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5); }
     #resume-wrapper #resume #column-left,
     #resume-wrapper #resume #column-right {
       display: flex;
       flex-direction: column; }
+    #resume-wrapper #resume .header {
+      color: #0960a5;
+      border-bottom: 1px solid #0960a5;
+      margin: 0 0 .5rem 0;
+      padding: 0 0 .5rem 0; }
     #resume-wrapper #resume #column-left {
       flex: 0 0 35%; }
-      #resume-wrapper #resume #column-left .header {
-        color: #0960a5;
-        border-bottom: 1px solid #0960a5;
-        margin: 0 0 .7rem 0;
-        padding: 0 0 .5rem 0; }
       #resume-wrapper #resume #column-left .section {
         flex: 0 0 auto;
-        padding: 1rem 2rem; }
+        padding: 1.4rem 2.2rem 0; }
       #resume-wrapper #resume #column-left #intro {
         background-color: #0960a5;
-        color: white; }
+        color: white;
+        padding-bottom: 1.4rem; }
         #resume-wrapper #resume #column-left #intro #personal-info {
           padding: 0 0 12px 0; }
         #resume-wrapper #resume #column-left #intro #contact-info .contact-line {
@@ -66,46 +72,50 @@ p {
           #resume-wrapper #resume #column-left #intro #contact-info .contact-line .text {
             flex: 1 0 auto; }
       #resume-wrapper #resume #column-left #about,
-      #resume-wrapper #resume #column-left #professional-interests,
+      #resume-wrapper #resume #column-left #projects,
       #resume-wrapper #resume #column-left #personal-interests {
         background-color: #cae6fc; }
+      #resume-wrapper #resume #column-left #projects .project-wrapper {
+        padding: 0 0 .8rem 0; }
+        #resume-wrapper #resume #column-left #projects .project-wrapper .project {
+          font-weight: 600; }
+        #resume-wrapper #resume #column-left #projects .project-wrapper i,
+        #resume-wrapper #resume #column-left #projects .project-wrapper a {
+          color: #0960a5; }
+        #resume-wrapper #resume #column-left #projects .project-wrapper a {
+          padding: 0 0 0 .5rem; }
       #resume-wrapper #resume #column-left #personal-interests {
         flex: 1 0 auto; }
-      #resume-wrapper #resume #column-left .interest-wrapper {
-        display: flex;
-        flex-wrap: wrap; }
-        #resume-wrapper #resume #column-left .interest-wrapper .interest-group {
+        #resume-wrapper #resume #column-left #personal-interests .interest-wrapper {
           display: flex;
-          flex: 1 0 auto;
-          flex-direction: column;
-          align-items: center; }
-          #resume-wrapper #resume #column-left .interest-wrapper .interest-group .circle {
+          flex-wrap: wrap; }
+          #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group {
             display: flex;
-            justify-content: center;
-            text-align: center;
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
-            align-items: center;
-            background-color: #0960a5;
-            margin: .5rem 0 .3rem 0; }
-            #resume-wrapper #resume #column-left .interest-wrapper .interest-group .circle i {
-              width: 100%;
-              color: white; }
-          #resume-wrapper #resume #column-left .interest-wrapper .interest-group .interest {
-            font-weight: 600; }
+            flex: 1 0 auto;
+            flex-direction: column;
+            align-items: center; }
+            #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group .circle {
+              display: flex;
+              justify-content: center;
+              text-align: center;
+              width: 4rem;
+              height: 4rem;
+              border-radius: 50%;
+              align-items: center;
+              background-color: #0960a5;
+              margin: .5rem 0 .3rem 0; }
+              #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group .circle i {
+                width: 100%;
+                color: white; }
+            #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group .interest {
+              font-weight: 600; }
     #resume-wrapper #resume #column-right {
       flex: 0 0 65%; }
-      #resume-wrapper #resume #column-right .header {
-        color: #0960a5;
-        border-bottom: 1px solid #0960a5;
-        margin: 0 0 .5rem 0;
-        padding: 0 0 .5rem 0; }
       #resume-wrapper #resume #column-right .section {
         flex: 0 0 auto;
-        padding: 1rem 1.5rem; }
+        padding: 1.4rem 1.5rem 0 1.5rem; }
       #resume-wrapper #resume #column-right .employment {
-        padding: .5rem 0 .5rem 1rem; }
+        padding: .5rem 0 .5rem 1.2rem; }
         #resume-wrapper #resume #column-right .employment.bottom-border {
           border-bottom: 1px solid #cae6fc; }
         #resume-wrapper #resume #column-right .employment .position {
@@ -169,12 +179,17 @@ p {
     padding: 0; }
     #resume-wrapper #resume {
       width: 100%;
-      flex-direction: column; }
+      flex-direction: column;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none; }
       #resume-wrapper #resume #column-left,
       #resume-wrapper #resume #column-right {
         flex: 1 0 auto; }
       #resume-wrapper #resume #column-left #personal-interests {
         flex: 0 0 auto; }
+        #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group {
+          flex: 1 0 33%; }
       #resume-wrapper #resume #column-right #skills .skills-wrapper {
         flex-direction: column; }
         #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group:first-child {
