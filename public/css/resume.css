@@ -85,7 +85,8 @@ p {
         #resume-wrapper #resume #column-left #projects .project-wrapper a {
           padding: 0 0 0 .5rem; }
       #resume-wrapper #resume #column-left #personal-interests {
-        flex: 1 0 auto; }
+        flex: 1 0 auto;
+        padding-bottom: 1.2rem; }
         #resume-wrapper #resume #column-left #personal-interests .interest-wrapper {
           display: flex;
           flex-wrap: wrap; }
