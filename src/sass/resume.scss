@@ -50,6 +50,30 @@ p {
   padding: 3rem 0;
   min-height: 100vh;
 
+  #back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+
+    a {
+
+      i,
+      span {
+        font-size: 1.2rem;
+      }
+
+      i {
+        margin: 0 .5rem 0 0;
+      }
+
+      &:hover i {
+        text-decoration: underline;
+      }
+    }
+  }
+
   #resume {
     display: flex;
     width: 8.5in;
@@ -276,6 +300,10 @@ p {
   #resume-wrapper {
     padding: 0;
 
+    #back-button {
+      left: 84vw;
+    }
+
     #resume {
       width: 100%;
       flex-direction: column;
@@ -297,6 +325,10 @@ p {
 @media only screen and (max-width: 600px) {
   #resume-wrapper {
     padding: 0;
+
+    #back-button {
+      left: 75vw;
+    }
 
     #resume {
       width: 100%;
@@ -351,6 +383,10 @@ p {
   align-items: initial;
   background-image: none;
   padding: 0;
+
+  #back-button {
+    display: none;
+  }
 
   #resume {
     box-shadow: none;

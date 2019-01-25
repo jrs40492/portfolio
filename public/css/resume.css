@@ -34,6 +34,19 @@ p {
   background-image: radial-gradient(#ffffff, #0960a5);
   padding: 3rem 0;
   min-height: 100vh; }
+  #resume-wrapper #back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center; }
+    #resume-wrapper #back-button a i,
+    #resume-wrapper #back-button a span {
+      font-size: 1.2rem; }
+    #resume-wrapper #back-button a i {
+      margin: 0 .5rem 0 0; }
+    #resume-wrapper #back-button a:hover i {
+      text-decoration: underline; }
   #resume-wrapper #resume {
     display: flex;
     width: 8.5in;
@@ -167,6 +180,8 @@ p {
 @media only screen and (max-width: 8.5in) {
   #resume-wrapper {
     padding: 0; }
+    #resume-wrapper #back-button {
+      left: 84vw; }
     #resume-wrapper #resume {
       width: 100%;
       flex-direction: column; }
@@ -178,6 +193,8 @@ p {
 @media only screen and (max-width: 600px) {
   #resume-wrapper {
     padding: 0; }
+    #resume-wrapper #back-button {
+      left: 75vw; }
     #resume-wrapper #resume {
       width: 100%;
       flex-direction: column;
@@ -203,6 +220,8 @@ p {
   align-items: initial;
   background-image: none;
   padding: 0; }
+  #resume-wrapper.print #back-button {
+    display: none; }
   #resume-wrapper.print #resume {
     box-shadow: none; }
 

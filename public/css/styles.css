@@ -12,7 +12,7 @@ ul {
   background-size: cover; }
 
 #introduction {
-  background-image: radial-gradient(#2196f3, #0960a5);
+  background-image: radial-gradient(#0d8aee, #0960a5);
   height: 100vh; }
   #introduction #header {
     color: white; }
