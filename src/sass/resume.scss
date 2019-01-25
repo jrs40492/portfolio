@@ -344,3 +344,15 @@ p {
     }
   }
 }
+
+#resume-wrapper.print {
+  display: flex;
+  justify-content: initial;
+  align-items: initial;
+  background-image: none;
+  padding: 0;
+
+  #resume {
+    box-shadow: none;
+  }
+}

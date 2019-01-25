@@ -197,5 +197,13 @@ p {
           padding: 0; }
         #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line .skill {
           flex: 0 0 35%; } }
+#resume-wrapper.print {
+  display: flex;
+  justify-content: initial;
+  align-items: initial;
+  background-image: none;
+  padding: 0; }
+  #resume-wrapper.print #resume {
+    box-shadow: none; }
 
 /*# sourceMappingURL=resume.css.map */
