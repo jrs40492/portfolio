@@ -377,18 +377,20 @@ p {
   }
 }
 
-#resume-wrapper.print {
-  display: flex;
-  justify-content: initial;
-  align-items: initial;
-  background-image: none;
-  padding: 0;
+@media print {
+  #resume-wrapper {
+    display: flex;
+    justify-content: initial;
+    align-items: initial;
+    background-image: none;
+    padding: 0;
 
-  #back-button {
-    display: none;
-  }
+    #back-button {
+      display: none;
+    }
 
-  #resume {
-    box-shadow: none;
+    #resume {
+      box-shadow: none;
+    }
   }
 }
