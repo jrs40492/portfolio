@@ -11,8 +11,8 @@ Even though most developers will probably build their own site to showcase their
 
 ### TODO
 * Add full user accessibility
-* Add better layout for portfolio
 * Ability to dynamically add projects
+* Add backend to easily change wording and resume
 
 ### Ideas
 * Add a blog
