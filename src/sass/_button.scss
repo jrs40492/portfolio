@@ -1,0 +1,26 @@
+.button {
+  border: 1px solid $primary-font;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 7px;
+
+  &:hover {
+    cursor: pointer;
+    color: $primary-color;
+    background-color: $primary-font;
+  }
+
+  &.button-dark {
+    border: 1px solid $border-color;
+
+    a {
+      color: black;
+
+    }
+
+    &:hover {
+      color: $primary-color;
+      background-color: $primary-font;
+    }
+  }
+}

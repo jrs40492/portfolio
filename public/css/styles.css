@@ -1,75 +1,161 @@
 * {
-  font-size: 2vh; }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: initial;
+  font-family: 'Montserrat', sans-serif; }
 
+a {
+  color: white;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+p {
+  padding: 0 0 .4rem 0; }
+
+.button {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 7px; }
+  .button:hover {
+    cursor: pointer;
+    color: #0960a5;
+    background-color: white; }
+  .button.button-dark {
+    border: 1px solid #d8d8d8; }
+    .button.button-dark a {
+      color: black; }
+    .button.button-dark:hover {
+      color: #0960a5;
+      background-color: white; }
+
+a.link {
+  color: #0960a5; }
+
+.card-group {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly; }
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  flex: 0 0 23%;
+  overflow: hidden; }
+  .card .card-header,
+  .card .card-body,
+  .card .card-footer {
+    padding: 10px 15px; }
+  .card .card-header {
+    font-size: 2vh;
+    font-weight: 600;
+    border-bottom: 1px solid #d8d8d8; }
+  .card .card-body .card-body-title {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 2.5vh;
+    padding: 5px 0; }
+  .card .card-body img {
+    width: 100%;
+    padding: 0 0 10px 0; }
+  .card .card-footer {
+    display: flex;
+    border-top: 1px solid #d8d8d8;
+    align-items: center;
+    justify-content: center; }
+    .card .card-footer .card-footer-left,
+    .card .card-footer .card-footer-right {
+      display: flex;
+      flex: 0 0 50%;
+      justify-content: center; }
+    .card .card-footer .card-footer-left {
+      border-right: 1px solid #d8d8d8; }
+
+@media only screen and (max-width: 800px) {
+  .card-group .card {
+    flex: 0 0 47%;
+    margin: 1vh 0; } }
+@media only screen and (max-width: 600px) {
+  .card-group .card {
+    flex: 0 0 95%;
+    margin: 1vh 0; } }
 ol,
 ul {
   list-style: inside; }
+  ol li,
+  ul li {
+    padding: 3px 0; }
 
 .section {
   width: 100vw;
   min-height: 100vh;
   display: block;
-  background-size: cover; }
+  background-size: cover;
+  background-color: #0d8aee; }
+  .section .section-header {
+    flex: 0 0 100%;
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    text-decoration: underline;
+    padding: 10px 0; }
 
 #introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: radial-gradient(#0d8aee, #0960a5);
-  height: 100vh; }
-  #introduction #header {
-    color: white; }
-  #introduction .row {
-    height: 33%;
+  height: 100vh;
+  color: white; }
+  #introduction .intro-row {
+    flex: 1 0 33%;
+    display: flex;
+    align-items: center; }
+  #introduction #about {
+    flex-direction: column;
+    justify-content: center;
     text-align: center; }
-  #introduction .links {
-    display: flex; }
-    #introduction .links a.icon {
-      color: white;
-      padding-right: 10px; }
-      #introduction .links a.icon:hover {
-        color: #e2e6ea; }
-  #introduction .btn {
-    margin-right: 10px; }
+    #introduction #about h1 {
+      font-size: 5vh; }
+  #introduction #links,
+  #introduction #navigation {
+    justify-content: center; }
+  #introduction a.icon {
+    color: white;
+    padding-right: 10px; }
+    #introduction a.icon:hover {
+      color: #e2e6ea; }
 
 #tech {
+  display: flex;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("/images/computer.jpeg") no-repeat;
   background-size: cover;
   z-index: -100;
-  padding-bottom: 10px; }
-  #tech #tech-header {
-    color: white;
-    text-align: center; }
-  #tech .row {
-    z-index: 50; }
-  #tech .card {
-    margin-top: 10px; }
+  padding-bottom: 10px;
+  flex-direction: column; }
 
-#portfolio .row {
-  width: 100%; }
-#portfolio .header {
-  text-decoration: underline;
-  text-align: center; }
-#portfolio .tab-content {
-  min-height: 100vh; }
-  #portfolio .tab-content .tab-pane {
-    min-height: 100vh; }
-    #portfolio .tab-content .tab-pane .row {
-      min-height: 100%;
-      max-height: 100%; }
-#portfolio .project-title {
-  text-decoration: underline; }
-@media (max-width: 1199.98px) {
-  #portfolio .project-image {
-    width: 100%; } }
-#portfolio .bg-default {
-  color: white;
-  background-color: rgba(17, 22, 28, 0.8); }
-#portfolio .bg-ufsports {
-  color: white;
-  background-color: #0960a5; }
-#portfolio .bg-lucylane {
-  color: white;
-  background-color: #26327c; }
-#portfolio .bg-blackjack {
-  color: white;
-  background-color: #165006; }
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-content: flex-start; }
+  #portfolio .bg-default {
+    color: white;
+    background-color: rgba(17, 22, 28, 0.8); }
+  #portfolio .bg-ufsports {
+    color: white;
+    background-color: #0960a5; }
+  #portfolio .bg-lucylane {
+    color: white;
+    background-color: #26327c; }
+  #portfolio .bg-blackjack {
+    color: white;
+    background-color: #165006; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,15 +1,7 @@
 #portfolio.section
-  .row.mx-0
-    .col-12.col-sm-4.col-md-2.px-0
-      h1.header Portfolio
-      .list-group.list-group-flush(role="tablist")
-        a.list-group-item.list-group-item-action.active(data-toggle="list",href="#project-jacobrswanson",role="tab",aria-controls="jacobrswanson") Jacob R Swanson
-        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-ufsports",role="tab",aria-controls="ufsports") Ultimate Fantasy Sports
-        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-59lucylane",role="tab",aria-controls="59lucylane") 59 Lucy Lane
-        a.list-group-item.list-group-item-action(data-toggle="list",href="#project-blackjack",role="tab",aria-controls="blackjack") Blackjack
-    .col-12.col-sm-8.col-md-10.px-0
-      .tab-content
-        include projects/jacobrswanson.pug
-        include projects/ufsports.pug
-        include projects/59lucylane.pug
-        include projects/blackjack.pug
+  .section-header Portfolio
+  .card-group
+    include projects/jacobrswanson.pug
+    include projects/ufsports.pug
+    include projects/59lucylane.pug
+    include projects/blackjack.pug

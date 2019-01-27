@@ -1,16 +1,11 @@
-$primary-color: #0960a5;
-$primary-font: white;
+@import "variables";
+@import "global";
 
 $secondary-color: lighten(#0960a5, 55%);
 $secondary-font: $primary-color;
 
 * {
-  padding: 0;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  word-wrap: initial;
   font-size: .9rem;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -27,19 +22,6 @@ h3 {
 
 h4 {
   font-size: 1.2em;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-p {
-  padding: 0 0 .4rem 0;
 }
 
 #resume-wrapper {
