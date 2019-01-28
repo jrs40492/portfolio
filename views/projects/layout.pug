@@ -3,7 +3,8 @@ block vars
   - var title = '';
   - var projectId = ''
   - var isActive = false;
-  - var image = '';
+  - var imageWebp = ''
+  - var imageDefault = '';
   - var backgroundClass = 'bg-default';
   - var link = '';
 
@@ -11,8 +12,12 @@ block vars
   .card-header(class=`${backgroundClass}`)
     span #{title}
   .card-body
-    if image !== ''
-      img.project-image(src=`images/${image}`, alt="")
+    if imageDefault !== ''
+      picture
+        source(srcset=`/images/${imageWebp}`, type="image/webp")
+        source(srcset=`images/${imageDefault}`, type="image/jpeg")
+        source(srcset=`images/${imageDefault}`, type="image/png")
+        img.project-image(src=`/images/${image}`, alt="")
     block desc
     .card-body-title Technology Used
     ul
@@ -22,4 +27,4 @@ block vars
       //- .card-footer-left
         //- .button More <i class="fas fa-angle-down"></i>
       //- .card-footer-right
-      a.link(href=link, target="_blank") Visit <i class="fas fa-external-link-alt"></i>
+      a.link(href=link, target="_blank",rel="noopener") Visit <i class="fas fa-external-link-alt"></i>

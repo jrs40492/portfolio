@@ -4,7 +4,7 @@
 @import "links";
 @import "card";
 
-$secondary-color: lighten(#0960a5, 15%);
+$secondary-color: lighten($primary-color, 15%);
 $secondary-font: $primary-color;
 
 ol,
@@ -77,11 +77,18 @@ ul {
 
 #tech {
   display: flex;
-  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.jpeg') no-repeat;
   background-size: cover;
   z-index: -100;
   padding-bottom: 10px;
   flex-direction: column;
+}
+
+.no-webp #tech {
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.jpeg') no-repeat;
+}
+
+.webp #tech {
+  background: linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .8)), url('/images/computer.webp') no-repeat;
 }
 
 #portfolio {
