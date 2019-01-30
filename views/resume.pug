@@ -13,21 +13,21 @@ block content
       #column-left
         #intro.section
           #personal-info
-            h1 #{dev_name}
-            h4 Full Stack Developer
+            h1= settings.name
+            h4= settings.jobTitle
           #contact-info
             .contact-line
               i.icon.fas.fa-envelope
-              a.text(href=`mailto:${email}`) #{email}
+              a.text(href=`mailto:${settings.email}`) #{settings.email}
             .contact-line
               i.icon.fab.fa-linkedin-in
-              a.text(href=`https://${linkedin_url}` target="_blank") #{linkedin_url}
+              a.text(href=`https://${settings.linkedinUrl}` target="_blank") #{settings.linkedinUrl}
             .contact-line
               i.icon.fab.fa-github
-              a.text(href=`https://${github_url}` target="_blank") #{github_url}
+              a.text(href=`https://${settings.githubUrl}` target="_blank") #{settings.githubUrl}
             .contact-line
               i.icon.fas.fa-link
-              a.text(href=`http://${website_url}` target="_blank") #{website_url}
+              a.text(href=`http://${settings.websiteUrl}` target="_blank") #{settings.websiteUrl}
             .contact-line
               i.icon.fas.fa-map-marker-alt
               .text Chautauqua, NY
@@ -41,20 +41,6 @@ block content
           p
             | Producing good quality code in a quick and efficient manner is important to me. I also enjoy going back
             | to my previous work and seeing what improvements and micro-optimizations could be made.
-        //- #projects.section
-        //-   h3.header Projects
-        //-   .project-wrapper
-        //-     .project Ultimate Fantasy Sports
-        //-     i.icon.fas.fa-link
-        //-     a(href="https://ufsports.com" target="_blank") ufsports.com
-        //-   .project-wrapper
-        //-     .project 59 Lucy Lane
-        //-     i.icon.fas.fa-link
-        //-     a(href="http://59lucylane.com" target="_blank") 59lucylane.com
-        //-   .project-wrapper
-        //-     .project Blackjack
-        //-     i.icon.fas.fa-link
-        //-     a(href="https://github.com/jrs40492/blackjack" target="_blank") Github
         #personal-interests.section
           h3.header Personal Interests
           .interest-wrapper

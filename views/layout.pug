@@ -1,7 +1,7 @@
 doctype html
 html(lang="en")
   head
-    title #{page_title}
+    title= `${settings.name} ${page ? page : ''} - ${settings.jobTitle}`
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
     meta(name="description",content="Portfolio and resume for Jacob Swanson. A Full Stack Developer with 8+ years of experience.")
@@ -14,6 +14,7 @@ html(lang="en")
   body
     block content
     block foot
+
     block scripts
       script(src="http://code.jquery.com/jquery-3.3.1.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
       script(src="js/main.min.js")

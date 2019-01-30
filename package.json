@@ -11,9 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^6.2.0",
-    "dotenv-expand": "^4.2.0",
     "express": "^4.16.4",
-    "serve-favicon": "^2.5.0"
+    "firebase": "^5.8.1",
+    "serve-favicon": "^2.5.0",
+    "pug": "^2.0.3"
   },
   "devDependencies": {
     "grunt": "^1.0.3",
@@ -25,7 +26,6 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-express-server": "^0.5.4",
-    "pug": "^2.0.3"
+    "grunt-express-server": "^0.5.4"
   }
 }

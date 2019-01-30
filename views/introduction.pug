@@ -1,14 +1,14 @@
 #introduction.section
   #about.intro-row
-    h1 Hello, I'm #{dev_name}
-    h3 #{tag_line}
+    h1= `Hello, I'm ${settings.name}`
+    h3= `${settings.tagLine}`
   #links.intro-row
     a.button(href=`/resume`, role="button") Resumé
-    if twitter_url
-      a.icon(href=`https://${twitter_url}`,target="_blank",alt="Twitter",rel="noreferrer")
+    if settings.twitterUrl
+      a.icon(href=`https://${settings.twitterUrl}`,target="_blank",alt="Twitter",rel="noreferrer")
         i.fab.fa-twitter-square.fa-3x
-    if github_url
-      a.icon(href=`https://${github_url}`,target="_blank",alt="GitHub",rel="noreferrer")
+    if settings.githubUrl
+      a.icon(href=`https://${settings.githubUrl}`,target="_blank",alt="GitHub",rel="noreferrer")
         i.fab.fa-github-square.fa-3x
   #navigation.intro-row
     .button.scroll-btn(data-id="tech") Tech <i class="fas fa-angle-down"></i>

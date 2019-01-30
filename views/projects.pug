@@ -1,0 +1,18 @@
+.card.project-card
+  .card-header(style=`background-color:#${project.data.accentColor}`)
+    span= project.data.title
+  .card-body
+    if project.data.imageFallback || project.data.image
+      picture
+        source(srcset=`${imagePath}${project.data.image}`, type="image/webp")
+        source(srcset=`${imagePath}${project.data.imageFallback}`)
+        img.project-image(src=`${imagePath}${project.data.imageFallback}`, alt="")
+    p= project.data.description
+    .card-body-title Technology Used
+    if project.data.tech
+      ul
+        each tech in project.data.tech
+          li= tech
+  if project.data.link
+    .card-footer
+      a.link(href=`${project.data.link}`,target="_blank",rel="noopener") Visit <i class="fas fa-external-link-alt"></i>

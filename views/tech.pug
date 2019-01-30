@@ -2,55 +2,11 @@
   #tech-gradient
   .section-header Technology
   .card-group
-    .tech-card.card
-      .card-header
-        span Languages
-      .card-body
-        ul
-          li PHP
-          li MySQL
-          li T-SQL
-          li Oracle SQL
-          li Typescript
-          li ES6
-          li VB.NET
-          li .NET
-          li C++
-          li C#
-          li Swift
-          li Java
-    .tech-card.card
-      .card-header Web
-      .card-body
-        ul
-          li HTML5
-          li CSS3/SASS
-          li Javascript
-          li jQuery
-          li Node.js
-          li Angular
-          li Accessability
-    .tech-card.card
-      .card-header Software & IDEs
-      .card-body
-        ul
-          li Git/GitHub
-          li Jira
-          li Codekit
-          li Visual Studio
-          li Visual Studio Code
-          li Sublime
-          li Atom
-          li Linux
-          li Windows
-          li macOS
-          li Apache
-          li Eclipse
-          li Kanban process
-    .tech-card.card
-      .card-header Interested in learning
-      .card-body
-        ul
-          li CI/CD with GitLab
-          li Python
-          li Ruby on Rails
+    for tech in technology
+      .tech-card.card
+        .card-header
+          span= tech.data.title
+        .card-body
+          ul
+            for item in tech.data.list
+              li= item

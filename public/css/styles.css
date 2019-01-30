@@ -150,17 +150,7 @@ ul {
   align-items: flex-start;
   justify-content: space-evenly;
   align-content: flex-start; }
-  #portfolio .bg-default {
-    color: white;
-    background-color: rgba(17, 22, 28, 0.8); }
-  #portfolio .bg-ufsports {
-    color: white;
-    background-color: #0960a5; }
-  #portfolio .bg-lucylane {
-    color: white;
-    background-color: #26327c; }
-  #portfolio .bg-blackjack {
-    color: white;
-    background-color: #165006; }
+  #portfolio .card-header {
+    color: white; }
 
 /*# sourceMappingURL=styles.css.map */

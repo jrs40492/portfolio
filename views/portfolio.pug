@@ -1,7 +1,5 @@
 #portfolio.section
   .section-header Portfolio
   .card-group
-    include projects/jacobrswanson.pug
-    include projects/ufsports.pug
-    include projects/59lucylane.pug
-    include projects/blackjack.pug
+    each project in projects
+      include projects.pug

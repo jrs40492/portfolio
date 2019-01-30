@@ -1,19 +1,44 @@
 # Jacob R Swanson
-Even though most developers will probably build their own site to showcase their talents, I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
+Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
 
 ### Setup & Installation
 1. Run "npm install"
-2. Create .env file in top directory
-3. Copy contents of .env.example to .env file
-4. Populate with desired values
-5. Run "Grunt dev"
-6. Navigate to <a href="http://localhost:3000">localhost:3000</a>
+2. Create .env based on .env.example
+3. Set up Firebase (see scheme below)
+4. Run "Grunt dev"
+5. Navigate to <localhost:3000>
+
+
+## Firebase Schema
+
+### projects > [document name]
+- accentColor (String)
+- description (String)
+- image (String)
+- imageFallback (String)
+- order (Number)
+- tech (Array)
+- title (String)
+
+### settings > site
+- email (String)
+- githubUrl (String)
+- jobTitle (String)
+- linkedinUrl (String)
+- name (String)
+- tagLine (String)
+- twitterUrl (String)
+- websiteUrl (String)
+
+### tech > [document name]
+- list (Array)
+- order (Number)
+- title (String)
 
 
 ### TODO
 * Add full user accessibility
-* Ability to dynamically add projects
-* Add backend to easily change wording and resume
+* Add resume setup/layout to firebase
 
 ### Ideas
 * Add a blog

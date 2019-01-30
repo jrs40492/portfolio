@@ -98,23 +98,7 @@ ul {
   justify-content: space-evenly;
   align-content: flex-start;
 
-  .bg-default {
+  .card-header {
     color: white;
-    background-color: rgba(17, 22, 28, .8);
-  }
-
-  .bg-ufsports {
-    color: white;
-    background-color: #0960a5;
-  }
-
-  .bg-lucylane {
-    color: white;
-    background-color: lighten(#1a2255, 10%);
-  }
-
-  .bg-blackjack {
-    color: white;
-    background-color: darken(#1d6808, 5%);
   }
 }
