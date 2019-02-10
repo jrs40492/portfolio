@@ -52,7 +52,8 @@ h4 {
   #resume-wrapper #resume {
     display: flex;
     width: 8.5in;
-    height: 11in;
+    max-width: 8.5in;
+    max-height: 11in;
     background-color: white;
     -webkit-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
@@ -90,6 +91,8 @@ h4 {
       #resume-wrapper #resume #column-left #projects,
       #resume-wrapper #resume #column-left #personal-interests {
         background-color: #cae6fc; }
+      #resume-wrapper #resume #column-left #about p {
+        font-size: 1.1em; }
       #resume-wrapper #resume #column-left #projects .project-wrapper {
         padding: 0 0 .8rem 0; }
         #resume-wrapper #resume #column-left #projects .project-wrapper .project {
