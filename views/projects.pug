@@ -1,27 +1,33 @@
 .card.project-card
-  .card-header(style=`background-color:#${project.data.accentColor}`)
+  .card-header(style=`background-color:#${project.data.accentColor};color:#${project.data.color || 'FFFFFF'}`)
     span= project.data.title
   .card-body
-    if project.data.imageFallback || project.data.image
-      picture
-        source(srcset=`${imagePath}${project.data.image}`, type="image/webp")
-        source(srcset=`${imagePath}${project.data.imageFallback}`)
-        img.project-image(src=`${imagePath}${project.data.imageFallback}`, alt="")
+    //- if project.data.imageFallback || project.data.image
+    //-   picture
+    //-     source(srcset=`${imagePath}${project.data.image}`, type="image/webp")
+    //-     source(srcset=`${imagePath}${project.data.imageFallback}`)
+    //-     img.project-image(src=`${imagePath}${project.data.imageFallback}`, alt="")
     p= project.data.description
     .card-body-title Technology Used
     if project.data.tech
       ul
         each tech in project.data.tech
           li= tech
-  if project.data.link
+  if project.data.link || project.data.retired || project.data.sourceLink
     .card-footer
-      .card-footer-left
-        if project.data.link
-          a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye"></i>
-      .card-footer-right
-        if project.data.sourceLink
-          a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye"></i>
-        else
-          span Source Private <i class="fa fa-eye-slash"></i>
+      if !project.data.retired
+        .card-footer-left
+          if project.data.link
+            a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+          else
+            span No Link <i class="far fa-frown-open"></i>
+        .card-footer-right
+          if project.data.sourceLink
+            a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye" aria-hidden="true"></i>
+          else
+            span Source Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
+      else
+        .card-footer-full
+          span Project Retired <i class="far fa-frown-open" aria-hidden="true"></i>
 
 

@@ -44,6 +44,7 @@ a.link {
 .card {
   background-color: white;
   border-radius: 5px;
+  margin: 0 0 10px 0;
   flex: 0 0 23%;
   overflow: hidden; }
   .card .card-header,
@@ -67,11 +68,16 @@ a.link {
     align-items: center;
     justify-content: center; }
     .card .card-footer .card-footer-left,
-    .card .card-footer .card-footer-right {
+    .card .card-footer .card-footer-right,
+    .card .card-footer .card-footer-full {
       display: flex;
-      flex: 0 0 50%;
       justify-content: center;
       padding: 10px 0; }
+    .card .card-footer .card-footer-left,
+    .card .card-footer .card-footer-right {
+      flex: 0 0 50%; }
+    .card .card-footer .card-footer-full {
+      flex: 0 0 100%; }
     .card .card-footer .card-footer-left {
       border-right: 1px solid #d8d8d8; }
 

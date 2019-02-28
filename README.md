@@ -25,6 +25,7 @@ Most developers will probably build their own site to showcase their talents but
 - title (String)
 - link (String)
 - sourceLink (String)
+- retired (Boolean)
 
 ### settings > site
 
