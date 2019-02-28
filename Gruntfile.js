@@ -156,7 +156,6 @@ module.exports = grunt => {
 
   grunt.registerTask('dev', [
     'express',
-    'imagemin',
     'uglify',
     'cssmin',
     'watch',

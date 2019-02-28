@@ -4,12 +4,15 @@
     h3= `${settings.tagLine}`
   #links.intro-row
     a.button(href=`/resume`, role="button") Resumé
-    if settings.twitterUrl
-      a.icon(href=`https://${settings.twitterUrl}`,target="_blank",alt="Twitter",rel="noreferrer")
-        i.fab.fa-twitter-square.fa-3x
+    if settings.stackoverflowUrl
+      a.icon(href=`https://${settings.stackoverflowUrl}`,target="_blank",alt="Stack Overflow",rel="noreferrer")
+        i.fab.fa-stack-overflow.fa-3x
     if settings.githubUrl
       a.icon(href=`https://${settings.githubUrl}`,target="_blank",alt="GitHub",rel="noreferrer")
         i.fab.fa-github-square.fa-3x
+    if settings.linkedinUrl
+      a.icon(href=`https://${settings.linkedinUrl}`,target="_blank",alt="LinkedIn",rel="noreferrer")
+        i.fab.fa-linkedin.fa-3x
   #navigation.intro-row
     .button.scroll-btn(data-id="tech") Tech <i class="fas fa-angle-down"></i>
     .button.scroll-btn(data-id="portfolio") Portfolio <i class="fas fa-angle-down"></i>

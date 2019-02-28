@@ -1,4 +1,4 @@
-# Jacob R Swanson
+# Portfolio
 
 Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
 
@@ -34,8 +34,8 @@ Most developers will probably build their own site to showcase their talents but
 - linkedinUrl (String)
 - name (String)
 - tagLine (String)
-- twitterUrl (String)
 - websiteUrl (String)
+- stackoverflowUrl (String)
 
 ### tech > [document name]
 
