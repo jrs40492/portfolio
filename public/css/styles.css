@@ -81,7 +81,11 @@ a.link {
     .card .card-footer .card-footer-left {
       border-right: 1px solid #d8d8d8; }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
+  .card-group .card {
+    flex: 0 0 32%;
+    margin: 1vh 0; } }
+@media only screen and (max-width: 900px) {
   .card-group .card {
     flex: 0 0 47%;
     margin: 1vh 0; } }

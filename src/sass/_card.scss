@@ -67,7 +67,16 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
+  .card-group {
+    .card {
+      flex: 0 0 32%;
+      margin: 1vh 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
   .card-group {
     .card {
       flex: 0 0 47%;
