@@ -1,4 +1,8 @@
-module.exports = (grunt) => {
+const webp = require('imagemin-webp');
+const png = require('imagemin-optipng');
+const jpeg = require('imagemin-jpegtran');
+
+module.exports = grunt => {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     compass: {
@@ -22,14 +26,18 @@ module.exports = (grunt) => {
       },
       css: {
         files: ['src/sass/*.scss'],
-        tasks: ['sass', 'cssmin'],
+        tasks: ['sass', 'cssmin']
       },
       pug: {
-        files: ['views/*.pug', 'views/projects/*.pug'],
+        files: ['views/*.pug', 'views/projects/*.pug']
       },
       scripts: {
         files: ['src/js/*.js'],
-        tasks: ['concat', 'jshint'],
+        tasks: ['concat', 'jshint']
+      },
+      images: {
+        files: ['src/images/*'],
+        tasks: ['imagemin']
       }
     },
     sass: {
@@ -38,8 +46,8 @@ module.exports = (grunt) => {
           compass: true
         },
         files: {
-          "public/css/styles.css": "src/sass/styles.scss",
-          "public/css/resume.css": "src/sass/resume.scss"
+          'public/css/styles.css': 'src/sass/styles.scss',
+          'public/css/resume.css': 'src/sass/resume.scss'
         }
       }
     },
@@ -87,12 +95,53 @@ module.exports = (grunt) => {
       beforeconcat: ['Gruntfile.js', 'src/js/*.js', 'test/js/*.js'],
       afterconcat: ['public/js/main.js'],
       options: {
-        "esversion": 6,
+        esversion: 6,
         globals: {
           $: true
         }
       }
     },
+    imagemin: {
+      webp: {
+        options: {
+          use: [
+            webp({
+              quality: 75
+            })
+          ]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{png,jpg,jpeg,gif}'],
+          dest: 'public/images',
+          ext: '.webp'
+        }]
+      },
+      png: {
+        options: {
+          use: [png()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.png'],
+          dest: 'public/images'
+        }]
+      },
+      jpeg: {
+        options: {
+          use: [jpeg()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{jpg,jpeg}'],
+          dest: 'public/images',
+          ext: '.jpg'
+        }]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -101,9 +150,15 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks('grunt-contrib-uglify-es');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('dev', ['express', 'uglify', 'cssmin', 'watch']);
-
+  grunt.registerTask('dev', [
+    'express',
+    'imagemin',
+    'uglify',
+    'cssmin',
+    'watch',
+  ]);
 };

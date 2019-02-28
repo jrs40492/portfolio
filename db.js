@@ -1,6 +1,5 @@
 const dotenv = require('dotenv');
-const firebase = require('firebase');
-require('firebase/app');
+const firebase = require('firebase/app');
 require('firebase/firestore');
 
 dotenv.config()

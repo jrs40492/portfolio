@@ -47,8 +47,7 @@ a.link {
   flex: 0 0 23%;
   overflow: hidden; }
   .card .card-header,
-  .card .card-body,
-  .card .card-footer {
+  .card .card-body {
     padding: 10px 15px; }
   .card .card-header {
     font-size: 2vh;
@@ -71,7 +70,8 @@ a.link {
     .card .card-footer .card-footer-right {
       display: flex;
       flex: 0 0 50%;
-      justify-content: center; }
+      justify-content: center;
+      padding: 10px 0; }
     .card .card-footer .card-footer-left {
       border-right: 1px solid #d8d8d8; }
 
@@ -95,7 +95,8 @@ ul {
   min-height: 100vh;
   display: block;
   background-size: cover;
-  background-color: #0d8aee; }
+  background-color: #0d8aee;
+  padding: 0 0 10px 0; }
   .section .section-header {
     flex: 0 0 100%;
     color: white;

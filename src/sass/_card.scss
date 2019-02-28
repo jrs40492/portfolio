@@ -13,8 +13,7 @@
   overflow: hidden;
 
   .card-header,
-  .card-body,
-  .card-footer {
+  .card-body {
     padding: 10px 15px;
   }
 
@@ -49,6 +48,7 @@
       display: flex;
       flex: 0 0 50%;
       justify-content: center;
+      padding: 10px 0;
     }
 
     .card-footer-left {

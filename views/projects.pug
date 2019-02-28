@@ -15,4 +15,13 @@
           li= tech
   if project.data.link
     .card-footer
-      a.link(href=`${project.data.link}`,target="_blank",rel="noopener") Visit <i class="fas fa-external-link-alt"></i>
+      .card-footer-left
+        if project.data.link
+          a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye"></i>
+      .card-footer-right
+        if project.data.sourceLink
+          a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye"></i>
+        else
+          span Source Private <i class="fa fa-eye-slash"></i>
+
+
