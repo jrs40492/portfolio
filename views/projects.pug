@@ -8,7 +8,7 @@
     //-     source(srcset=`${imagePath}${project.data.imageFallback}`)
     //-     img.project-image(src=`${imagePath}${project.data.imageFallback}`, alt="")
     p= project.data.description
-    .card-body-title Technology Used
+    .card-body-title Tech Used
     if project.data.tech
       ul
         each tech in project.data.tech
@@ -18,7 +18,10 @@
       if !project.data.retired
         .card-footer-left
           if project.data.link
-            a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+            if project.data.link === "self"
+              span You're on it!
+            else
+              a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
           else
             span No Link <i class="far fa-frown-open"></i>
         .card-footer-right

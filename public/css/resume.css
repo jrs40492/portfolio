@@ -15,7 +15,7 @@ p {
   padding: 0 0 .4rem 0; }
 
 * {
-  font-size: .9rem; }
+  font-size: 0.9rem; }
 
 h1 {
   font-size: 2em; }
@@ -46,7 +46,7 @@ h4 {
     #resume-wrapper #back-button a span {
       font-size: 1.2rem; }
     #resume-wrapper #back-button a i {
-      margin: 0 .5rem 0 0; }
+      margin: 0 0.5rem 0 0; }
     #resume-wrapper #back-button a:hover i {
       text-decoration: underline; }
   #resume-wrapper #resume {
@@ -65,8 +65,8 @@ h4 {
     #resume-wrapper #resume .header {
       color: #0960a5;
       border-bottom: 1px solid #0960a5;
-      margin: 0 0 .5rem 0;
-      padding: 0 0 .5rem 0; }
+      margin: 0 0 0.5rem 0;
+      padding: 0 0 0.5rem 0; }
     #resume-wrapper #resume #column-left {
       flex: 0 0 35%; }
       #resume-wrapper #resume #column-left .section {
@@ -94,14 +94,14 @@ h4 {
       #resume-wrapper #resume #column-left #about p {
         font-size: 1.1em; }
       #resume-wrapper #resume #column-left #projects .project-wrapper {
-        padding: 0 0 .8rem 0; }
+        padding: 0 0 0.8rem 0; }
         #resume-wrapper #resume #column-left #projects .project-wrapper .project {
           font-weight: 600; }
         #resume-wrapper #resume #column-left #projects .project-wrapper i,
         #resume-wrapper #resume #column-left #projects .project-wrapper a {
           color: #0960a5; }
         #resume-wrapper #resume #column-left #projects .project-wrapper a {
-          padding: 0 0 0 .5rem; }
+          padding: 0 0 0 0.5rem; }
       #resume-wrapper #resume #column-left #personal-interests {
         flex: 1 0 auto;
         padding-bottom: 1.2rem; }
@@ -122,7 +122,7 @@ h4 {
               border-radius: 50%;
               align-items: center;
               background-color: #0960a5;
-              margin: .5rem 0 .3rem 0; }
+              margin: 0.5rem 0 0.3rem 0; }
               #resume-wrapper #resume #column-left #personal-interests .interest-wrapper .interest-group .circle i {
                 width: 100%;
                 color: white; }
@@ -135,52 +135,51 @@ h4 {
         flex: 1 1 auto;
         justify-content: space-evenly; }
       #resume-wrapper #resume #column-right .employment {
-        padding: .5rem 0 .5rem 1.2rem; }
+        padding: 0.5rem 0 0.5rem 1.2rem; }
         #resume-wrapper #resume #column-right .employment.bottom-border {
           border-bottom: 1px solid #cae6fc; }
         #resume-wrapper #resume #column-right .employment .position {
           font-size: 1.2em;
           font-weight: 600;
           color: #0960a5;
-          padding: 0 0 .2rem 0; }
+          padding: 0 0 0.2rem 0; }
         #resume-wrapper #resume #column-right .employment .company-line {
-          padding: 0 0 .2rem 0; }
+          padding: 0 0 0.2rem 0; }
           #resume-wrapper #resume #column-right .employment .company-line .company {
             font-weight: 600; }
           #resume-wrapper #resume #column-right .employment .company-line .dates {
-            padding: 0 0 0 .3rem; }
+            padding: 0 0 0 0.3rem; }
         #resume-wrapper #resume #column-right .employment .tools-line label {
           font-weight: 600; }
         #resume-wrapper #resume #column-right .employment .tools-line .tools {
-          padding: 0 0 0 .3rem; }
+          padding: 0 0 0 0.3rem; }
         #resume-wrapper #resume #column-right .employment .duties {
           padding: 0 0 0 1.2rem; }
           #resume-wrapper #resume #column-right .employment .duties li {
-            padding: .7rem 0 0 0; }
+            padding: 0.7rem 0 0 0; }
       #resume-wrapper #resume #column-right #education .college {
         font-weight: 600; }
       #resume-wrapper #resume #column-right #education .dates {
         padding: 0 0 0 3px; }
       #resume-wrapper #resume #column-right #skills .skills-wrapper {
-        display: flex;
-        padding: 1rem 0 0 0; }
+        display: flex; }
         #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group {
           display: flex;
           flex-direction: column;
-          flex: 0 0 50%; }
+          flex: 0 0 33%; }
           #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group:first-child {
             padding: 0 1rem 0 0; }
           #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line {
             display: flex;
             width: 100%;
-            margin: 0 0 .5rem 0;
+            margin: 0 0 0.5rem 0;
             align-items: center; }
             #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line .skill {
               flex: 1 0 auto;
               font-weight: 600; }
             #resume-wrapper #resume #column-right #skills .skills-wrapper .skills-group .skill-line i {
               flex: 0 0 auto;
-              padding: 0 .3rem 0 0;
+              padding: 0 0.3rem 0 0;
               color: #0960a5; }
 
 @media only screen and (max-width: 8.5in) {
@@ -190,7 +189,10 @@ h4 {
       left: 84vw; }
     #resume-wrapper #resume {
       width: 100%;
-      flex-direction: column; }
+      flex-direction: column;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none; }
       #resume-wrapper #resume #column-left,
       #resume-wrapper #resume #column-right {
         flex: 1 0 auto; }
@@ -203,10 +205,7 @@ h4 {
       left: 75vw; }
     #resume-wrapper #resume {
       width: 100%;
-      flex-direction: column;
-      box-shadow: none;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none; }
+      flex-direction: column; }
       #resume-wrapper #resume #column-left,
       #resume-wrapper #resume #column-right {
         flex: 1 0 auto; }

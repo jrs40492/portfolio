@@ -1,11 +1,11 @@
-@import "variables";
-@import "global";
+@import 'variables';
+@import 'global';
 
 $secondary-color: lighten(#0960a5, 55%);
 $secondary-font: $primary-color;
 
 * {
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 h1 {
@@ -40,14 +40,13 @@ h4 {
     align-items: center;
 
     a {
-
       i,
       span {
         font-size: 1.2rem;
       }
 
       i {
-        margin: 0 .5rem 0 0;
+        margin: 0 0.5rem 0 0;
       }
 
       &:hover i {
@@ -75,8 +74,8 @@ h4 {
     .header {
       color: $primary-color;
       border-bottom: 1px solid $primary-color;
-      margin: 0 0 .5rem 0;
-      padding: 0 0 .5rem 0;
+      margin: 0 0 0.5rem 0;
+      padding: 0 0 0.5rem 0;
     }
 
     #column-left {
@@ -128,7 +127,7 @@ h4 {
 
       #projects {
         .project-wrapper {
-          padding: 0 0 .8rem 0;
+          padding: 0 0 0.8rem 0;
 
           .project {
             font-weight: 600;
@@ -140,7 +139,7 @@ h4 {
           }
 
           a {
-            padding: 0 0 0 .5rem;
+            padding: 0 0 0 0.5rem;
           }
         }
       }
@@ -168,7 +167,7 @@ h4 {
               border-radius: 50%;
               align-items: center;
               background-color: $primary-color;
-              margin: .5rem 0 .3rem 0;
+              margin: 0.5rem 0 0.3rem 0;
 
               i {
                 width: 100%;
@@ -194,7 +193,7 @@ h4 {
       }
 
       .employment {
-        padding: .5rem 0 .5rem 1.2rem;
+        padding: 0.5rem 0 0.5rem 1.2rem;
 
         &.bottom-border {
           border-bottom: 1px solid $secondary-color;
@@ -204,18 +203,18 @@ h4 {
           font-size: 1.2em;
           font-weight: 600;
           color: $primary-color;
-          padding: 0 0 .2rem 0;
+          padding: 0 0 0.2rem 0;
         }
 
         .company-line {
-          padding: 0 0 .2rem 0;
+          padding: 0 0 0.2rem 0;
 
           .company {
             font-weight: 600;
           }
 
           .dates {
-            padding: 0 0 0 .3rem;
+            padding: 0 0 0 0.3rem;
           }
         }
 
@@ -225,7 +224,7 @@ h4 {
           }
 
           .tools {
-            padding: 0 0 0 .3rem;
+            padding: 0 0 0 0.3rem;
           }
         }
 
@@ -233,7 +232,7 @@ h4 {
           padding: 0 0 0 1.2rem;
 
           li {
-            padding: .7rem 0 0 0;
+            padding: 0.7rem 0 0 0;
           }
         }
       }
@@ -251,12 +250,11 @@ h4 {
       #skills {
         .skills-wrapper {
           display: flex;
-          padding: 1rem 0 0 0;
 
           .skills-group {
             display: flex;
             flex-direction: column;
-            flex: 0 0 50%;
+            flex: 0 0 33%;
 
             &:first-child {
               padding: 0 1rem 0 0;
@@ -265,7 +263,7 @@ h4 {
             .skill-line {
               display: flex;
               width: 100%;
-              margin: 0 0 .5rem 0;
+              margin: 0 0 0.5rem 0;
               align-items: center;
 
               .skill {
@@ -275,7 +273,7 @@ h4 {
 
               i {
                 flex: 0 0 auto;
-                padding: 0 .3rem 0 0;
+                padding: 0 0.3rem 0 0;
                 color: $primary-color;
               }
             }
@@ -297,6 +295,9 @@ h4 {
     #resume {
       width: 100%;
       flex-direction: column;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
 
       #column-left,
       #column-right {
@@ -323,9 +324,6 @@ h4 {
     #resume {
       width: 100%;
       flex-direction: column;
-      box-shadow: none;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
 
       #column-left,
       #column-right {
