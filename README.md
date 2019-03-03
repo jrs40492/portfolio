@@ -16,9 +16,7 @@ Most developers will probably build their own site to showcase their talents but
 
 ### projects > [document name]
 
-- color (String)
-- accentColor (String)
-- description (String)=
+- description (String)
 - order (Number)
 - tech (Array)
 - title (String)

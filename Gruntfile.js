@@ -101,47 +101,47 @@ module.exports = grunt => {
         }
       }
     },
-    // imagemin: {
-    //   webp: {
-    //     options: {
-    //       use: [
-    //         webp({
-    //           quality: 75
-    //         })
-    //       ]
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'src/images/',
-    //       src: ['**/*.{png,jpg,jpeg,gif}'],
-    //       dest: 'public/images',
-    //       ext: '.webp'
-    //     }]
-    //   },
-    //   png: {
-    //     options: {
-    //       use: [png()]
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'src/images/',
-    //       src: ['**/*.png'],
-    //       dest: 'public/images'
-    //     }]
-    //   },
-    //   jpeg: {
-    //     options: {
-    //       use: [jpeg()]
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'src/images/',
-    //       src: ['**/*.{jpg,jpeg}'],
-    //       dest: 'public/images',
-    //       ext: '.jpg'
-    //     }]
-    //   }
-    // }
+    imagemin: {
+      webp: {
+        options: {
+          use: [
+            webp({
+              quality: 75
+            })
+          ]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{png,jpg,jpeg,gif}'],
+          dest: 'public/images',
+          ext: '.webp'
+        }]
+      },
+      png: {
+        options: {
+          use: [png()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.png'],
+          dest: 'public/images'
+        }]
+      },
+      jpeg: {
+        options: {
+          use: [jpeg()]
+        },
+        files: [{
+          expand: true,
+          cwd: 'src/images/',
+          src: ['**/*.{jpg,jpeg}'],
+          dest: 'public/images',
+          ext: '.jpg'
+        }]
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-compass');
@@ -159,5 +159,6 @@ module.exports = grunt => {
     'uglify',
     'cssmin',
     'watch',
+    'imagemin'
   ]);
 };

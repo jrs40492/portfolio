@@ -1,3 +1,8 @@
+@import 'variables';
+@import 'button';
+@import 'links';
+@import 'card';
+
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +14,8 @@
 a {
   color: white;
   text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 p {
-  padding: 0 0 .4rem 0;
+  padding: 0 0 0.4rem 0;
 }

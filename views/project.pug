@@ -1,12 +1,7 @@
 .card.project-card
-  .card-header(style=`background-color:#${project.data.accentColor};color:#${project.data.color || 'FFFFFF'}`)
+  .card-header
     span= project.data.title
   .card-body
-    //- if project.data.imageFallback || project.data.image
-    //-   picture
-    //-     source(srcset=`${imagePath}${project.data.image}`, type="image/webp")
-    //-     source(srcset=`${imagePath}${project.data.imageFallback}`)
-    //-     img.project-image(src=`${imagePath}${project.data.imageFallback}`, alt="")
     p= project.data.description
     .card-body-title Tech Used
     if project.data.tech
@@ -23,14 +18,14 @@
             else
               a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
           else
-            span No Link <i class="far fa-frown-open"></i>
+            span No Link
         .card-footer-right
           if project.data.sourceLink
             a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fa fa-eye" aria-hidden="true"></i>
           else
-            span Source Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            span Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
       else
         .card-footer-full
-          span Project Retired <i class="far fa-frown-open" aria-hidden="true"></i>
+          span Project Retired
 
 

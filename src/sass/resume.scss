@@ -1,8 +1,4 @@
-@import 'variables';
 @import 'global';
-
-$secondary-color: lighten(#0960a5, 55%);
-$secondary-font: $primary-color;
 
 * {
   font-size: 0.9rem;
@@ -13,7 +9,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 h3 {
@@ -29,35 +25,24 @@ h4 {
   justify-content: center;
   align-items: center;
   background-image: radial-gradient(white, $primary-color);
-  padding: 3rem 0;
+  padding: 25px 0;
   min-height: 100vh;
 
   #back-button {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
-    display: flex;
-    align-items: center;
+    top: 15px;
+    left: 15px;
+    font-size: 1.2rem;
 
-    a {
-      i,
-      span {
-        font-size: 1.2rem;
-      }
-
-      i {
-        margin: 0 0.5rem 0 0;
-      }
-
-      &:hover i {
-        text-decoration: underline;
-      }
+    i {
+      margin: 0 5px 0 0;
     }
   }
 
   #resume {
     display: flex;
     width: 8.5in;
+    height: 11in;
     max-width: 8.5in;
     max-height: 11in;
     background-color: white;
@@ -71,25 +56,24 @@ h4 {
       flex-direction: column;
     }
 
-    .header {
-      color: $primary-color;
-      border-bottom: 1px solid $primary-color;
-      margin: 0 0 0.5rem 0;
-      padding: 0 0 0.5rem 0;
-    }
-
     #column-left {
       flex: 0 0 35%;
 
       .section {
         flex: 0 0 auto;
-        padding: 1.4rem 2.2rem 0;
+        padding: 20px 25px 0;
+        color: $primary-font;
+      }
+
+      .header {
+        border-bottom: 1px solid $primary-font;
+        margin: 0 0 5px 0;
+        padding: 0 0 2px 0;
       }
 
       #intro {
         background-color: $primary-color;
-        color: white;
-        padding-bottom: 1.4rem;
+        padding-bottom: 25px;
 
         #personal-info {
           padding: 0 0 12px 0;
@@ -114,9 +98,8 @@ h4 {
       }
 
       #about,
-      #projects,
-      #personal-interests {
-        background-color: $secondary-color;
+      #skills {
+        background-color: darken($secondary-color, 2%);
       }
 
       #about {
@@ -125,58 +108,17 @@ h4 {
         }
       }
 
-      #projects {
-        .project-wrapper {
-          padding: 0 0 0.8rem 0;
-
-          .project {
-            font-weight: 600;
-          }
-
-          i,
-          a {
-            color: $primary-color;
-          }
-
-          a {
-            padding: 0 0 0 0.5rem;
-          }
-        }
-      }
-
-      #personal-interests {
+      #skills {
         flex: 1 0 auto;
-        padding-bottom: 1.2rem;
-
-        .interest-wrapper {
+        .skills-wrapper {
           display: flex;
-          flex-wrap: wrap;
 
-          .interest-group {
-            display: flex;
-            flex: 1 0 auto;
-            flex-direction: column;
-            align-items: center;
+          .skills-group {
+            flex: 0 0 50%;
 
-            .circle {
-              display: flex;
-              justify-content: center;
-              text-align: center;
-              width: 4rem;
-              height: 4rem;
-              border-radius: 50%;
-              align-items: center;
-              background-color: $primary-color;
-              margin: 0.5rem 0 0.3rem 0;
-
-              i {
-                width: 100%;
-                color: $primary-font;
-              }
-            }
-
-            .interest {
+            .skill {
               font-weight: 600;
+              margin: 6px 0;
             }
           }
         }
@@ -187,13 +129,34 @@ h4 {
       flex: 0 0 65%;
       padding: 20px;
 
+      .header {
+        color: $primary-color;
+        border-bottom: 1px solid $primary-color;
+        margin: 0 0 5px 0;
+        padding: 0 0 2px 0;
+      }
+
+      .tools-line {
+        label {
+          font-weight: 600;
+        }
+
+        .tools {
+          padding: 0 0 0 3px;
+        }
+      }
+
       .section {
         flex: 1 1 auto;
         justify-content: space-evenly;
+
+        .sub-section {
+          padding-left: 15px;
+        }
       }
 
       .employment {
-        padding: 0.5rem 0 0.5rem 1.2rem;
+        padding: 5px 0 5px;
 
         &.bottom-border {
           border-bottom: 1px solid $secondary-color;
@@ -203,36 +166,26 @@ h4 {
           font-size: 1.2em;
           font-weight: 600;
           color: $primary-color;
-          padding: 0 0 0.2rem 0;
+          padding: 0 0 2px 0;
         }
 
         .company-line {
-          padding: 0 0 0.2rem 0;
+          padding: 0 0 2px 0;
 
           .company {
             font-weight: 600;
           }
 
           .dates {
-            padding: 0 0 0 0.3rem;
-          }
-        }
-
-        .tools-line {
-          label {
-            font-weight: 600;
-          }
-
-          .tools {
-            padding: 0 0 0 0.3rem;
+            padding: 0 0 0 3px;
           }
         }
 
         .duties {
-          padding: 0 0 0 1.2rem;
+          padding: 0 0 0 15px;
 
           li {
-            padding: 0.7rem 0 0 0;
+            padding: 10px 0 0 0;
           }
         }
       }
@@ -247,36 +200,29 @@ h4 {
         }
       }
 
-      #skills {
-        .skills-wrapper {
-          display: flex;
+      #projects {
+        .project-wrapper {
+          padding: 5px 0 0 0;
 
-          .skills-group {
-            display: flex;
-            flex-direction: column;
-            flex: 0 0 33%;
+          &.bottom-border {
+            border-bottom: 1px solid $secondary-color;
+          }
 
-            &:first-child {
-              padding: 0 1rem 0 0;
+          .project-line {
+            padding: 0 0 5px 0;
+
+            .project {
+              font-weight: bold;
             }
 
-            .skill-line {
-              display: flex;
-              width: 100%;
-              margin: 0 0 0.5rem 0;
-              align-items: center;
-
-              .skill {
-                flex: 1 0 auto;
-                font-weight: 600;
-              }
-
-              i {
-                flex: 0 0 auto;
-                padding: 0 0.3rem 0 0;
-                color: $primary-color;
-              }
+            a {
+              padding: 0 0 0 3px;
+              color: $primary-color;
             }
+          }
+
+          .tools-line {
+            padding-bottom: 5px;
           }
         }
       }
@@ -337,26 +283,6 @@ h4 {
           .interest-wrapper {
             .interest-group {
               flex: 1 0 33%;
-            }
-          }
-        }
-      }
-
-      #column-right {
-        #skills {
-          .skills-wrapper {
-            flex-direction: column;
-
-            .skills-group {
-              &:first-child {
-                padding: 0;
-              }
-
-              .skill-line {
-                .skill {
-                  flex: 0 0 35%;
-                }
-              }
             }
           }
         }
