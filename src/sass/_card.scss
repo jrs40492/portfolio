@@ -2,11 +2,12 @@
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-evenly;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 5px;
   margin: 0 0 10px 0;
@@ -24,9 +25,12 @@
     color: white;
     border-bottom: 1px solid $border-color;
     background-color: $primary-color;
+    flex: 0 0 auto;
   }
 
   .card-body {
+    flex: 1 1 auto;
+
     .card-body-title {
       text-decoration: underline;
       font-weight: 600;
@@ -40,6 +44,7 @@
     border-top: 1px solid $border-color;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
 
     .card-footer-left,
     .card-footer-right,

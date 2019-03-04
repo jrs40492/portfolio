@@ -93,5 +93,5 @@ ul {
   align-items: flex-start;
   justify-content: space-evenly;
   align-content: flex-start;
-  background-image: $secondary-color;
+  background-color: lighten($secondary-color, 10%);
 }

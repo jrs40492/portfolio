@@ -23,10 +23,11 @@ a.link {
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-evenly; }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border-radius: 5px;
   margin: 0 0 10px 0;
@@ -40,17 +41,21 @@ a.link {
     font-weight: 600;
     color: white;
     border-bottom: 1px solid #d8d8d8;
-    background-color: #0960a5; }
-  .card .card-body .card-body-title {
-    text-decoration: underline;
-    font-weight: 600;
-    font-size: 2.5vh;
-    padding: 5px 0; }
+    background-color: #0960a5;
+    flex: 0 0 auto; }
+  .card .card-body {
+    flex: 1 1 auto; }
+    .card .card-body .card-body-title {
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 2.5vh;
+      padding: 5px 0; }
   .card .card-footer {
     display: flex;
     border-top: 1px solid #d8d8d8;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    flex: 0 0 auto; }
     .card .card-footer .card-footer-left,
     .card .card-footer .card-footer-right,
     .card .card-footer .card-footer-full {
