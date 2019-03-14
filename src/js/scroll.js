@@ -28,12 +28,12 @@ const scroll_listen = e => {
   e.preventDefault();
 
   // Set scroll rate
-  const scrollRate = 10;
+  const scrollRate = 12;
   const target = e.srcElement.dataset.id;
 
   // Get offset from top of page
   const offset = document.getElementById(target).offsetTop;
-  call = setInterval(() => scroll(offset, scrollRate), 5);
+  call = setInterval(() => scroll(offset, scrollRate), 2);
 };
 
 // Add Event Listener to parent Element
