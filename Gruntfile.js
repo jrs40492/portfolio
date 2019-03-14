@@ -33,7 +33,7 @@ module.exports = grunt => {
       },
       scripts: {
         files: ['src/js/*.js'],
-        tasks: ['concat', 'jshint']
+        tasks: ['concat', 'uglify', 'jshint']
       },
       images: {
         files: ['src/images/*'],
@@ -55,33 +55,35 @@ module.exports = grunt => {
       options: {
         separator: ';',
         stripBanners: true,
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner:
+          '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       dist: {
-        src: ['src/js/*.js'],
-        dest: 'public/js/main.min.js'
+        src: ['src/js/*.js', '!src/js/main.js'],
+        dest: 'src/js/main.js'
       }
     },
     uglify: {
-      options: {
-        manage: false,
-        preserveComments: 'all'
-      },
       my_target: {
+        options: {
+          preserveComments: false
+        },
         files: {
-          'public/js/main.min.js': ['src/js/*.js']
+          'public/js/main.min.js': ['src/js/main.js']
         }
       }
     },
     cssmin: {
       my_target: {
-        files: [{
-          expand: true,
-          cwd: 'public/css/',
-          src: ['*.css', '!*.min.css'],
-          dest: 'public/css/',
-          ext: '.min.css'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'public/css/',
+            src: ['*.css', '!*.min.css'],
+            dest: 'public/css/',
+            ext: '.min.css'
+          }
+        ]
       }
     },
     express: {
@@ -92,13 +94,14 @@ module.exports = grunt => {
       }
     },
     jshint: {
-      beforeconcat: ['Gruntfile.js', 'src/js/*.js', 'test/js/*.js'],
-      afterconcat: ['public/js/main.js'],
+      beforeconcat: [
+        'Gruntfile.js',
+        'src/js/*.js',
+        '!src/js/modernizr.js',
+        '!src/js/main.js'
+      ],
       options: {
-        esversion: 6,
-        globals: {
-          $: true
-        }
+        esversion: 6
       }
     },
     imagemin: {
@@ -110,36 +113,42 @@ module.exports = grunt => {
             })
           ]
         },
-        files: [{
-          expand: true,
-          cwd: 'src/images/',
-          src: ['**/*.{png,jpg,jpeg,gif}'],
-          dest: 'public/images',
-          ext: '.webp'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images/',
+            src: ['**/*.{png,jpg,jpeg,gif}'],
+            dest: 'public/images',
+            ext: '.webp'
+          }
+        ]
       },
       png: {
         options: {
           use: [png()]
         },
-        files: [{
-          expand: true,
-          cwd: 'src/images/',
-          src: ['**/*.png'],
-          dest: 'public/images'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images/',
+            src: ['**/*.png'],
+            dest: 'public/images'
+          }
+        ]
       },
       jpeg: {
         options: {
           use: [jpeg()]
         },
-        files: [{
-          expand: true,
-          cwd: 'src/images/',
-          src: ['**/*.{jpg,jpeg}'],
-          dest: 'public/images',
-          ext: '.jpg'
-        }]
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images/',
+            src: ['**/*.{jpg,jpeg}'],
+            dest: 'public/images',
+            ext: '.jpg'
+          }
+        ]
       }
     }
   });
