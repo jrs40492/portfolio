@@ -1,5 +1,9 @@
 let call;
 
+document.onwheel = () => {
+  clearInterval(call);
+};
+
 const scroll = (offset, scrollRate) => {
   const difference = offset - document.documentElement.scrollTop;
 
@@ -16,7 +20,6 @@ const scroll = (offset, scrollRate) => {
     document.documentElement.scrollTop -= scrollRate;
     return;
   }
-  console.log(1);
 
   clearInterval(call);
 };
