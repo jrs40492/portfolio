@@ -9,111 +9,81 @@ block content
       i.fas.fa-angle-left
       | Back
     #resume
-      #column-left
+      header
         #intro.section
           #personal-info
             h1= settings.name
             h4= settings.jobTitle
           #contact-info
             .contact-line
-              i.icon.fas.fa-envelope
-              a.text(href=`mailto:${settings.email}`) #{settings.email}
-            .contact-line
-              i.icon.fab.fa-linkedin-in
-              a.text(href=`https://${settings.linkedinUrl}` target="_blank" rel="noreferrer") #{settings.linkedinUrl}
-            .contact-line
-              i.icon.fab.fa-github
-              a.text(href=`https://${settings.githubUrl}` target="_blank" rel="noreferrer") #{settings.githubUrl}
-            .contact-line
+              a(href=`http://${settings.websiteUrl}` target="_blank" rel="noreferrer") #{settings.websiteUrl}
               i.icon.fas.fa-link
-              a.text(href=`http://${settings.websiteUrl}` target="_blank" rel="noreferrer") #{settings.websiteUrl}
             .contact-line
-              i.icon.fas.fa-map-marker-alt
-              .text Chautauqua, NY
-        #about.section
-          h3.header About Me
-          p
-            | Hello, my name is Jacob. I am a full stack developer with more than 8 years of experience developing complex
-            | web applications. I enjoy developing new and exciting programs and features. I've also discovered I have
-            | a special skill for debugging code.  At my last place of employment, I quickly became the lead maintenance
-            | developer on over 30 projects and received the nickname "Super Jake" from the Help Desk support team.
-        #skills.section
-          h3.header Skills
-          .skills-wrapper
-            .skills-group
-              .skill HTML5
-              .skill CSS3
-              .skill SASS
-              .skill JavaScript
-              .skill jQuery
-              .skill PHP
-              .skill Node.js
-              .skill Vue.js
-              .skill Linux
-              .skill Webpack
-            .skills-group
-              .skill MySQL
-              .skill T-SQL
-              .skill MongoDB
-              .skill Oracle SQL
-              .skill Postgres
-              .skill C#
-              .skill .NET
-              .skill Bootstrap
-              .skill WordPress
-              .skill Apache
-      #column-right
+              a(href=`https://${settings.githubUrl}` target="_blank" rel="noreferrer") #{settings.githubUrl}
+              i.icon.fab.fa-github
+            .contact-line
+              a(href=`https://${settings.linkedinUrl}` target="_blank" rel="noreferrer") #{settings.linkedinUrl}
+              i.icon.fab.fa-linkedin-in
+            .contact-line
+              a(href=`mailto:${settings.email}`) #{settings.email}
+              i.icon.fas.fa-envelope
+
+      #body
         #work.section
-          h2.header Work Experience
+          h2.header Experience
           .sub-section
             .employment.bottom-border
-              .position Senior Software Engineer
-              .company-line
-                span.company Libera, Inc.
-                span.dates - 2015 to 2018 (In office/Remote)
-              .tools-line
+              .position-wrapper
+                span.position Senior Software Engineer
+                span.company - Libera, Inc.
+                span.dates 2015 to 2018
+              .tools-wrapper
                 label Tools:
                 span.tools
                   | C#, .NET, VB.NET, Node.js, Angular, T-SQL, Oracle, MongoDB, Postgres, Javascript, jQuery,
                   | Bootstrap, Webpack
               ul.duties
+                li Website and application maintenance/development across 20+ different products.
                 li
-                  | Website and application maintenance and development across 30 different projects.
+                  | Cleared the ticket investigation queue which contained hundreds of backlogged and unsolved
+                  | tickets. New tickets were being added daily.
                 li
-                  | Develop enhancements and corrections in two-week sprints, including thorough development testing
-                  | and documentation of work.
-                li Develop technical designs, complete with proof of concept, and/or prototype, and documentation.
+                  | Developed enhancements and corrections in two-week sprints, including thorough testing
+                  | and documentation.
                 li
-                  | Worked with team members and customers to ensure that requirements are well understood and capture
-                  | the customers' expectations.
+                  | Worked with teams and clients to ensure that requirements were understood and captured
+                  | their expectations.
             .employment.bottom-border
-              .position IT Manager & Software Developer
-              .company-line
-                span.company Self Employed
-                span.dates - 2013 to 2015
-              .tools-line
+              .position-wrapper
+                span.position Self Employed
+                span.dates 2013 to 2015
+              .tools-wrapper
                 label Tools:
                 span.tools LAMP stack, Javascript, jQuery, Joomla, Wordpress
               ul.duties
                 li Designed, built, and assisted with development of websites for several clients.
                 li
-                  | Troubleshoot and repaired personal computer problems for clients; including replacement of computer
+                  | Troubleshot and repaired personal computers for clients; including replacement of computer
                   | parts, virus removal, computer backup, and installation of new software.
             .employment
-              .position Software Developer
-              .company-line
-                span.company Juju Inc.
-                span.dates - 2013 to 2014 (Remote)
-              .tools-line
+              .position-wrapper
+                span.position Software Developer
+                span.company - Juju Inc.
+                span.dates 2013 to 2014
+              .tools-wrapper
                 label Tools:
                 span.tools Python, Javascript, Regex
               ul.duties
                 li Worked with others to develop code that scraped information using regular expressions.
                 li Inserted scraped data into backend database to populate website.
+
+
         #certificates.section
           h2.header Certificates
           .sub-section
             .certificate Programming in HTML5 with JavaScript and CSS3 - Microsoft
+
+
         #projects.section
           h2.header Projects
           .sub-section
@@ -121,28 +91,70 @@ block content
               .project-line
                 span.project Portfolio -
                 a(href="http://jacobrswanson.com" target="_blank" rel="noreferrer") jacobrswanson.com
-              .tools-line
+              .tools-wrapper
                 label Tools:
-                span.tools Node.js, NPM, HTML5, CSS/SASS, Pug, Grunt, Firebase, PM2, Digital Ocean
+                span.tools Node.js, NPM, Pug, Grunt, Firebase
             .project-wrapper.bottom-border
               .project-line
                 span.project Ultimate Fantasy Sports -
                 a(href="https://ufsports.com" target="blank" rel="noreferrer") ufsports.com
-              .tools-line
+              .tools-wrapper
                 label Tools:
-                span.tools LAMP stack, HTML5, CSS3, Javascript, jQuery, custom CSS/SASS library, phpMyAdmin, Digital Ocean
+                span.tools HTML5, CSS3,Javascript/jQuery, custom SASS library, PHP, MySQL
             .project-wrapper
               .project-line
                 span.project Data Table -
                 a(href="https://britecore-prod.firebaseapp.com" target="blank" rel="noreferrer") britecore-prod.firebaseapp.com
-              .tools-line
+              .tools-wrapper
                 label Tools:
-                span.tools Vue.js, Vuex, Vue-router, Firebase, Jest, CSV Parser, Lodash, PM2
+                span.tools Vue.js, Vuex, Vue-router, NPM, Firebase, Jest, CSV Parser, Lodash
+
+
         #education.section
           h2.header Education
           .sub-section
             .degree Associates of Science in Individual Studies with a focus on Computer Science
             span.college Jamestown Community College
             span.dates - 2012
+
+
+        #skills.section
+          h2.header Skills
+          #skills-wrapper
+            .skills-group
+              h3.skills-header Languages
+              .skills-list
+                .skill HTML
+                .skill CSS/SASS
+                .skill JavaScript
+                .skill ES6+
+                .skill TypeScript
+                .skill PHP
+                .skill Java
+                .skill C#
+                .skill .NET
+                .skill VB.NET
+            .skills-group
+              h3.skills-header Frameworks & Tools
+              .skills-list
+                .skill Node.js
+                .skill NPM
+                .skill Vue.js
+                .skill Angular
+                .skill jQuery
+                .skill React
+                .skill Apache
+                .skill Webpack
+                .skill Git
+                .skill Grunt
+            .skills-group
+              h3.skills-header Databases
+              .skills-list
+                .skill MySQL
+                .skill T-SQL
+                .skill Mongo
+                .skill Oracle SQL
+                .skill Postgres
+                .skill Firestore
 
 block scripts

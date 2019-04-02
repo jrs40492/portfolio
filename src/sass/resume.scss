@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 h3 {
@@ -40,7 +40,6 @@ h4 {
   }
 
   #resume {
-    display: flex;
     width: 8.5in;
     height: 11in;
     max-width: 8.5in;
@@ -50,84 +49,59 @@ h4 {
     -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
 
-    #column-left,
-    #column-right {
-      display: flex;
-      flex-direction: column;
-    }
-
-    #column-left {
-      flex: 0 0 35%;
-
+    header {
       .section {
         flex: 0 0 auto;
-        padding: 20px 25px 0;
+        padding: 12px 20px;
         color: $primary-font;
       }
 
-      .header {
-        border-bottom: 1px solid $primary-font;
-        margin: 0 0 5px 0;
-        padding: 0 0 2px 0;
-      }
-
       #intro {
+        display: flex;
         background-color: $primary-color;
-        padding-bottom: 25px;
 
         #personal-info {
-          padding: 0 0 12px 0;
+          flex: 0 1 auto;
+          align-self: center;
         }
 
         #contact-info {
+          flex: 1 0 auto;
+
+          .contact-line:not(:first-child) {
+            padding: 10px 0 0 0;
+          }
+
           .contact-line {
             display: flex;
-            padding: 6px 0;
             align-items: center;
+            text-align: right;
 
             .icon {
               flex: 0 1 auto;
-              padding: 0 8px 0 0;
+              padding: 0 0 0 8px;
             }
 
-            .text {
+            a {
               flex: 1 0 auto;
-            }
-          }
-        }
-      }
 
-      #about,
-      #skills {
-        background-color: darken($secondary-color, 2%);
-      }
-
-      #about {
-        p {
-          font-size: 1.1em;
-        }
-      }
-
-      #skills {
-        flex: 1 0 auto;
-        .skills-wrapper {
-          display: flex;
-
-          .skills-group {
-            flex: 0 0 50%;
-
-            .skill {
-              font-weight: 600;
-              margin: 6px 0;
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
         }
       }
     }
 
-    #column-right {
-      flex: 0 0 65%;
-      padding: 20px;
+    #body {
+      .section {
+        padding: 6px 15px;
+
+        .sub-section {
+          padding: 0 0 0 15px;
+        }
+      }
 
       .header {
         color: $primary-color;
@@ -136,7 +110,7 @@ h4 {
         padding: 0 0 2px 0;
       }
 
-      .tools-line {
+      .tools-wrapper {
         label {
           font-weight: 600;
         }
@@ -146,38 +120,36 @@ h4 {
         }
       }
 
-      .section {
-        flex: 1 1 auto;
-        justify-content: space-evenly;
-
-        .sub-section {
-          padding-left: 15px;
-        }
-      }
-
       .employment {
-        padding: 5px 0 5px;
+        padding: 5px 0;
 
         &.bottom-border {
-          border-bottom: 1px solid $secondary-color;
+          border-bottom: 1px solid $border-color;
         }
 
-        .position {
-          font-size: 1.2em;
+        .position-wrapper {
+          display: flex;
           font-weight: 600;
-          color: $primary-color;
-          padding: 0 0 2px 0;
-        }
 
-        .company-line {
-          padding: 0 0 2px 0;
+          .company,
+          .dates {
+            align-self: center;
+          }
 
+          .position,
           .company {
-            font-weight: 600;
+            flex: 0 1 auto;
+          }
+
+          .position {
+            font-size: 1.2em;
+            color: $primary-color;
+            padding: 0 3px 0 0;
           }
 
           .dates {
-            padding: 0 0 0 3px;
+            flex: 1 0 auto;
+            text-align: right;
           }
         }
 
@@ -205,7 +177,7 @@ h4 {
           padding: 5px 0 0 0;
 
           &.bottom-border {
-            border-bottom: 1px solid $secondary-color;
+            border-bottom: 1px solid $border-color;
           }
 
           .project-line {
@@ -221,8 +193,38 @@ h4 {
             }
           }
 
-          .tools-line {
+          .tools-wrapper {
             padding-bottom: 5px;
+          }
+        }
+      }
+
+      #skills {
+        #skills-wrapper {
+          display: flex;
+
+          .skills-group {
+            flex: 0 1 auto;
+            text-align: center;
+
+            &:not(:last-child) .skills-list {
+              border-right: 1px solid $border-color;
+            }
+
+            .skills-header {
+              flex: 1 0 100%;
+              color: $primary-color;
+            }
+
+            .skills-list {
+              display: flex;
+              flex-wrap: wrap;
+
+              .skill {
+                flex: 1 0 50%;
+                padding: 3px 0;
+              }
+            }
           }
         }
       }
@@ -230,12 +232,13 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 8.5in) {
+@media only screen and (max-width: 1016px) {
   #resume-wrapper {
-    padding: 0;
+    padding: 60px 0 0 0;
 
     #back-button {
-      left: 84vw;
+      top: 10px;
+      left: 10px;
     }
 
     #resume {
@@ -244,45 +247,23 @@ h4 {
       box-shadow: none;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-
-      #column-left,
-      #column-right {
-        flex: 1 0 auto;
-      }
-
-      #column-left {
-        #personal-interests {
-          flex: 0 0 auto;
-        }
-      }
     }
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 520px) {
   #resume-wrapper {
-    padding: 0;
-
-    #back-button {
-      left: 75vw;
-    }
-
     #resume {
-      width: 100%;
-      flex-direction: column;
+      header {
+        #intro {
+          flex-direction: column;
 
-      #column-left,
-      #column-right {
-        flex: 1 0 auto;
-      }
+          #personal-info {
+            align-self: initial;
+          }
 
-      #column-left {
-        #personal-interests {
-          flex: 0 0 auto;
-
-          .interest-wrapper {
-            .interest-group {
-              flex: 1 0 33%;
+          #contact-info {
+            .contact-line {
             }
           }
         }
@@ -293,9 +274,6 @@ h4 {
 
 @media print {
   #resume-wrapper {
-    display: flex;
-    justify-content: initial;
-    align-items: initial;
     background-image: none;
     padding: 0;
 

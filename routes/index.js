@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     imagePath: process.env.IMAGE_PATH,
     projects: data.projects,
     settings: data.settings,
-    technology: data.tech,
+    technology: data.tech
   });
 });
 
@@ -27,7 +27,7 @@ router.get('/resume', async (req, res) => {
   res.render('resume', {
     node_env: process.env.NODE_ENV,
     page: 'Resume',
-    settings: data.settings,
+    settings: data.settings
   });
 });
 
