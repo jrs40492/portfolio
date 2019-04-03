@@ -69,23 +69,23 @@ ul {
   }
 }
 
-#tech {
-  display: flex;
-  background-size: cover;
-  z-index: -100;
-  padding-bottom: 10px;
-  flex-direction: column;
-}
+// #tech {
+//   display: flex;
+//   background-size: cover;
+//   z-index: -100;
+//   padding-bottom: 10px;
+//   flex-direction: column;
+// }
 
-.no-webp #tech {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    url('/images/computer.jpeg') no-repeat;
-}
+// .no-webp #tech {
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+//     url('/images/computer.jpeg') no-repeat;
+// }
 
-.webp #tech {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
-    url('/images/computer.webp') no-repeat;
-}
+// .webp #tech {
+//   background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+//     url('/images/computer.webp') no-repeat;
+// }
 
 #portfolio {
   display: flex;
