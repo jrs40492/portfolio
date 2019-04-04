@@ -5,26 +5,21 @@ document.onwheel = () => {
 };
 
 const scroll = (offset, scrollRate) => {
-  const difference = offset - document.documentElement.scrollTop;
+  const difference = offset - window.pageYOffset;
 
   if (difference < scrollRate) {
     scrollRate = difference;
   }
 
-  if (difference > 0) {
-    document.documentElement.scrollTop += scrollRate;
-    return;
-  }
-
-  if (difference < 0) {
-    document.documentElement.scrollTop -= scrollRate;
+  if (difference != 0) {
+    window.scrollBy(0, scrollRate);
     return;
   }
 
   clearInterval(call);
 };
 
-const scroll_listen = e => {
+const scrollListen = e => {
   e.preventDefault();
 
   // Set scroll rate
@@ -40,5 +35,5 @@ const scroll_listen = e => {
 const buttons = document.getElementsByClassName('scroll-btn');
 
 Array.from(buttons).forEach(element => {
-  element.addEventListener('click', scroll_listen);
+  element.addEventListener('click', scrollListen);
 });

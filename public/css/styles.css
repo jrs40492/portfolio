@@ -1,10 +1,19 @@
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }
+
 .button {
   border: 1px solid white;
   border-radius: 3px;
   padding: 10px;
   margin: 0 7px;
   text-decoration: none; }
-  .button:hover {
+  .no-touchevents .button:hover {
     cursor: pointer;
     color: #0960a5;
     background-color: white; }
@@ -12,7 +21,7 @@
     border: 1px solid #d8d8d8; }
     .button.button-dark a {
       color: black; }
-    .button.button-dark:hover {
+    .no-touchevents .button.button-dark:hover {
       color: #0960a5;
       background-color: white; }
 

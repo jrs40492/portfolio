@@ -1,3 +1,13 @@
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .button {
   border: 1px solid $primary-font;
   border-radius: 3px;
@@ -5,7 +15,7 @@
   margin: 0 7px;
   text-decoration: none;
 
-  &:hover {
+  .no-touchevents &:hover {
     cursor: pointer;
     color: $primary-color;
     background-color: $primary-font;
@@ -18,7 +28,7 @@
       color: black;
     }
 
-    &:hover {
+    .no-touchevents &:hover {
       color: $primary-color;
       background-color: $primary-font;
     }
