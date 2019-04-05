@@ -7,39 +7,33 @@ Most developers will probably build their own site to showcase their talents but
 ```
 1. Run "npm install"
 2. Create .env based on .env.example
-3. Set up Firebase (see scheme below)
+3. Set up Firebase (see schema below)
 4. Run "grunt dev"
-5. Navigate to <localhost:3000>
+5. Navigate to localhost:3000
 ```
 
 ## Firebase Schema
 
-### projects > [document name]
+### projects > [project name]
 
-- description (String)
-- order (Number)
-- tech (Array)
 - title (String)
-- link (String)
-- sourceLink (String)
-- retired (Boolean)
+- description (String)
+- link (String) - Link to website
+- sourceLink (String) - Link to source code/repo
+- tech (Array)
+- order (Number)
+- retired (Boolean) - Will hide links
 
 ### settings > site
 
-- email (String)
+- name (String) - Your name
+- email (String) - Your email
+- jobTitle (String) - Desired/Current Job Title
+- tagLine (String) - Your motto
 - githubUrl (String)
-- jobTitle (String)
 - linkedinUrl (String)
-- name (String)
-- tagLine (String)
-- websiteUrl (String)
+- websiteUrl (String) - Your portfolio
 - stackoverflowUrl (String)
-
-### tech > [document name]
-
-- list (Array)
-- order (Number)
-- title (String)
 
 ### TODO
 
