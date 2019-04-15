@@ -1,0 +1,20 @@
+#portfolio-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  background-color: lighten($secondary-color, 10%);
+
+  .project-square {
+    .project-header {
+      font-size: 1.4em;
+    }
+
+    .project-body {
+    }
+
+    .project-footer {
+    }
+  }
+}

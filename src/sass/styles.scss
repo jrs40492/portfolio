@@ -1,5 +1,10 @@
 @import 'global';
 
+// Pages
+@import 'resume';
+@import 'projects';
+@import 'hire_me';
+
 ol,
 ul {
   list-style: inside;
@@ -66,20 +71,5 @@ ul {
         color: #e2e6ea;
       }
     }
-  }
-}
-
-#portfolio-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  background-color: lighten($secondary-color, 10%);
-}
-
-#hire-section {
-  #hire-wrapper {
-    display: flex;
   }
 }

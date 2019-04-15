@@ -45,10 +45,15 @@ module.exports = grunt => {
         options: {
           compass: true
         },
-        files: {
-          'public/css/styles.css': 'src/sass/styles.scss',
-          'public/css/resume.css': 'src/sass/resume.scss'
-        }
+        files: [
+          {
+            expand: true,
+            cwd: 'src/sass',
+            src: ['*.scss'],
+            dest: 'public/css',
+            ext: '.css'
+          }
+        ]
       }
     },
     concat: {
@@ -166,6 +171,7 @@ module.exports = grunt => {
   grunt.registerTask('dev', [
     'express',
     'uglify',
+    'sass',
     'cssmin',
     'watch',
     'imagemin'
