@@ -132,7 +132,6 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: radial-gradient(#0c7cd5, #0960a5);
   height: 100vh;
   color: white; }
   #introduction .intro-row {
@@ -154,12 +153,15 @@ ul {
     #introduction a.icon:hover {
       color: #e2e6ea; }
 
-#portfolio {
+#portfolio-section {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: #2196f3; }
+
+#hire-section #hire-wrapper {
+  display: flex; }
 
 /*# sourceMappingURL=styles.css.map */

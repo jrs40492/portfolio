@@ -108,6 +108,12 @@ h4 {
         border-bottom: 1px solid $primary-color;
         margin: 0 0 5px 0;
         padding: 0 0 2px 0;
+
+        .icon {
+          font-size: 1.2em;
+          padding: 0 5px;
+          min-width: 30px;
+        }
       }
 
       .tools-wrapper {

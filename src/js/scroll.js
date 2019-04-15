@@ -27,7 +27,7 @@ const scrollListen = e => {
   const target = e.srcElement.dataset.id;
 
   // Get offset from top of page
-  const offset = document.getElementById(target).offsetTop;
+  const offset = document.getElementById(`${target}-section`).offsetTop;
   call = setInterval(() => scroll(offset, scrollRate), 2);
 };
 
