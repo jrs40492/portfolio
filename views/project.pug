@@ -1,31 +1,28 @@
 .project-square
-  .project-header
-    span= project.data.title
-  .card-body
-    p= project.data.description
-    .card-body-title Tech Used
-    if project.data.tech
-      ul
+  h2.project-header= project.data.title
+  .project-body
+    .project-description= project.data.description
+    .project-tech
+      p Tech Used
+      if project.data.tech
         each tech in project.data.tech
-          li= tech
+          .tech= tech
   if project.data.link || project.data.retired || project.data.sourceLink
-    .card-footer
+    .project-footer
       if !project.data.retired
-        .card-footer-left
+        .project-footer-left
           if project.data.link
-            if project.data.link === "self"
-              span You're on it!
-            else
-              a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+            if project.data.link !== "self"
+              a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
           else
             span No Link
-        .card-footer-right
+        .project-footer-right
           if project.data.sourceLink
-            a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fa fa-eye" aria-hidden="true"></i>
+            a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye" aria-hidden="true"></i>
           else
-            span Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            span Source Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
       else
-        .card-footer-full
+        .project-footer-full
           span Project Retired
 
 

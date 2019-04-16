@@ -1,20 +1,58 @@
 #portfolio-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: lighten($secondary-color, 10%);
 
   .project-square {
+    flex: 1 1 33%;
+    color: white;
+    padding: 10px 15px;
+
+    &:nth-child(even) {
+      background-color: darken($secondary-color, 10%);
+    }
+
     .project-header {
-      font-size: 1.4em;
+      text-align: center;
+      text-decoration: underline;
+      padding: 0 0 7px 0;
     }
 
     .project-body {
+      padding: 15px 0;
+
+      .project-description {
+      }
+
+      .project-tech {
+        display: flex;
+        justify-content: space-evenly;
+
+        .tech {
+          flex: 1 1 50%;
+        }
+      }
     }
 
     .project-footer {
+      display: flex;
+
+      .project-footer-left,
+      .project-footer-right {
+        flex: 1 0 50%;
+        text-align: center;
+      }
+
+      .project-footer-left {
+      }
+
+      .project-footer-right {
+      }
+
+      .project-footer-full {
+      }
     }
   }
 }
