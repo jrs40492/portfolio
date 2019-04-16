@@ -134,6 +134,8 @@ ul {
   align-items: center;
   height: 100vh;
   color: white; }
+  #introduction *:after {
+    mix-blend-mode: difference; }
   #introduction .intro-row {
     flex: 1 0 33%;
     display: flex;

@@ -32,9 +32,12 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background-image: radial-gradient($secondary-color, $primary-color);
   height: 100vh;
   color: white;
+
+  *:after {
+    mix-blend-mode: difference;
+  }
 
   .intro-row {
     flex: 1 0 33%;
