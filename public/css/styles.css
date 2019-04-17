@@ -105,6 +105,13 @@ a {
 p {
   padding: 0 0 0.4rem 0; }
 
+ol,
+ul {
+  list-style: inside; }
+  ol li,
+  ul li {
+    padding: 3px 0; }
+
 h1 {
   font-size: 2em; }
 
@@ -272,48 +279,47 @@ h4 {
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: #2196f3; }
-  #portfolio-section .project-square {
+  #portfolio-section .project {
     flex: 1 1 50%;
     color: white;
     min-height: 50vh;
-    padding: 10px 15px; }
-    #portfolio-section .project-square:nth-child(4n + 1) {
+    padding: 4vh 4vw; }
+    #portfolio-section .project:nth-child(4n + 1), #portfolio-section .project:nth-child(4n) {
       background-color: #0960a5; }
-    #portfolio-section .project-square .project-header {
+    #portfolio-section .project .project-header {
       text-align: center;
-      text-decoration: underline;
       padding: 0 0 7px 0; }
-    #portfolio-section .project-square .project-body {
-      padding: 15px 0; }
-      #portfolio-section .project-square .project-body .project-tech {
+    #portfolio-section .project .project-body {
+      padding: 5vh 5vw; }
+      #portfolio-section .project .project-body .project-tech {
         display: flex;
         flex-wrap: wrap; }
-        #portfolio-section .project-square .project-body .project-tech .tech {
+        #portfolio-section .project .project-body .project-tech .tech {
           flex: 1 0 50%; }
-    #portfolio-section .project-square .project-footer {
-      display: flex; }
-      #portfolio-section .project-square .project-footer .project-footer-left,
-      #portfolio-section .project-square .project-footer .project-footer-right {
+    #portfolio-section .project .project-footer {
+      display: flex;
+      padding: 5vh 10vw; }
+      #portfolio-section .project .project-footer .project-link,
+      #portfolio-section .project .project-footer .project-source-link {
         flex: 1 0 50%;
         text-align: center; }
+      #portfolio-section .project .project-footer .project-button {
+        border: 1px solid white;
+        padding: 10px 20px;
+        border-radius: 25px; }
+        #portfolio-section .project .project-footer .project-button:hover {
+          color: black;
+          background-color: white; }
 
 #hire-section #hire-wrapper {
   display: flex; }
-
-ol,
-ul {
-  list-style: inside; }
-  ol li,
-  ul li {
-    padding: 3px 0; }
 
 .section {
   width: 100vw;
   min-height: 100vh;
   display: block;
   background-size: cover;
-  background-color: #0c7cd5;
-  padding: 0 0 10px 0; }
+  background-color: #0c7cd5; }
   .section .section-header {
     flex: 0 0 100%;
     color: white;

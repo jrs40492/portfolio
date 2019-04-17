@@ -1,4 +1,4 @@
-.project-square
+.project
   h2.project-header= project.data.title
   .project-body
     .project-description= project.data.description
@@ -8,20 +8,12 @@
           .tech= tech
   if project.data.link || project.data.retired || project.data.sourceLink
     .project-footer
-      if !project.data.retired
-        .project-footer-left
-          if project.data.link
-            if project.data.link !== "self"
-              a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
-          else
-            span No Link
-        .project-footer-right
-          if project.data.sourceLink
-            a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye" aria-hidden="true"></i>
-          else
-            span Source Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
-      else
-        .project-footer-full
-          span Project Retired
+      .project-link
+        if project.data.link
+          if project.data.link !== "self"
+            a.project-button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+      .project-source-link
+        if project.data.sourceLink
+          a.project-button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye" aria-hidden="true"></i>
 
 

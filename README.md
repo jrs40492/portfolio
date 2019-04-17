@@ -21,8 +21,9 @@ Most developers will probably build their own site to showcase their talents but
 - link (String) - Link to website
 - sourceLink (String) - Link to source code/repo
 - tech (Array)
-- order (Number)
-- retired (Boolean) - Will hide links
+- startYear (Number) - Year the project was started
+- endYear (Number) - Year the project was retired
+- priority (Number) - Used to sort projects
 
 ### settings > site
 
