@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-15 */
+/*! jacobrswanson 2019-04-17 */
 const section = document.getElementById('introduction');
 const pageHeight = window.innerHeight / 255;
 const pageWidth = window.innerWidth / 255;
