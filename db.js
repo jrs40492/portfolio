@@ -2,7 +2,7 @@ const dotenv = require('dotenv');
 const firebase = require('firebase/app');
 require('firebase/firestore');
 
-dotenv.config()
+dotenv.config();
 
 firebase.initializeApp({
   apiKey: `${process.env.FIRESTORE_API_KEY}`,
@@ -16,42 +16,48 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 const getSettings = async () => {
-  const settings = await db.collection("settings").doc("site").get();
+  const settings = await db
+    .collection('settings')
+    .doc('site')
+    .get();
   return settings.data();
-}
+};
 
 const getTech = async () => {
-  const techSnapshot = await db.collection("tech").orderBy('order').get();
+  const techSnapshot = await db
+    .collection('tech')
+    .orderBy('order')
+    .get();
 
   const techList = [];
-  techSnapshot.forEach((tech) => {
+  techSnapshot.forEach(tech => {
     techList.push({
       id: tech.id,
-      data: tech.data(),
+      data: tech.data()
     });
   });
   return techList;
-}
+};
 
 const getProjects = async () => {
-  const projectsSnapshot = await db.collection("projects").orderBy('order').get();
+  const projectsSnapshot = await db.collection('projects').get();
 
   const projects = [];
-  projectsSnapshot.forEach((project) => {
+  projectsSnapshot.forEach(project => {
     projects.push({
       id: project.id,
-      data: project.data(),
+      data: project.data()
     });
   });
   return projects;
-}
+};
 
 const loadData = async () => {
   return {
     settings: await getSettings(),
     tech: await getTech(),
-    projects: await getProjects(),
+    projects: await getProjects()
   };
-}
+};
 
 module.exports = loadData;
