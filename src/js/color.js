@@ -1,33 +1,15 @@
 const section = document.getElementById('introduction');
-const pageHeight = window.innerHeight / 255;
-const pageWidth = window.innerWidth / 255;
-
-const inverseColor = value => {
-  return 255 - value;
-};
 
 section.addEventListener('mousemove', e => {
   const x = e.clientX;
   const y = e.clientY;
 
-  const red = x / pageWidth;
-  const green = y / pageHeight;
-  const blue = (red + green) / 2;
+  const pageHeight = window.innerHeight / 255;
+  const pageWidth = window.innerWidth / 255;
 
-  section.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  const red = 255 - Math.round(x / pageWidth);
+  const green = Math.round(y / pageHeight);
+  const blue = 255 - (red + green) / 2;
 
-  const background = (red * 299 + green * 587 + blue * 114) / 1000;
-  const color = background >= 128 ? 'black' : 'white';
-
-  section.style.color = color;
-
-  const buttons = section.querySelectorAll('.button');
-  buttons.forEach(button => {
-    button.style.border = `1px solid ${color}`;
-  });
-
-  const links = section.querySelectorAll('a');
-  links.forEach(link => {
-    link.style.color = color;
-  });
+  section.style.backgroundImage = `linear-gradient(to bottom right, rgba(${red}, 0, 0, .8), rgba(0, 0, ${blue}, .7), rgba(0, ${green}, 0, .6))`;
 });

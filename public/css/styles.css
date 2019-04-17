@@ -273,10 +273,11 @@ h4 {
   align-content: flex-start;
   background-color: #2196f3; }
   #portfolio-section .project-square {
-    flex: 1 1 33%;
+    flex: 1 1 50%;
     color: white;
+    min-height: 50vh;
     padding: 10px 15px; }
-    #portfolio-section .project-square:nth-child(even) {
+    #portfolio-section .project-square:nth-child(4n + 1) {
       background-color: #0960a5; }
     #portfolio-section .project-square .project-header {
       text-align: center;
@@ -286,9 +287,9 @@ h4 {
       padding: 15px 0; }
       #portfolio-section .project-square .project-body .project-tech {
         display: flex;
-        justify-content: space-evenly; }
+        flex-wrap: wrap; }
         #portfolio-section .project-square .project-body .project-tech .tech {
-          flex: 1 1 50%; }
+          flex: 1 0 50%; }
     #portfolio-section .project-square .project-footer {
       display: flex; }
       #portfolio-section .project-square .project-footer .project-footer-left,
@@ -328,6 +329,8 @@ ul {
   align-items: center;
   height: 100vh;
   color: white; }
+  #introduction *:after {
+    mix-blend-mode: difference; }
   #introduction .intro-row {
     flex: 1 0 33%;
     display: flex;

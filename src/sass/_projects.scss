@@ -6,11 +6,12 @@
   background-color: lighten($secondary-color, 10%);
 
   .project-square {
-    flex: 1 1 33%;
+    flex: 1 1 50%;
     color: white;
+    min-height: 50vh;
     padding: 10px 15px;
 
-    &:nth-child(even) {
+    &:nth-child(4n + 1) {
       background-color: darken($secondary-color, 10%);
     }
 
@@ -28,10 +29,10 @@
 
       .project-tech {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
 
         .tech {
-          flex: 1 1 50%;
+          flex: 1 0 50%;
         }
       }
     }
