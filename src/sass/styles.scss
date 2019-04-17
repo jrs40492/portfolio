@@ -34,6 +34,12 @@ ul {
   align-items: center;
   height: 100vh;
   color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba(255, 0, 0, 0.9),
+    rgba(0, 0, 255, 0.7) 60%,
+    rgba(0, 255, 0, 0.6) 80%
+  );
 
   *:after {
     mix-blend-mode: difference;

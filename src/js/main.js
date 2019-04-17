@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-16 */
+/*! jacobrswanson 2019-04-17 */
 const section = document.getElementById('introduction');
 
 section.addEventListener('mousemove', e => {
@@ -12,7 +12,7 @@ section.addEventListener('mousemove', e => {
   const green = Math.round(y / pageHeight);
   const blue = 255 - (red + green) / 2;
 
-  section.style.backgroundImage = `linear-gradient(to bottom right, rgba(${red}, 0, 0, .8), rgba(0, 0, ${blue}, .7), rgba(0, ${green}, 0, .6))`;
+  section.style.backgroundImage = `linear-gradient(to bottom right, rgba(${red}, 0, 0, .9), rgba(0, 0, ${blue}, .7) 60%, rgba(0, ${green}, 0, .6) 80%)`;
 });
 ;/*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-touchevents-webp-setclasses !*/
