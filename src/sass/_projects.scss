@@ -1,30 +1,30 @@
-#portfolio-section {
+#projects-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: lighten($secondary-color, 10%);
+  color: white;
 
   .project {
     flex: 1 1 50%;
-    color: white;
     min-height: 50vh;
     padding: 4vh 4vw;
 
-    &:nth-child(4n + 1),
-    &:nth-child(4n) {
-      background-color: darken($secondary-color, 10%);
-    }
-
     .project-header {
-      text-align: center;
-      padding: 0 0 7px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10vh;
     }
 
     .project-body {
+      min-height: 30vh;
       padding: 5vh 5vw;
 
       .project-description {
+        text-align: center;
+        line-height: 1.7em;
       }
 
       .project-tech {
@@ -39,7 +39,8 @@
 
     .project-footer {
       display: flex;
-      padding: 5vh 10vw;
+      padding: 5vh 5vw;
+      min-height: 10vh;
 
       .project-link,
       .project-source-link {
@@ -48,15 +49,130 @@
       }
 
       .project-button {
-        border: 1px solid white;
-        padding: 10px 20px;
-        border-radius: 25px;
+        color: inherit;
+        padding: 10px 30px;
+        border-radius: 3px;
 
         &:hover {
           color: black;
           background-color: white;
         }
       }
+    }
+  }
+}
+
+#lucy-lane {
+  background-color: #1a2254;
+}
+
+#ufsports {
+  $color: #0960a5;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#data-table {
+  $color: #004ddd;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#portfolio {
+  $color: #000093;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#marsh-tree {
+  $color: #006312;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#big-fish {
+  $color: #0960a5;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#blackjack {
+  $color: #165006;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#cookie-jar {
+  $color: #673ab7;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#tic-tac-toe {
+  $color: #67717c;
+  color: #e0ffff;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#sales-form {
+  $color: #afafaf;
+  color: black;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#century-21 {
+  $color: #b3a479;
+  color: #372525;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+#comhs {
+  $color: #4758d7;
+  background-color: $color;
+
+  .project-button {
+    background-color: darken($color, 5%);
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #projects-section {
+    .project {
+      flex: 1 1 auto;
+      height: initial;
     }
   }
 }

@@ -24,12 +24,7 @@ const getSettings = async () => {
 };
 
 const getTech = async () => {
-  const techSnapshot = await db
-    .collection('tech')
-    .orderBy('priority')
-    .orderBy('startYear')
-    .orderBy('endYear')
-    .get();
+  const techSnapshot = await db.collection('tech').get();
 
   const techList = [];
   techSnapshot.forEach(tech => {
@@ -44,7 +39,9 @@ const getTech = async () => {
 const getProjects = async () => {
   const projectsSnapshot = await db
     .collection('projects')
-    .orderBy('order')
+    .orderBy('priority')
+    .orderBy('startYear', 'desc')
+    .orderBy('endYear', 'desc')
     .get();
 
   const projects = [];

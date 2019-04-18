@@ -16,14 +16,15 @@ Most developers will probably build their own site to showcase their talents but
 
 ### projects > [project name]
 
+- id (String) - Unique project ID, used for CSS styling
 - title (String)
 - description (String)
 - link (String) - Link to website
 - sourceLink (String) - Link to source code/repo
 - tech (Array)
-- startYear (Number) - Year the project was started
-- endYear (Number) - Year the project was retired
-- priority (Number) - Used to sort projects
+- startYear (Number - required) - Year the project was started
+- endYear (Number - required) - Year the project was retired
+- priority (Number - required) - Used to sort projects
 
 ### settings > site
 

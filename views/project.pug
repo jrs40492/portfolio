@@ -1,19 +1,17 @@
-.project
-  h2.project-header= project.data.title
+.project(id=`${project.data.id}`)
+  h1.project-header= project.data.title
   .project-body
     .project-description= project.data.description
-    .project-tech
-      if project.data.tech
-        each tech in project.data.tech
-          .tech= tech
-  if project.data.link || project.data.retired || project.data.sourceLink
-    .project-footer
+    //- .project-tech
+    //-   if project.data.tech
+    //-     each tech in project.data.tech
+    //-       .tech= tech
+  .project-footer
+    if project.data.link && project.data.link !== "self"
       .project-link
-        if project.data.link
-          if project.data.link !== "self"
-            a.project-button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+        a.project-button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+    if project.data.sourceLink
       .project-source-link
-        if project.data.sourceLink
-          a.project-button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") View Source <i class="fa fa-eye" aria-hidden="true"></i>
+        a.project-button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
 
 
