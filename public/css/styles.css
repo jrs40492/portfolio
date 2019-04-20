@@ -281,23 +281,31 @@ h4 {
   background-color: #2196f3;
   color: white; }
   #projects-section .project {
-    flex: 1 1 50%;
+    flex: 1 1 100%;
     min-height: 50vh;
-    padding: 4vh 4vw; }
+    padding: 4vh 4vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
     #projects-section .project .project-header {
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 10vh; }
     #projects-section .project .project-body {
+      display: flex;
       min-height: 30vh;
       padding: 5vh 5vw; }
       #projects-section .project .project-body .project-description {
-        text-align: center;
-        line-height: 1.7em; }
+        flex: 1 0 50%;
+        line-height: 1.7em;
+        padding: 0 6vw 0 2vw; }
       #projects-section .project .project-body .project-tech {
+        flex: 1 0 50%;
         display: flex;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+        padding: 0 4vw; }
         #projects-section .project .project-body .project-tech .tech {
           flex: 1 0 50%; }
     #projects-section .project .project-footer {
@@ -308,79 +316,59 @@ h4 {
       #projects-section .project .project-footer .project-source-link {
         flex: 1 0 50%;
         text-align: center; }
-      #projects-section .project .project-footer .project-button {
-        color: inherit;
-        padding: 10px 30px;
-        border-radius: 3px; }
-        #projects-section .project .project-footer .project-button:hover {
-          color: black;
-          background-color: white; }
+
+.no-webp #ufsports {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.jpg"); }
+.no-webp #portfolio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.jpg"); }
+
+.webp #ufsports {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.webp"); }
+.webp #portfolio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.webp"); }
 
 #lucy-lane {
   background-color: #1a2254; }
 
-#ufsports {
-  background-color: #0960a5; }
-  #ufsports .project-button {
-    background-color: #08528d; }
-
 #data-table {
   background-color: #004ddd; }
-  #data-table .project-button {
-    background-color: #0044c4; }
-
-#portfolio {
-  background-color: #000093; }
-  #portfolio .project-button {
-    background-color: #00007a; }
 
 #marsh-tree {
   background-color: #006312; }
-  #marsh-tree .project-button {
-    background-color: #004a0d; }
 
 #big-fish {
   background-color: #0960a5; }
-  #big-fish .project-button {
-    background-color: #08528d; }
 
 #blackjack {
   background-color: #165006; }
-  #blackjack .project-button {
-    background-color: #0f3804; }
 
 #cookie-jar {
   background-color: #673ab7; }
-  #cookie-jar .project-button {
-    background-color: #5c34a4; }
 
 #tic-tac-toe {
   color: #e0ffff;
   background-color: #67717c; }
-  #tic-tac-toe .project-button {
-    background-color: #5b646e; }
 
 #sales-form {
   color: black;
   background-color: #afafaf; }
-  #sales-form .project-button {
-    background-color: #a2a2a2; }
 
 #century-21 {
   color: #372525;
   background-color: #b3a479; }
-  #century-21 .project-button {
-    background-color: #aa9969; }
 
 #comhs {
   background-color: #4758d7; }
-  #comhs .project-button {
-    background-color: #3245d2; }
 
 @media only screen and (max-width: 860px) {
   #projects-section .project {
     flex: 1 1 auto;
-    height: initial; } }
+    height: initial; }
+    #projects-section .project .project-body {
+      flex-wrap: wrap; }
+      #projects-section .project .project-body .project-description,
+      #projects-section .project .project-body .project-tech {
+        flex: 1 1 100%; } }
 #hire-section #hire-wrapper {
   display: flex; }
 
@@ -425,5 +413,16 @@ h4 {
     padding-right: 10px; }
     #introduction a.icon:hover {
       color: #e2e6ea; }
+
+#back-to-top-button {
+  display: none;
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px; }
+  #back-to-top-button:hover {
+    color: white;
+    background-color: initial; }
 
 /*# sourceMappingURL=styles.css.map */

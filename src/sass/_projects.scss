@@ -7,9 +7,14 @@
   color: white;
 
   .project {
-    flex: 1 1 50%;
+    flex: 1 1 100%;
     min-height: 50vh;
     padding: 4vh 4vw;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     .project-header {
       display: flex;
@@ -19,17 +24,21 @@
     }
 
     .project-body {
+      display: flex;
       min-height: 30vh;
       padding: 5vh 5vw;
 
       .project-description {
-        text-align: center;
+        flex: 1 0 50%;
         line-height: 1.7em;
+        padding: 0 6vw 0 2vw;
       }
 
       .project-tech {
+        flex: 1 0 50%;
         display: flex;
         flex-wrap: wrap;
+        padding: 0 4vw;
 
         .tech {
           flex: 1 0 50%;
@@ -47,18 +56,41 @@
         flex: 1 0 50%;
         text-align: center;
       }
-
-      .project-button {
-        color: inherit;
-        padding: 10px 30px;
-        border-radius: 3px;
-
-        &:hover {
-          color: black;
-          background-color: white;
-        }
-      }
     }
+  }
+}
+
+// Browser does not support webp
+.no-webp {
+  #ufsports {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7) 40%
+      ),
+      url('/images/ufsports.jpg');
+  }
+
+  #portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/portfolio.jpg');
+  }
+}
+
+// Browser supports webp
+.webp {
+  #ufsports {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7) 40%
+      ),
+      url('/images/ufsports.webp');
+  }
+
+  #portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/portfolio.webp');
   }
 }
 
@@ -66,106 +98,43 @@
   background-color: #1a2254;
 }
 
-#ufsports {
-  $color: #0960a5;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
-}
-
 #data-table {
-  $color: #004ddd;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
-}
-
-#portfolio {
-  $color: #000093;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #004ddd;
 }
 
 #marsh-tree {
-  $color: #006312;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #006312;
 }
 
 #big-fish {
-  $color: #0960a5;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #0960a5;
 }
 
 #blackjack {
-  $color: #165006;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #165006;
 }
 
 #cookie-jar {
-  $color: #673ab7;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #673ab7;
 }
 
 #tic-tac-toe {
-  $color: #67717c;
   color: #e0ffff;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #67717c;
 }
 
 #sales-form {
-  $color: #afafaf;
   color: black;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #afafaf;
 }
 
 #century-21 {
-  $color: #b3a479;
   color: #372525;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #b3a479;
 }
 
 #comhs {
-  $color: #4758d7;
-  background-color: $color;
-
-  .project-button {
-    background-color: darken($color, 5%);
-  }
+  background-color: #4758d7;
 }
 
 @media only screen and (max-width: 860px) {
@@ -173,6 +142,15 @@
     .project {
       flex: 1 1 auto;
       height: initial;
+
+      .project-body {
+        flex-wrap: wrap;
+
+        .project-description,
+        .project-tech {
+          flex: 1 1 100%;
+        }
+      }
     }
   }
 }

@@ -2,16 +2,16 @@
   h1.project-header= project.data.title
   .project-body
     .project-description= project.data.description
-    //- .project-tech
-    //-   if project.data.tech
-    //-     each tech in project.data.tech
-    //-       .tech= tech
+    .project-tech
+      if project.data.tech
+        each tech in project.data.tech
+          .tech= tech
   .project-footer
     if project.data.link && project.data.link !== "self"
       .project-link
-        a.project-button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+        a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
     if project.data.sourceLink
       .project-source-link
-        a.project-button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
+        a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
 
 

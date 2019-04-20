@@ -173,7 +173,7 @@ module.exports = grunt => {
     'uglify',
     'sass',
     'cssmin',
-    'watch',
-    'imagemin'
+    'imagemin',
+    'watch'
   ]);
 };

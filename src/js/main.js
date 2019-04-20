@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-17 */
+/*! jacobrswanson 2019-04-20 */
 const section = document.getElementById('introduction');
 
 section.addEventListener('mousemove', e => {
@@ -289,4 +289,23 @@ const buttons = document.getElementsByClassName('scroll-btn');
 
 Array.from(buttons).forEach(element => {
   element.addEventListener('click', scrollListen);
+});
+
+/*
+  Display the "Back to Top" button if scrolled past the second project
+*/
+const isOnScreen = elem => {
+  const bounding = elem.getBoundingClientRect();
+  return bounding.top <= 0;
+};
+
+const elem = document.getElementById('data-table');
+const backToTopButton = document.getElementById('back-to-top-button');
+
+window.addEventListener('scroll', e => {
+  if (isOnScreen(elem)) {
+    backToTopButton.style.display = 'initial';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
 });

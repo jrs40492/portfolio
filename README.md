@@ -22,9 +22,9 @@ Most developers will probably build their own site to showcase their talents but
 - link (String) - Link to website
 - sourceLink (String) - Link to source code/repo
 - tech (Array)
+- priority (Number - required) - Used to sort projects
 - startYear (Number - required) - Year the project was started
 - endYear (Number - required) - Year the project was retired
-- priority (Number - required) - Used to sort projects
 
 ### settings > site
 
