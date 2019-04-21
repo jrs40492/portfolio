@@ -1,0 +1,232 @@
+#projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  background-color: white;
+  color: white;
+
+  .project {
+    flex: 1 1 100%;
+    min-height: 50vh;
+    padding: 4vh 4vw;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10vh;
+    }
+
+    .project-body {
+      display: flex;
+      min-height: 30vh;
+      padding: 4vh 4vw;
+
+      .project-description,
+      .project-tech {
+        flex: 1 0 50%;
+      }
+
+      .project-description,
+      .project-tech .tech {
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2em;
+      }
+
+      .project-description {
+        line-height: 1.6em;
+        padding: 0 6vw 0 2vw;
+      }
+
+      .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4vw;
+
+        .tech {
+          flex: 1 0 33%;
+        }
+      }
+    }
+
+    .project-footer {
+      display: flex;
+      padding: 4vh 4vw;
+
+      .project-link,
+      .project-source-link {
+        flex: 1 0 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Browser does not support webp
+.no-webp {
+  #ufsports {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7) 40%
+      ),
+      url('/images/ufsports.jpg');
+  }
+
+  #portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/portfolio.jpg');
+  }
+
+  #cookie-jar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/cookies.jpg');
+  }
+
+  #data-table {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.8) 50%
+      ),
+      url('/images/data.jpg');
+  }
+
+  #marsh-tree {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marshtree.jpg');
+  }
+
+  #sales-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/salesform.jpg');
+  }
+
+  #comhs {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/school.jpg');
+  }
+
+  #tic-tac-toe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/images/tic_tac_toe.jpg');
+  }
+
+  #blackjack {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/blackjack.jpg');
+  }
+
+  #big-fish {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marathon.jpg');
+  }
+
+  #century-21 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/houses.jpg');
+  }
+}
+
+// Browser supports webp
+.webp {
+  #ufsports {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.7) 40%
+      ),
+      url('/images/ufsports.webp');
+  }
+
+  #portfolio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/portfolio.webp');
+  }
+
+  #cookie-jar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/cookies.webp');
+  }
+
+  #data-table {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.8) 50%
+      ),
+      url('/images/data.webp');
+  }
+
+  #marsh-tree {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marshtree.webp');
+  }
+
+  #sales-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/salesform.webp');
+  }
+
+  #comhs {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/school.webp');
+  }
+
+  #tic-tac-toe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/images/tic_tac_toe.webp');
+  }
+
+  #blackjack {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/blackjack.webp');
+  }
+
+  #big-fish {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marathon.webp');
+  }
+
+  #century-21 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/houses.webp');
+  }
+}
+
+#lucy-lane {
+  display: none;
+  background-color: #1a2254;
+}
+
+@media only screen and (max-width: 860px) {
+  #projects-section {
+    .project {
+      flex: 1 1 auto;
+      height: initial;
+
+      .project-body {
+        flex-wrap: wrap;
+
+        .project-description,
+        .project-tech {
+          flex: 1 1 100%;
+
+          .tech {
+            flex: 1 0 50%;
+          }
+        }
+
+        .project-tech .tech {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
