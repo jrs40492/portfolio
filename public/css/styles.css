@@ -313,7 +313,7 @@ h4 {
         flex-wrap: wrap;
         padding: 0 4vw; }
         #projects-section .project .project-body .project-tech .tech {
-          flex: 1 0 50%; }
+          flex: 1 0 33%; }
     #projects-section .project .project-footer {
       display: flex;
       padding: 4vh 4vw; }
@@ -380,7 +380,12 @@ h4 {
       flex-wrap: wrap; }
       #projects-section .project .project-body .project-description,
       #projects-section .project .project-body .project-tech {
-        flex: 1 1 100%; } }
+        flex: 1 1 100%; }
+        #projects-section .project .project-body .project-description .tech,
+        #projects-section .project .project-body .project-tech .tech {
+          flex: 1 0 50%; }
+      #projects-section .project .project-body .project-tech .tech {
+        text-align: center; } }
 #hire-section #hire-wrapper {
   display: flex; }
 

@@ -50,7 +50,7 @@
         padding: 0 4vw;
 
         .tech {
-          flex: 1 0 50%;
+          flex: 1 0 33%;
         }
       }
     }
@@ -217,6 +217,14 @@
         .project-description,
         .project-tech {
           flex: 1 1 100%;
+
+          .tech {
+            flex: 1 0 50%;
+          }
+        }
+
+        .project-tech .tech {
+          text-align: center;
         }
       }
     }
