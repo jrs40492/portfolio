@@ -126,7 +126,7 @@ h4 {
   font-size: 1.2em; }
 
 #resume-wrapper {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,10 +146,8 @@ h4 {
     max-width: 8.5in;
     max-height: 11in;
     background-color: white;
-    -webkit-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5); }
-    #resume-wrapper #resume header .section {
+    #resume-wrapper #resume header .resume-section {
       flex: 0 0 auto;
       padding: 12px 20px;
       color: white; }
@@ -174,9 +172,9 @@ h4 {
             flex: 1 0 auto; }
             #resume-wrapper #resume header #intro #contact-info .contact-line a:hover {
               text-decoration: underline; }
-    #resume-wrapper #resume #body .section {
+    #resume-wrapper #resume #body .resume-section {
       padding: 6px 15px; }
-      #resume-wrapper #resume #body .section .sub-section {
+      #resume-wrapper #resume #body .resume-section .sub-section {
         padding: 0 0 0 15px; }
     #resume-wrapper #resume #body .header {
       color: #0960a5;
