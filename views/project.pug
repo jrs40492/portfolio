@@ -1,31 +1,17 @@
-.card.project-card
-  .card-header
-    span= project.data.title
-  .card-body
-    p= project.data.description
-    .card-body-title Tech Used
-    if project.data.tech
-      ul
+.project(id=`${project.data.id}`)
+  h1.project-header= project.data.title
+  .project-body
+    .project-description= project.data.description
+    .project-tech
+      if project.data.tech
         each tech in project.data.tech
-          li= tech
-  if project.data.link || project.data.retired || project.data.sourceLink
-    .card-footer
-      if !project.data.retired
-        .card-footer-left
-          if project.data.link
-            if project.data.link === "self"
-              span You're on it!
-            else
-              a.link(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
-          else
-            span No Link
-        .card-footer-right
-          if project.data.sourceLink
-            a.link(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fa fa-eye" aria-hidden="true"></i>
-          else
-            span Private <i class="fa fa-eye-slash" aria-hidden="true"></i>
-      else
-        .card-footer-full
-          span Project Retired
+          .tech= tech
+  .project-footer
+    if project.data.link && project.data.link !== "self"
+      .project-link
+        a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+    if project.data.sourceLink
+      .project-source-link
+        a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
 
 

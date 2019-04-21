@@ -1,13 +1,9 @@
 @import 'global';
 
-ol,
-ul {
-  list-style: inside;
-
-  li {
-    padding: 3px 0;
-  }
-}
+// Pages
+@import 'resume';
+@import 'projects';
+@import 'hire_me';
 
 .section {
   width: 100vw;
@@ -15,7 +11,6 @@ ul {
   display: block;
   background-size: cover;
   background-color: $secondary-color;
-  padding: 0 0 10px 0;
 
   .section-header {
     flex: 0 0 100%;
@@ -27,17 +22,13 @@ ul {
   }
 }
 
-#introduction {
+#introduction-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   color: white;
-
-  *:after {
-    mix-blend-mode: difference;
-  }
 
   .intro-row {
     flex: 1 0 33%;
@@ -72,17 +63,21 @@ ul {
   }
 }
 
-#portfolio-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  background-color: lighten($secondary-color, 10%);
-}
+#back-to-top-button {
+  opacity: 0;
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease-in;
 
-#hire-section {
-  #hire-wrapper {
-    display: flex;
+  &.show {
+    opacity: 1;
+  }
+
+  &:hover {
+    color: white;
+    background-color: initial;
   }
 }

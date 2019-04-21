@@ -96,7 +96,8 @@ a.link {
   padding: 0;
   box-sizing: border-box;
   word-wrap: initial;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%; }
 
 a {
   color: white;
@@ -112,13 +113,288 @@ ul {
   ul li {
     padding: 3px 0; }
 
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.2em; }
+
+#resume-wrapper {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(#ffffff, #0960a5);
+  padding: 25px 0;
+  min-height: 100vh; }
+  #resume-wrapper #back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.2rem; }
+    #resume-wrapper #back-button i {
+      margin: 0 5px 0 0; }
+  #resume-wrapper #resume {
+    width: 8.5in;
+    height: 11in;
+    max-width: 8.5in;
+    max-height: 11in;
+    background-color: white;
+    -webkit-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5); }
+    #resume-wrapper #resume header .section {
+      flex: 0 0 auto;
+      padding: 12px 20px;
+      color: white; }
+    #resume-wrapper #resume header #intro {
+      display: flex;
+      background-color: #0960a5; }
+      #resume-wrapper #resume header #intro #personal-info {
+        flex: 0 1 auto;
+        align-self: center; }
+      #resume-wrapper #resume header #intro #contact-info {
+        flex: 1 0 auto; }
+        #resume-wrapper #resume header #intro #contact-info .contact-line:not(:first-child) {
+          padding: 10px 0 0 0; }
+        #resume-wrapper #resume header #intro #contact-info .contact-line {
+          display: flex;
+          align-items: center;
+          text-align: right; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line .icon {
+            flex: 0 1 auto;
+            padding: 0 0 0 8px; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line a {
+            flex: 1 0 auto; }
+            #resume-wrapper #resume header #intro #contact-info .contact-line a:hover {
+              text-decoration: underline; }
+    #resume-wrapper #resume #body .section {
+      padding: 6px 15px; }
+      #resume-wrapper #resume #body .section .sub-section {
+        padding: 0 0 0 15px; }
+    #resume-wrapper #resume #body .header {
+      color: #0960a5;
+      border-bottom: 1px solid #0960a5;
+      margin: 0 0 5px 0;
+      padding: 0 0 2px 0; }
+      #resume-wrapper #resume #body .header .icon {
+        font-size: 1.2em;
+        padding: 0 5px;
+        min-width: 30px; }
+    #resume-wrapper #resume #body .tools-wrapper label {
+      font-weight: 600; }
+    #resume-wrapper #resume #body .tools-wrapper .tools {
+      padding: 0 0 0 3px; }
+    #resume-wrapper #resume #body .employment {
+      padding: 5px 0; }
+      #resume-wrapper #resume #body .employment.bottom-border {
+        border-bottom: 1px solid #d8d8d8; }
+      #resume-wrapper #resume #body .employment .position-wrapper {
+        display: flex;
+        font-weight: 600; }
+        #resume-wrapper #resume #body .employment .position-wrapper .company,
+        #resume-wrapper #resume #body .employment .position-wrapper .dates {
+          align-self: center; }
+        #resume-wrapper #resume #body .employment .position-wrapper .position,
+        #resume-wrapper #resume #body .employment .position-wrapper .company {
+          flex: 0 1 auto; }
+        #resume-wrapper #resume #body .employment .position-wrapper .position {
+          font-size: 1.2em;
+          color: #0960a5;
+          padding: 0 3px 0 0; }
+        #resume-wrapper #resume #body .employment .position-wrapper .dates {
+          flex: 1 0 auto;
+          text-align: right; }
+      #resume-wrapper #resume #body .employment .duties {
+        padding: 0 0 0 15px; }
+        #resume-wrapper #resume #body .employment .duties li {
+          padding: 10px 0 0 0; }
+    #resume-wrapper #resume #body #education .college {
+      font-weight: 600; }
+    #resume-wrapper #resume #body #education .dates {
+      padding: 0 0 0 3px; }
+    #resume-wrapper #resume #body #projects .project-wrapper {
+      padding: 5px 0 0 0; }
+      #resume-wrapper #resume #body #projects .project-wrapper.bottom-border {
+        border-bottom: 1px solid #d8d8d8; }
+      #resume-wrapper #resume #body #projects .project-wrapper .project-line {
+        padding: 0 0 5px 0; }
+        #resume-wrapper #resume #body #projects .project-wrapper .project-line .project {
+          font-weight: bold; }
+        #resume-wrapper #resume #body #projects .project-wrapper .project-line a {
+          padding: 0 0 0 3px;
+          color: #0960a5; }
+      #resume-wrapper #resume #body #projects .project-wrapper .tools-wrapper {
+        padding-bottom: 5px; }
+    #resume-wrapper #resume #body #skills #skills-wrapper {
+      display: flex; }
+      #resume-wrapper #resume #body #skills #skills-wrapper .skills-group {
+        flex: 0 1 auto;
+        text-align: center; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group:not(:last-child) .skills-list {
+          border-right: 1px solid #d8d8d8; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-header {
+          flex: 1 0 100%;
+          color: #0960a5; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-list {
+          display: flex;
+          flex-wrap: wrap; }
+          #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-list .skill {
+            flex: 1 0 50%;
+            padding: 3px 0; }
+
+@media only screen and (max-width: 1016px) {
+  #resume-wrapper {
+    padding: 60px 0 0 0; }
+    #resume-wrapper #back-button {
+      top: 10px;
+      left: 10px; }
+    #resume-wrapper #resume {
+      width: 100%;
+      flex-direction: column;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none; } }
+@media only screen and (max-width: 520px) {
+  #resume-wrapper #resume header #intro {
+    flex-direction: column; }
+    #resume-wrapper #resume header #intro #personal-info {
+      align-self: initial; } }
+@media print {
+  #resume-wrapper {
+    background-image: none;
+    padding: 0; }
+    #resume-wrapper #back-button {
+      display: none; }
+    #resume-wrapper #resume {
+      box-shadow: none; } }
+#projects-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  background-color: white;
+  color: white; }
+  #projects-section .project {
+    flex: 1 1 100%;
+    min-height: 50vh;
+    padding: 4vh 4vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #projects-section .project .project-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 10vh; }
+    #projects-section .project .project-body {
+      display: flex;
+      min-height: 30vh;
+      padding: 4vh 4vw; }
+      #projects-section .project .project-body .project-description,
+      #projects-section .project .project-body .project-tech {
+        flex: 1 0 50%; }
+      #projects-section .project .project-body .project-description,
+      #projects-section .project .project-body .project-tech .tech {
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2em; }
+      #projects-section .project .project-body .project-description {
+        line-height: 1.6em;
+        padding: 0 6vw 0 2vw; }
+      #projects-section .project .project-body .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4vw; }
+        #projects-section .project .project-body .project-tech .tech {
+          flex: 1 0 33%; }
+    #projects-section .project .project-footer {
+      display: flex;
+      padding: 4vh 4vw; }
+      #projects-section .project .project-footer .project-link,
+      #projects-section .project .project-footer .project-source-link {
+        flex: 1 0 50%;
+        text-align: center; }
+
+.no-webp #ufsports {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.jpg"); }
+.no-webp #portfolio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.jpg"); }
+.no-webp #cookie-jar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/cookies.jpg"); }
+.no-webp #data-table {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 50%), url("/images/data.jpg"); }
+.no-webp #marsh-tree {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marshtree.jpg"); }
+.no-webp #sales-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/salesform.jpg"); }
+.no-webp #comhs {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/school.jpg"); }
+.no-webp #tic-tac-toe {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/tic_tac_toe.jpg"); }
+.no-webp #blackjack {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/blackjack.jpg"); }
+.no-webp #big-fish {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.jpg"); }
+.no-webp #century-21 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.jpg"); }
+
+.webp #ufsports {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.webp"); }
+.webp #portfolio {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.webp"); }
+.webp #cookie-jar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/cookies.webp"); }
+.webp #data-table {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 50%), url("/images/data.webp"); }
+.webp #marsh-tree {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marshtree.webp"); }
+.webp #sales-form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/salesform.webp"); }
+.webp #comhs {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/school.webp"); }
+.webp #tic-tac-toe {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/tic_tac_toe.webp"); }
+.webp #blackjack {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/blackjack.webp"); }
+.webp #big-fish {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.webp"); }
+.webp #century-21 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.webp"); }
+
+#lucy-lane {
+  display: none;
+  background-color: #1a2254; }
+
+@media only screen and (max-width: 860px) {
+  #projects-section .project {
+    flex: 1 1 auto;
+    height: initial; }
+    #projects-section .project .project-body {
+      flex-wrap: wrap; }
+      #projects-section .project .project-body .project-description,
+      #projects-section .project .project-body .project-tech {
+        flex: 1 1 100%; }
+        #projects-section .project .project-body .project-description .tech,
+        #projects-section .project .project-body .project-tech .tech {
+          flex: 1 0 50%; }
+      #projects-section .project .project-body .project-tech .tech {
+        text-align: center; } }
+#hire-section #hire-wrapper {
+  display: flex; }
+
 .section {
   width: 100vw;
   min-height: 100vh;
   display: block;
   background-size: cover;
-  background-color: #0c7cd5;
-  padding: 0 0 10px 0; }
+  background-color: #0c7cd5; }
   .section .section-header {
     flex: 0 0 100%;
     color: white;
@@ -127,43 +403,44 @@ ul {
     text-decoration: underline;
     padding: 10px 0; }
 
-#introduction {
+#introduction-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   color: white; }
-  #introduction *:after {
-    mix-blend-mode: difference; }
-  #introduction .intro-row {
+  #introduction-section .intro-row {
     flex: 1 0 33%;
     display: flex;
     align-items: center; }
-  #introduction #about {
+  #introduction-section #about {
     flex-direction: column;
     justify-content: center;
     text-align: center; }
-    #introduction #about h1 {
+    #introduction-section #about h1 {
       font-size: 5vh; }
-  #introduction #links,
-  #introduction #navigation {
+  #introduction-section #links,
+  #introduction-section #navigation {
     justify-content: center; }
-  #introduction a.icon {
+  #introduction-section a.icon {
     color: white;
     padding-right: 10px; }
-    #introduction a.icon:hover {
+    #introduction-section a.icon:hover {
       color: #e2e6ea; }
 
-#portfolio-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  align-content: flex-start;
-  background-color: #2196f3; }
-
-#hire-section #hire-wrapper {
-  display: flex; }
+#back-to-top-button {
+  opacity: 0;
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease-in; }
+  #back-to-top-button.show {
+    opacity: 1; }
+  #back-to-top-button:hover {
+    color: white;
+    background-color: initial; }
 
 /*# sourceMappingURL=styles.css.map */

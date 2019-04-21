@@ -9,6 +9,7 @@
   box-sizing: border-box;
   word-wrap: initial;
   font-family: 'Montserrat', sans-serif;
+  max-width: 100%;
 }
 
 a {
@@ -18,4 +19,13 @@ a {
 
 p {
   padding: 0 0 0.4rem 0;
+}
+
+ol,
+ul {
+  list-style: inside;
+
+  li {
+    padding: 3px 0;
+  }
 }
