@@ -15,7 +15,7 @@ h4 {
 }
 
 #resume-wrapper {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,12 +40,10 @@ h4 {
     max-width: 8.5in;
     max-height: 11in;
     background-color: white;
-    -webkit-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
 
     header {
-      .section {
+      .resume-section {
         flex: 0 0 auto;
         padding: 12px 20px;
         color: $primary-font;
@@ -90,7 +88,7 @@ h4 {
     }
 
     #body {
-      .section {
+      .resume-section {
         padding: 6px 15px;
 
         .sub-section {
