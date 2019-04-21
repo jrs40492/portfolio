@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
-  background-color: lighten($secondary-color, 10%);
+  background-color: white;
   color: white;
 
   .project {
@@ -26,16 +26,25 @@
     .project-body {
       display: flex;
       min-height: 30vh;
-      padding: 5vh 5vw;
+      padding: 4vh 4vw;
+
+      .project-description,
+      .project-tech {
+        flex: 1 0 50%;
+      }
+
+      .project-description,
+      .project-tech .tech {
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2em;
+      }
 
       .project-description {
-        flex: 1 0 50%;
-        line-height: 1.7em;
+        line-height: 1.6em;
         padding: 0 6vw 0 2vw;
       }
 
       .project-tech {
-        flex: 1 0 50%;
         display: flex;
         flex-wrap: wrap;
         padding: 0 4vw;
@@ -48,8 +57,7 @@
 
     .project-footer {
       display: flex;
-      padding: 5vh 5vw;
-      min-height: 10vh;
+      padding: 4vh 4vw;
 
       .project-link,
       .project-source-link {
@@ -75,6 +83,55 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('/images/portfolio.jpg');
   }
+
+  #cookie-jar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/cookies.jpg');
+  }
+
+  #data-table {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.8) 50%
+      ),
+      url('/images/data.jpg');
+  }
+
+  #marsh-tree {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marshtree.jpg');
+  }
+
+  #sales-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/salesform.jpg');
+  }
+
+  #comhs {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/school.jpg');
+  }
+
+  #tic-tac-toe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/images/tic_tac_toe.jpg');
+  }
+
+  #blackjack {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/blackjack.jpg');
+  }
+
+  #big-fish {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marathon.jpg');
+  }
+
+  #century-21 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/houses.jpg');
+  }
 }
 
 // Browser supports webp
@@ -92,49 +149,59 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('/images/portfolio.webp');
   }
+
+  #cookie-jar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/cookies.webp');
+  }
+
+  #data-table {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.8) 50%
+      ),
+      url('/images/data.webp');
+  }
+
+  #marsh-tree {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marshtree.webp');
+  }
+
+  #sales-form {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/salesform.webp');
+  }
+
+  #comhs {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/school.webp');
+  }
+
+  #tic-tac-toe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url('/images/tic_tac_toe.webp');
+  }
+
+  #blackjack {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/blackjack.webp');
+  }
+
+  #big-fish {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/marathon.webp');
+  }
+
+  #century-21 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+      url('/images/houses.webp');
+  }
 }
 
 #lucy-lane {
   background-color: #1a2254;
-}
-
-#data-table {
-  background-color: #004ddd;
-}
-
-#marsh-tree {
-  background-color: #006312;
-}
-
-#big-fish {
-  background-color: #0960a5;
-}
-
-#blackjack {
-  background-color: #165006;
-}
-
-#cookie-jar {
-  background-color: #673ab7;
-}
-
-#tic-tac-toe {
-  color: #e0ffff;
-  background-color: #67717c;
-}
-
-#sales-form {
-  color: black;
-  background-color: #afafaf;
-}
-
-#century-21 {
-  color: #372525;
-  background-color: #b3a479;
-}
-
-#comhs {
-  background-color: #4758d7;
 }
 
 @media only screen and (max-width: 860px) {

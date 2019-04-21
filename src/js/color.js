@@ -1,4 +1,4 @@
-const section = document.getElementById('introduction');
+const section = document.getElementById('introduction-section');
 
 section.addEventListener('mousemove', e => {
   const x = e.clientX;

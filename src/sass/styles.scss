@@ -22,17 +22,13 @@
   }
 }
 
-#introduction {
+#introduction-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   color: white;
-
-  *:after {
-    mix-blend-mode: difference;
-  }
 
   .intro-row {
     flex: 1 0 33%;
@@ -68,12 +64,17 @@
 }
 
 #back-to-top-button {
-  display: none;
+  opacity: 0;
   color: black;
   background-color: white;
   position: fixed;
   bottom: 20px;
   right: 20px;
+  transition: opacity 0.3s ease-in;
+
+  &.show {
+    opacity: 1;
+  }
 
   &:hover {
     color: white;
