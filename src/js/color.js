@@ -12,6 +12,7 @@ sections.forEach(section => {
     const green = Math.round(y / pageHeight);
     const blue = 255 - (red + green) / 2;
 
-    section.style.backgroundImage = `linear-gradient(to bottom right, rgba(${red}, 0, 0, .9), rgba(0, 0, ${blue}, .7) 60%, rgba(0, ${green}, 0, .6) 80%)`;
+    const direction = section.dataset.colorDirection;
+    section.style.backgroundImage = `linear-gradient(to ${direction}, rgba(${red}, 0, 0, .9), rgba(0, 0, ${blue}, .7) 60%, rgba(0, ${green}, 0, .6) 80%)`;
   });
 });
