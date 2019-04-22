@@ -387,6 +387,9 @@ h4 {
 #hire-section #hire-wrapper {
   display: flex; }
 
+#contact-section {
+  color: white; }
+
 .section {
   width: 100vw;
   min-height: 100vh;
