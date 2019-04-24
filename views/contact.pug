@@ -1,2 +1,19 @@
 #contact-section.section.color-bg(data-color-direction="bottom left")
-  h1.contact-header Want a website? Need website help? I can help!
+  #about-wrapper
+    h1.contact-header About Me
+    p= `I'm ${settings.name}, a ${settings.jobTitle} from ${settings.location}`
+
+  #contact-wrapper
+    h1 Contact Me
+    h3 New Projects, freelance inquiry, or just a meeting.
+    form(action="/send", method="post")
+      .textfield
+        label(for="name") Name
+        input(type="text", name="name")
+      .textfield
+        label(for="email") E-mail
+        input(type="text", name="email")
+      .textarea
+        label(for="message") Message
+        textarea(name="message", rows="10")
+      button#send-it-button.button(type="submit") Ship it!

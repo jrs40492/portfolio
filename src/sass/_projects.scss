@@ -132,6 +132,11 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
       url('/images/houses.jpg');
   }
+
+  #yori-wine {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/wine.jpg');
+  }
 }
 
 // Browser supports webp
@@ -198,12 +203,17 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
       url('/images/houses.webp');
   }
+
+  #yori-wine {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/wine.webp');
+  }
 }
 
-#lucy-lane {
-  display: none;
-  background-color: #1a2254;
-}
+// #lucy-lane {
+//   display: none;
+//   background-color: #1a2254;
+// }
 
 @media only screen and (max-width: 860px) {
   #projects-section {

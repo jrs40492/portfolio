@@ -1,3 +1,27 @@
 #contact-section {
+  display: flex;
   color: white;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom left,
+    rgba(255, 0, 0, 0.9),
+    rgba(0, 0, 255, 0.7) 60%,
+    rgba(0, 255, 0, 0.6) 80%
+  );
+
+  #about-wrapper,
+  #contact-wrapper {
+    flex: 1 0 50%;
+    padding: 4vh 4vw;
+  }
+
+  #about-wrapper {
+  }
+
+  #contact-wrapper {
+    h1,
+    h3 {
+      padding: 0 0 5px 0;
+    }
+  }
 }

@@ -11,7 +11,7 @@ button {
   border: 1px solid white;
   border-radius: 3px;
   padding: 10px;
-  margin: 0 7px;
+  margin: 0 10px 0 0;
   text-decoration: none; }
   .no-touchevents .button:hover {
     cursor: pointer;
@@ -91,6 +91,51 @@ a.link {
   .card-group .card {
     flex: 0 0 95%;
     margin: 1vh 0; } }
+input,
+textarea {
+  background: none;
+  font-size: 1em; }
+  input:focus,
+  textarea:focus {
+    outline: none; }
+
+.textfield {
+  display: flex;
+  margin: 0 0 7px; }
+  .textfield label,
+  .textfield input {
+    border: 1px solid white;
+    color: white;
+    padding: 10px; }
+  .textfield label {
+    flex: 0 0 auto;
+    border-right: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    align-self: center; }
+  .textfield input {
+    flex: 1 0 auto;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; }
+
+.textarea {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 7px; }
+  .textarea label,
+  .textarea textarea {
+    flex: 1 0 100%;
+    padding: 10px;
+    color: white;
+    border: 1px solid white; }
+  .textarea label {
+    border-bottom: none;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px; }
+  .textarea textarea {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -342,6 +387,8 @@ h4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.jpg"); }
 .no-webp #century-21 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.jpg"); }
+.no-webp #yori-wine {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/wine.jpg"); }
 
 .webp #ufsports {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.webp"); }
@@ -365,10 +412,8 @@ h4 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.webp"); }
 .webp #century-21 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.webp"); }
-
-#lucy-lane {
-  display: none;
-  background-color: #1a2254; }
+.webp #yori-wine {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/wine.webp"); }
 
 @media only screen and (max-width: 860px) {
   #projects-section .project {
@@ -384,11 +429,18 @@ h4 {
           flex: 1 0 50%; }
       #projects-section .project .project-body .project-tech .tech {
         text-align: center; } }
-#hire-section #hire-wrapper {
-  display: flex; }
-
 #contact-section {
-  color: white; }
+  display: flex;
+  color: white;
+  align-items: center;
+  background-image: linear-gradient(to bottom left, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.6) 80%); }
+  #contact-section #about-wrapper,
+  #contact-section #contact-wrapper {
+    flex: 1 0 50%;
+    padding: 4vh 4vw; }
+  #contact-section #contact-wrapper h1,
+  #contact-section #contact-wrapper h3 {
+    padding: 0 0 5px 0; }
 
 .section {
   width: 100vw;
