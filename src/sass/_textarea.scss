@@ -20,5 +20,16 @@
   textarea {
     border-bottom-left-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  .error {
+    display: none;
+    flex: 0 0 100%;
+    color: $error-color;
+    padding: 5px 0;
   }
 }

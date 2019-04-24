@@ -1,5 +1,6 @@
 .textfield {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0 7px;
 
   label,
@@ -21,5 +22,16 @@
     flex: 1 0 auto;
     border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  .error {
+    display: none;
+    flex: 0 0 100%;
+    color: $error-color;
+    padding: 5px 0;
   }
 }

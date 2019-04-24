@@ -52,17 +52,8 @@ router.post(
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      if (!data) {
-        data = await loadData();
-      }
-
-      res.render('index', {
-        node_env: process.env.NODE_ENV,
-        imagePath: process.env.IMAGE_PATH,
-        projects: data.projects,
-        settings: data.settings,
-        errors: errors.mapped()
-      });
+      res.status(400);
+      res.send(errors.mapped());
     }
 
     const name = req.body.name;

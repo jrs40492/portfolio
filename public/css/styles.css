@@ -101,6 +101,7 @@ textarea {
 
 .textfield {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0 7px; }
   .textfield label,
   .textfield input {
@@ -117,6 +118,13 @@ textarea {
     flex: 1 0 auto;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px; }
+    .textfield input.invalid {
+      border-color: #d8000c; }
+  .textfield .error {
+    display: none;
+    flex: 0 0 100%;
+    color: #d8000c;
+    padding: 5px 0; }
 
 .textarea {
   display: flex;
@@ -135,6 +143,13 @@ textarea {
   .textarea textarea {
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px; }
+    .textarea textarea.invalid {
+      border-color: #d8000c; }
+  .textarea .error {
+    display: none;
+    flex: 0 0 100%;
+    color: #d8000c;
+    padding: 5px 0; }
 
 * {
   margin: 0;
@@ -157,6 +172,9 @@ ul {
   ol li,
   ul li {
     padding: 3px 0; }
+
+.underline {
+  text-decoration: underline; }
 
 h1 {
   font-size: 2em; }
@@ -415,6 +433,10 @@ h4 {
 .webp #yori-wine {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/wine.webp"); }
 
+#lucy-lane {
+  display: none;
+  background-color: #1a2254; }
+
 @media only screen and (max-width: 860px) {
   #projects-section .project {
     flex: 1 1 auto;
@@ -431,17 +453,25 @@ h4 {
         text-align: center; } }
 #contact-section {
   display: flex;
+  flex-wrap: wrap;
   color: white;
   align-items: center;
   background-image: linear-gradient(to bottom left, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.6) 80%); }
+  #contact-section .contact-header {
+    padding: 0 0 5px 0; }
   #contact-section #about-wrapper,
   #contact-section #contact-wrapper {
     flex: 1 0 50%;
     padding: 4vh 4vw; }
-  #contact-section #contact-wrapper h1,
-  #contact-section #contact-wrapper h3 {
-    padding: 0 0 5px 0; }
+  #contact-section #about-wrapper p {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
+    line-height: 1.7em; }
 
+@media only screen and (max-width: 860px) {
+  #contact-section #about-wrapper,
+  #contact-section #contact-wrapper {
+    flex: 1 0 100%; } }
 .section {
   width: 100vw;
   min-height: 100vh;

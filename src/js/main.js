@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-22 */
+/*! jacobrswanson 2019-04-24 */
 const sections = document.querySelectorAll('.color-bg');
 
 sections.forEach(section => {
@@ -15,6 +15,58 @@ sections.forEach(section => {
 
     const direction = section.dataset.colorDirection;
     section.style.backgroundImage = `linear-gradient(to ${direction}, rgba(${red}, 0, 0, .9), rgba(0, 0, ${blue}, .7) 60%, rgba(0, ${green}, 0, .6) 80%)`;
+  });
+});
+;const contactForm = document.getElementById('contact-form');
+const fields = document.querySelectorAll('input, textarea');
+
+// Listen for form submission
+contactForm.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('POST', '/send');
+  xhr.send();
+
+  xhr.onreadystatechange = function() {
+    if (this.readyState != 4) {
+      return;
+    }
+
+    if (this.status == 200) {
+      console.log(xhr.responseText);
+      return;
+    }
+
+    if (this.status == 400) {
+      const errors = JSON.parse(xhr.response);
+      const keys = Object.keys(errors);
+
+      keys.forEach(key => {
+        const error = errors[key];
+        addError(error.param, error.msg);
+      });
+    }
+  };
+});
+
+const addError = (name, error) => {
+  const elements = document.getElementsByName(name);
+  elements.forEach(element => {
+    element.classList.add('invalid');
+    const sibling = element.nextSibling;
+    sibling.innerHTML = error;
+    sibling.style.display = 'block';
+  });
+};
+
+// Listen for field change to clear errors
+fields.forEach(field => {
+  field.addEventListener('keyup', e => {
+    console.log(field);
+    field.classList.remove('invalid');
+    field.nextSibling.style.display = 'none';
   });
 });
 ;/*! modernizr 3.6.0 (Custom Build) | MIT *
