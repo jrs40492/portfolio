@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-24 */
+/*! jacobrswanson 2019-04-25 */
 const sections = document.querySelectorAll('.color-bg');
 
 sections.forEach(section => {
@@ -23,11 +23,18 @@ const fields = document.querySelectorAll('input, textarea');
 // Listen for form submission
 contactForm.addEventListener('submit', e => {
   e.preventDefault();
+  let params = {};
+
+  fields.forEach(field => {
+    params[field.name] = field.value;
+  });
 
   const xhr = new XMLHttpRequest();
 
-  xhr.open('POST', '/send');
-  xhr.send();
+  xhr.open('POST', '/send', true);
+  xhr.setRequestHeader('Content-type', 'application/json');
+
+  xhr.send(JSON.stringify(params));
 
   xhr.onreadystatechange = function() {
     if (this.readyState != 4) {
@@ -55,6 +62,7 @@ const addError = (name, error) => {
   const elements = document.getElementsByName(name);
   elements.forEach(element => {
     element.classList.add('invalid');
+
     const sibling = element.nextSibling;
     sibling.innerHTML = error;
     sibling.style.display = 'block';
@@ -64,7 +72,6 @@ const addError = (name, error) => {
 // Listen for field change to clear errors
 fields.forEach(field => {
   field.addEventListener('keyup', e => {
-    console.log(field);
     field.classList.remove('invalid');
     field.nextSibling.style.display = 'none';
   });

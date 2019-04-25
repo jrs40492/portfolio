@@ -49,6 +49,7 @@ router.post(
       .trim()
   ],
   async (req, res) => {
+    console.log(req.body);
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -76,7 +77,9 @@ router.post(
 
     // transporter.sendMail(options, (error, info) => {
     //   if (error) {
-    //     return console.log(error);
+    //     console.log(error);
+    //     res.status(400);
+    //     res.send('Error sending message');
     //   }
     //   console.log('Message %s sent: %s', info.messageId, info.response);
     // });
