@@ -93,6 +93,7 @@ a.link {
     margin: 1vh 0; } }
 input,
 textarea {
+  border-radius: 0;
   background: none;
   font-size: 1em; }
   input:focus,
@@ -109,7 +110,7 @@ textarea {
     color: white;
     padding: 10px; }
   .textfield label {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     border-right: none;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
@@ -461,12 +462,16 @@ h4 {
     padding: 0 0 5px 0; }
   #contact-section #about-wrapper,
   #contact-section #contact-wrapper {
-    flex: 1 0 50%;
     padding: 4vh 4vw; }
-  #contact-section #about-wrapper p {
-    font-family: 'Crimson Text', serif;
-    font-size: 1.2em;
-    line-height: 1.7em; }
+  #contact-section #about-wrapper {
+    flex: 1 0 60%; }
+    #contact-section #about-wrapper p {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.2em;
+      line-height: 1.7em;
+      padding-bottom: 20px; }
+  #contact-section #contact-wrapper {
+    flex: 1 0 40%; }
 
 @media only screen and (max-width: 860px) {
   #contact-section #about-wrapper,
