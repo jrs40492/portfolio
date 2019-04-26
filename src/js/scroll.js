@@ -30,7 +30,7 @@ const scrollListener = e => {
   e.preventDefault();
 
   // Set scroll rate
-  const scrollRate = 12;
+  const scrollRate = 25;
   const target = e.srcElement.dataset.id;
 
   // Get offset from top of page
