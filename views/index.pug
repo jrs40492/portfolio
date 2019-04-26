@@ -1,10 +1,20 @@
 extends layout.pug
 
 block content
-  include introduction.pug
-  include projects.pug
-  include contact.pug
+  #introduction-section.section.color-bg(data-color-direction="bottom right")
+    include navigation.pug
 
-  #back-to-top-button.button.scroll-btn(data-id="introduction")
-    | Back to Top &nbsp;
-    i.fas.fa-angle-up
+    #about.intro-row
+      h1= `Hello, I'm ${settings.name}`
+      h3= `${settings.tagLine}`
+    #links.intro-row
+      a.button(href=`/images/resume.pdf`, role="button", target="_blank") Resumé
+      if settings.stackoverflowUrl
+        a.icon(href=`https://${settings.stackoverflowUrl}`,target="_blank",alt="Stack Overflow",rel="noreferrer",title="Stack Overflow")
+          i.fab.fa-stack-overflow.fa-3x
+      if settings.githubUrl
+        a.icon(href=`https://${settings.githubUrl}`,target="_blank",alt="GitHub",rel="noreferrer",title="GitHub")
+          i.fab.fa-github-square.fa-3x
+      if settings.linkedinUrl
+        a.icon(href=`https://${settings.linkedinUrl}`,target="_blank",alt="LinkedIn",rel="noreferrer",title="LinkedIn")
+          i.fab.fa-linkedin.fa-3x

@@ -1,4 +1,12 @@
+extends layout.pug
 
-#projects-section.section
-  each project in projects
-    include project.pug
+block content
+  #projects-section.section
+    include navigation.pug
+
+    each project in projects
+      include project.pug
+
+  #back-to-top-button.button.scroll-btn(data-id="projects")
+    | Back to Top &nbsp;
+    i.fas.fa-angle-up

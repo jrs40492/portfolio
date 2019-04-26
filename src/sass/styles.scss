@@ -20,6 +20,19 @@
     text-decoration: underline;
     padding: 10px 0;
   }
+
+  #navigation {
+    padding: 2vh 0 0 0;
+    font-size: 1.1em;
+
+    a {
+      padding: 0 3vw 0 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 #introduction-section {
@@ -66,24 +79,5 @@
         color: #e2e6ea;
       }
     }
-  }
-}
-
-#back-to-top-button {
-  opacity: 0;
-  color: black;
-  background-color: white;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: opacity 0.3s ease-in;
-
-  &.show {
-    opacity: 1;
-  }
-
-  &:hover {
-    color: white;
-    background-color: initial;
   }
 }

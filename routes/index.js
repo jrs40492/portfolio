@@ -15,7 +15,31 @@ router.get('/', async (req, res) => {
   res.render('index', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
+    settings: data.settings
+  });
+});
+
+router.get('/projects', async (req, res) => {
+  if (!data) {
+    data = await loadData();
+  }
+
+  res.render('projects', {
+    node_env: process.env.NODE_ENV,
+    imagePath: process.env.IMAGE_PATH,
     projects: data.projects,
+    settings: data.settings
+  });
+});
+
+router.get('/contact', async (req, res) => {
+  if (!data) {
+    data = await loadData();
+  }
+
+  res.render('contact', {
+    node_env: process.env.NODE_ENV,
+    imagePath: process.env.IMAGE_PATH,
     settings: data.settings
   });
 });
