@@ -1,4 +1,4 @@
 node_modules
 .env
 .sass-cache
-src/js/main.js
+/src/js/main.js
