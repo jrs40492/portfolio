@@ -14,9 +14,9 @@ button {
   padding: 10px;
   margin: 0 10px 0 0;
   text-decoration: none;
+  cursor: pointer;
 
   .no-touchevents &:hover {
-    cursor: pointer;
     color: $primary-color;
     background-color: $primary-font;
   }
@@ -31,6 +31,17 @@ button {
     .no-touchevents &:hover {
       color: $primary-color;
       background-color: $primary-font;
+    }
+  }
+
+  &:disabled {
+    color: $disabled-color;
+    border-color: $disabled-color;
+    cursor: initial;
+
+    &:hover {
+      color: $disabled-color;
+      background-color: inherit;
     }
   }
 }

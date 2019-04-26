@@ -1,4 +1,4 @@
-/*! jacobrswanson 2019-04-25 */
+/*! jacobrswanson 2019-04-26 */
 const sections = document.querySelectorAll('.color-bg');
 
 sections.forEach(section => {
@@ -19,6 +19,7 @@ sections.forEach(section => {
 });
 ;const contactForm = document.getElementById('contact-form');
 const fields = document.querySelectorAll('input, textarea');
+const shipButton = document.getElementById('ship-button');
 
 // Listen for form submission
 contactForm.addEventListener('submit', e => {
@@ -43,6 +44,8 @@ contactForm.addEventListener('submit', e => {
 
     if (this.status == 200) {
       console.log(xhr.responseText);
+      shipButton.innerHTML = 'Shipped!';
+      shipButton.disabled = true;
       return;
     }
 

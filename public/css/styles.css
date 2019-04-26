@@ -12,9 +12,9 @@ button {
   border-radius: 3px;
   padding: 10px;
   margin: 0 10px 0 0;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   .no-touchevents .button:hover {
-    cursor: pointer;
     color: #0960a5;
     background-color: white; }
   .button.button-dark {
@@ -24,6 +24,13 @@ button {
     .no-touchevents .button.button-dark:hover {
       color: #0960a5;
       background-color: white; }
+  .button:disabled {
+    color: #c0c0c0;
+    border-color: #c0c0c0;
+    cursor: initial; }
+    .button:disabled:hover {
+      color: #c0c0c0;
+      background-color: inherit; }
 
 a.link {
   color: #0960a5; }

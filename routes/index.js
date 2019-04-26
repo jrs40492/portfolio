@@ -75,14 +75,14 @@ router.post(
       html: req.body.message
     };
 
-    // transporter.sendMail(options, (error, info) => {
-    //   if (error) {
-    //     console.log(error);
-    //     res.status(400);
-    //     res.send('Error sending message');
-    //   }
-    //   console.log('Message %s sent: %s', info.messageId, info.response);
-    // });
+    transporter.sendMail(options, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(400);
+        res.send('Error sending message');
+      }
+      console.log('Message %s sent: %s', info.messageId, info.response);
+    });
 
     res.end();
   }
