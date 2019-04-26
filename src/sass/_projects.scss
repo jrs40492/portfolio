@@ -132,6 +132,11 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
       url('/images/houses.jpg');
   }
+
+  #yori-wine {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/wine.jpg');
+  }
 }
 
 // Browser supports webp
@@ -197,6 +202,11 @@
   #century-21 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
       url('/images/houses.webp');
+  }
+
+  #yori-wine {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('/images/wine.webp');
   }
 }
 

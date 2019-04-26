@@ -30,6 +30,7 @@ Most developers will probably build their own site to showcase their talents but
 
 - name (String) - Your name
 - email (String) - Your email
+- location (String) - County, State
 - jobTitle (String) - Desired/Current Job Title
 - tagLine (String) - Your motto
 - githubUrl (String)

@@ -23,18 +23,18 @@ const getSettings = async () => {
   return settings.data();
 };
 
-const getTech = async () => {
-  const techSnapshot = await db.collection('tech').get();
+// const getTech = async () => {
+//   const techSnapshot = await db.collection('tech').get();
 
-  const techList = [];
-  techSnapshot.forEach(tech => {
-    techList.push({
-      id: tech.id,
-      data: tech.data()
-    });
-  });
-  return techList;
-};
+//   const techList = [];
+//   techSnapshot.forEach(tech => {
+//     techList.push({
+//       id: tech.id,
+//       data: tech.data()
+//     });
+//   });
+//   return techList;
+// };
 
 const getProjects = async () => {
   const projectsSnapshot = await db
@@ -57,7 +57,7 @@ const getProjects = async () => {
 const loadData = async () => {
   return {
     settings: await getSettings(),
-    tech: await getTech(),
+    // tech: await getTech(),
     projects: await getProjects()
   };
 };

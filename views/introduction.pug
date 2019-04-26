@@ -1,4 +1,4 @@
-#introduction-section.section
+#introduction-section.section.color-bg(data-color-direction="bottom right")
   #about.intro-row
     h1= `Hello, I'm ${settings.name}`
     h3= `${settings.tagLine}`
@@ -16,4 +16,7 @@
   #navigation.intro-row
     button.button.scroll-btn(data-id="projects")
       | Projects &nbsp;
+      i.fas.fa-angle-down
+    button.button.scroll-btn(data-id="contact")
+      | Contact &nbsp;
       i.fas.fa-angle-down

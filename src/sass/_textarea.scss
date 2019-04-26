@@ -1,0 +1,35 @@
+.textarea {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 7px;
+
+  label,
+  textarea {
+    flex: 1 0 100%;
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+  }
+
+  label {
+    border-bottom: none;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  textarea {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    &.invalid {
+      border-color: $error-color;
+    }
+  }
+
+  .error {
+    display: none;
+    flex: 0 0 100%;
+    color: $error-color;
+    padding: 5px 0;
+  }
+}

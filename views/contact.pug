@@ -1,0 +1,30 @@
+#contact-section.section.color-bg(data-color-direction="bottom left")
+  #about-wrapper
+    h1.contact-header About Me
+    p.
+      I'm #{settings.name}, a #{settings.jobTitle} located in #{settings.location}. I've loved technology
+      for as long as I can remember. When I discovered programming, I knew it's what I wanted to do for
+      the rest of my life. I've now been programming for 8+ years and haven't looked back once.
+    p.
+      I'm currently looking for a full-time developer position. In my spare time, I enjoy helping small businesses
+      with their websites and questions. When I'm not tinkering with projects, I like spending time with
+      family, playing video games, and watching TV.
+
+  #contact-wrapper
+    h1.contact-header Contact Me
+    h4.contact-header New Projects, freelance inquiry, or just a meeting.
+    p Use the form below or email me at <a class="underline" href="mailto:jrs40492@gmail.com">jrs40492@gmail.com</a>
+    form#contact-form(action="", method="post")
+      .textfield
+        label(for="name") Name
+        input(type="text", name="name")
+        div.error
+      .textfield
+        label(for="email") E-mail
+        input(type="text", name="email")
+        div.error
+      .textarea
+        label(for="message") Message
+        textarea(name="message", rows="10")
+        div.error
+      button#ship-button.button Ship it! <i id="envelope" class="far fa-envelope"></i>
