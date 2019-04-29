@@ -2,45 +2,47 @@ const contactForm = document.getElementById('contact-form');
 const fields = document.querySelectorAll('input, textarea');
 const shipButton = document.getElementById('ship-button');
 
-// Listen for form submission
-contactForm.addEventListener('submit', e => {
-  e.preventDefault();
-  let params = {};
+if (contactForm) {
+  // Listen for form submission
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    let params = {};
 
-  fields.forEach(field => {
-    params[field.name] = field.value;
+    fields.forEach(field => {
+      params[field.name] = field.value;
+    });
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('POST', '/send', true);
+    xhr.setRequestHeader('Content-type', 'application/json');
+
+    xhr.send(JSON.stringify(params));
+
+    xhr.onreadystatechange = function() {
+      if (this.readyState != 4) {
+        return;
+      }
+
+      if (this.status == 200) {
+        console.log(xhr.responseText);
+        shipButton.innerHTML = 'Shipped!';
+        shipButton.disabled = true;
+        return;
+      }
+
+      if (this.status == 400) {
+        const errors = JSON.parse(xhr.response);
+        const keys = Object.keys(errors);
+
+        keys.forEach(key => {
+          const error = errors[key];
+          addError(error.param, error.msg);
+        });
+      }
+    };
   });
-
-  const xhr = new XMLHttpRequest();
-
-  xhr.open('POST', '/send', true);
-  xhr.setRequestHeader('Content-type', 'application/json');
-
-  xhr.send(JSON.stringify(params));
-
-  xhr.onreadystatechange = function() {
-    if (this.readyState != 4) {
-      return;
-    }
-
-    if (this.status == 200) {
-      console.log(xhr.responseText);
-      shipButton.innerHTML = 'Shipped!';
-      shipButton.disabled = true;
-      return;
-    }
-
-    if (this.status == 400) {
-      const errors = JSON.parse(xhr.response);
-      const keys = Object.keys(errors);
-
-      keys.forEach(key => {
-        const error = errors[key];
-        addError(error.param, error.msg);
-      });
-    }
-  };
-});
+}
 
 const addError = (name, error) => {
   const elements = document.getElementsByName(name);

@@ -22,7 +22,7 @@
   }
 }
 
-#introduction-section {
+#introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +33,7 @@
     to bottom right,
     rgba(255, 0, 0, 0.9),
     rgba(0, 0, 255, 0.7) 60%,
-    rgba(0, 255, 0, 0.6) 80%
+    rgba(0, 255, 0, 0.7) 80%
   );
 
   .intro-row {
@@ -52,8 +52,7 @@
     }
   }
 
-  #links,
-  #navigation {
+  #links {
     justify-content: center;
   }
 
@@ -66,24 +65,5 @@
         color: #e2e6ea;
       }
     }
-  }
-}
-
-#back-to-top-button {
-  opacity: 0;
-  color: black;
-  background-color: white;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: opacity 0.3s ease-in;
-
-  &.show {
-    opacity: 1;
-  }
-
-  &:hover {
-    color: white;
-    background-color: initial;
   }
 }

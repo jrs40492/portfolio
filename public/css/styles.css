@@ -12,9 +12,9 @@ button {
   border-radius: 3px;
   padding: 10px;
   margin: 0 10px 0 0;
-  text-decoration: none;
-  cursor: pointer; }
+  text-decoration: none; }
   .no-touchevents .button:hover {
+    cursor: pointer;
     color: #0960a5;
     background-color: white; }
   .button.button-dark {
@@ -159,6 +159,25 @@ textarea {
     color: #d8000c;
     padding: 5px 0; }
 
+#navigation {
+  display: flex;
+  height: 12vh;
+  font-size: 1.2em;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+  #navigation.color-bg {
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 45%, rgba(0, 255, 0, 0.7) 80%); }
+  #navigation a {
+    padding: 0 2vw; }
+    #navigation a.active {
+      text-decoration: underline; }
+    #navigation a:hover {
+      text-decoration: underline; }
+
+@media only screen and (max-width: 700px) {
+  #navigation a {
+    padding: 0 4vw; } }
 * {
   margin: 0;
   padding: 0;
@@ -204,13 +223,6 @@ h4 {
   background-image: radial-gradient(#ffffff, #0960a5);
   padding: 25px 0;
   min-height: 100vh; }
-  #resume-wrapper #back-button {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 1.2rem; }
-    #resume-wrapper #back-button i {
-      margin: 0 5px 0 0; }
   #resume-wrapper #resume {
     width: 8.5in;
     height: 11in;
@@ -321,9 +333,6 @@ h4 {
 @media only screen and (max-width: 1016px) {
   #resume-wrapper {
     padding: 60px 0 0 0; }
-    #resume-wrapper #back-button {
-      top: 10px;
-      left: 10px; }
     #resume-wrapper #resume {
       width: 100%;
       flex-direction: column;
@@ -339,18 +348,16 @@ h4 {
   #resume-wrapper {
     background-image: none;
     padding: 0; }
-    #resume-wrapper #back-button {
-      display: none; }
     #resume-wrapper #resume {
       box-shadow: none; } }
-#projects-section {
+#projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: white;
   color: white; }
-  #projects-section .project {
+  #projects .project {
     flex: 1 1 100%;
     min-height: 50vh;
     padding: 4vh 4vw;
@@ -358,36 +365,36 @@ h4 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
-    #projects-section .project .project-header {
+    #projects .project .project-header {
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 10vh; }
-    #projects-section .project .project-body {
+    #projects .project .project-body {
       display: flex;
       min-height: 30vh;
       padding: 4vh 4vw; }
-      #projects-section .project .project-body .project-description,
-      #projects-section .project .project-body .project-tech {
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech {
         flex: 1 0 50%; }
-      #projects-section .project .project-body .project-description,
-      #projects-section .project .project-body .project-tech .tech {
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech .tech {
         font-family: 'Crimson Text', serif;
         font-size: 1.2em; }
-      #projects-section .project .project-body .project-description {
+      #projects .project .project-body .project-description {
         line-height: 1.6em;
         padding: 0 6vw 0 2vw; }
-      #projects-section .project .project-body .project-tech {
+      #projects .project .project-body .project-tech {
         display: flex;
         flex-wrap: wrap;
         padding: 0 4vw; }
-        #projects-section .project .project-body .project-tech .tech {
+        #projects .project .project-body .project-tech .tech {
           flex: 1 0 33%; }
-    #projects-section .project .project-footer {
+    #projects .project .project-footer {
       display: flex;
       padding: 4vh 4vw; }
-      #projects-section .project .project-footer .project-link,
-      #projects-section .project .project-footer .project-source-link {
+      #projects .project .project-footer .project-link,
+      #projects .project .project-footer .project-source-link {
         flex: 1 0 50%;
         text-align: center; }
 
@@ -445,44 +452,60 @@ h4 {
   display: none;
   background-color: #1a2254; }
 
+#back-to-top-button {
+  opacity: 0;
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease-in; }
+  #back-to-top-button.show {
+    opacity: 1; }
+  #back-to-top-button:hover {
+    color: white;
+    background-color: initial; }
+
 @media only screen and (max-width: 860px) {
-  #projects-section .project {
+  #projects .project {
     flex: 1 1 auto;
-    height: initial; }
-    #projects-section .project .project-body {
+    height: initial;
+    background-attachment: scroll; }
+    #projects .project .project-body {
       flex-wrap: wrap; }
-      #projects-section .project .project-body .project-description,
-      #projects-section .project .project-body .project-tech {
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech {
         flex: 1 1 100%; }
-        #projects-section .project .project-body .project-description .tech,
-        #projects-section .project .project-body .project-tech .tech {
+        #projects .project .project-body .project-description .tech,
+        #projects .project .project-body .project-tech .tech {
           flex: 1 0 50%; }
-      #projects-section .project .project-body .project-tech .tech {
-        text-align: center; } }
-#contact-section {
+      #projects .project .project-body .project-tech {
+        padding: 2vh 0 0 0; }
+        #projects .project .project-body .project-tech .tech {
+          text-align: center; } }
+#contact {
   display: flex;
   flex-wrap: wrap;
   color: white;
-  align-items: center;
-  background-image: linear-gradient(to bottom left, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.6) 80%); }
-  #contact-section .contact-header {
+  background-image: linear-gradient(to bottom left, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.7) 80%); }
+  #contact .contact-header {
     padding: 0 0 5px 0; }
-  #contact-section #about-wrapper,
-  #contact-section #contact-wrapper {
+  #contact #about-wrapper,
+  #contact #contact-wrapper {
     padding: 4vh 4vw; }
-  #contact-section #about-wrapper {
+  #contact #about-wrapper {
     flex: 1 0 60%; }
-    #contact-section #about-wrapper p {
+    #contact #about-wrapper p {
       font-family: 'Crimson Text', serif;
       font-size: 1.2em;
       line-height: 1.7em;
       padding-bottom: 20px; }
-  #contact-section #contact-wrapper {
+  #contact #contact-wrapper {
     flex: 1 0 40%; }
 
 @media only screen and (max-width: 860px) {
-  #contact-section #about-wrapper,
-  #contact-section #contact-wrapper {
+  #contact #about-wrapper,
+  #contact #contact-wrapper {
     flex: 1 0 100%; } }
 .section {
   width: 100vw;
@@ -498,45 +521,30 @@ h4 {
     text-decoration: underline;
     padding: 10px 0; }
 
-#introduction-section {
+#introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   color: white;
-  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.6) 80%); }
-  #introduction-section .intro-row {
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.7) 80%); }
+  #introduction .intro-row {
     flex: 1 0 33%;
     display: flex;
     align-items: center; }
-  #introduction-section #about {
+  #introduction #about {
     flex-direction: column;
     justify-content: center;
     text-align: center; }
-    #introduction-section #about h1 {
+    #introduction #about h1 {
       font-size: 5vh; }
-  #introduction-section #links,
-  #introduction-section #navigation {
+  #introduction #links {
     justify-content: center; }
-  #introduction-section a.icon {
+  #introduction a.icon {
     color: white;
     padding-right: 10px; }
-    #introduction-section a.icon:hover {
+    #introduction a.icon:hover {
       color: #e2e6ea; }
-
-#back-to-top-button {
-  opacity: 0;
-  color: black;
-  background-color: white;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  transition: opacity 0.3s ease-in; }
-  #back-to-top-button.show {
-    opacity: 1; }
-  #back-to-top-button:hover {
-    color: white;
-    background-color: initial; }
 
 /*# sourceMappingURL=styles.css.map */
