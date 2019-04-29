@@ -167,7 +167,7 @@ textarea {
   justify-content: center;
   width: 100%; }
   #navigation.color-bg {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 45%, rgba(0, 255, 0, 0.7) 80%); }
+    background-image: linear-gradient(to right, blue, red); }
   #navigation a {
     padding: 0 2vw; }
     #navigation a.active {

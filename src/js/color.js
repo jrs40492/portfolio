@@ -14,36 +14,26 @@ sections.forEach(section => {
     let green = Math.round(y / pageHeight);
     let blue = 255 - (red + green) / 2;
 
-    let direction;
-
-    let redPercent = 0;
-    let bluePercent = '60%';
-    let greenPercent = '80%';
-
-    let redOpacity = 0.9;
-    let blueOpacity = 0.7;
-    let greenOpacity = 0.7;
+    let gradient;
 
     switch (page) {
       case 'home':
-        direction = 'bottom right';
+        gradient = `linear-gradient(to bottom right, rgba(${red}, 0, 0, 0.9), rgba(0, 0, ${blue}, 0.7) 60%, rgba(0, ${green}, 0, 0.7) 80%)`;
         break;
 
       case 'navigation':
-        direction = 'right';
-        bluePercent = '45%';
-        greenPercent = '80%';
         green = red;
+        gradient = `linear-gradient(to right, rgba(0, 0, ${blue}, 1), rgba(${red}, 0, 0, 1) 70%)`;
         break;
 
       case 'contact':
-        direction = 'bottom left';
+        gradient = `linear-gradient(to bottom left, rgba(${red}, 0, 0, 0.9), rgba(0, 0, ${blue}, 0.7) 60%, rgba(0, ${green}, 0, 0.7) 80%)`;
         break;
 
       default:
-        direction = 'right';
+        gradient = `linear-gradient(to right, rgba(${red}, 0, 0, 0.9), rgba(0, 0, ${blue}, 0.7) 60%, rgba(0, ${green}, 0, 0.7) 80%)`;
         break;
     }
-    section.style.backgroundImage = `linear-gradient(to ${direction}, rgba(${red}, 0, 0, ${redOpacity}) ${redPercent}, rgba(0, 0, ${blue}, ${blueOpacity}) ${bluePercent}, rgba(0, ${green}, 0, ${greenOpacity}) ${greenPercent})`;
+    section.style.backgroundImage = gradient;
   });
 });
