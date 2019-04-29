@@ -1,15 +1,22 @@
 let call;
+let scrollRate = 10;
 
 document.onwheel = () => {
   clearInterval(call);
 };
 
-const scrollTo = (offset, scrollRate) => {
+const scrollTo = offset => {
   // Get difference between top of page and current offset
   const difference = offset - window.pageYOffset;
 
-  if (difference < 0) {
+  if (difference < 0 && scrollRate >= 0) {
     scrollRate *= -1;
+  }
+
+  if (scrollRate >= 0) {
+    scrollRate += 0.5;
+  } else {
+    scrollRate -= 0.5;
   }
 
   if (difference < scrollRate && difference > 0) {
@@ -29,13 +36,13 @@ const scrollTo = (offset, scrollRate) => {
 const scrollListener = e => {
   e.preventDefault();
 
-  // Set scroll rate
-  const scrollRate = 25;
+  // Reset scroll rate
+  scrollRate = 25;
   const target = e.srcElement.dataset.id;
 
   // Get offset from top of page
-  const offset = document.getElementById(`${target}-section`).offsetTop;
-  call = setInterval(() => scrollTo(offset, scrollRate), 2);
+  const offset = document.getElementById(`${target}`).offsetTop;
+  call = setInterval(() => scrollTo(offset), 5);
 };
 
 const buttons = document.getElementsByClassName('scroll-btn');

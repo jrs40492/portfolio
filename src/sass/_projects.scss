@@ -16,17 +16,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .project-header {
+    .project-header,
+    .project-body,
+    .project-footer {
       display: flex;
+      padding: 3vh 4vw;
+    }
+
+    .project-header {
       align-items: center;
       justify-content: center;
       min-height: 10vh;
     }
 
     .project-body {
-      display: flex;
-      min-height: 30vh;
-      padding: 4vh 4vw;
+      min-height: 25vh;
 
       .project-description,
       .project-tech {
@@ -56,9 +60,6 @@
     }
 
     .project-footer {
-      display: flex;
-      padding: 4vh 4vw;
-
       .project-link,
       .project-source-link {
         flex: 1 0 50%;
@@ -254,7 +255,7 @@
         }
 
         .project-tech {
-          padding: 2vh 0 0 0;
+          padding: 4vh 0 0 0;
 
           .tech {
             text-align: center;

@@ -167,7 +167,7 @@ textarea {
   justify-content: center;
   width: 100%; }
   #navigation.color-bg {
-    background-image: linear-gradient(to right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 45%, rgba(0, 255, 0, 0.7) 80%); }
+    background-image: linear-gradient(to right, blue, red); }
   #navigation a {
     padding: 0 2vw; }
     #navigation a.active {
@@ -365,15 +365,17 @@ h4 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
-    #projects .project .project-header {
+    #projects .project .project-header,
+    #projects .project .project-body,
+    #projects .project .project-footer {
       display: flex;
+      padding: 3vh 4vw; }
+    #projects .project .project-header {
       align-items: center;
       justify-content: center;
       min-height: 10vh; }
     #projects .project .project-body {
-      display: flex;
-      min-height: 30vh;
-      padding: 4vh 4vw; }
+      min-height: 25vh; }
       #projects .project .project-body .project-description,
       #projects .project .project-body .project-tech {
         flex: 1 0 50%; }
@@ -390,13 +392,10 @@ h4 {
         padding: 0 4vw; }
         #projects .project .project-body .project-tech .tech {
           flex: 1 0 33%; }
-    #projects .project .project-footer {
-      display: flex;
-      padding: 4vh 4vw; }
-      #projects .project .project-footer .project-link,
-      #projects .project .project-footer .project-source-link {
-        flex: 1 0 50%;
-        text-align: center; }
+    #projects .project .project-footer .project-link,
+    #projects .project .project-footer .project-source-link {
+      flex: 1 0 50%;
+      text-align: center; }
 
 .no-webp #ufsports {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.jpg"); }
@@ -480,7 +479,7 @@ h4 {
         #projects .project .project-body .project-tech .tech {
           flex: 1 0 50%; }
       #projects .project .project-body .project-tech {
-        padding: 2vh 0 0 0; }
+        padding: 4vh 0 0 0; }
         #projects .project .project-body .project-tech .tech {
           text-align: center; } }
 #contact {
