@@ -15,7 +15,8 @@ router.get('/', async (req, res) => {
   res.render('index', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
-    settings: data.settings
+    settings: data.settings,
+    page: 'home'
   });
 });
 
@@ -28,7 +29,8 @@ router.get('/projects', async (req, res) => {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
     projects: data.projects,
-    settings: data.settings
+    settings: data.settings,
+    page: 'projects'
   });
 });
 
@@ -40,7 +42,8 @@ router.get('/contact', async (req, res) => {
   res.render('contact', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
-    settings: data.settings
+    settings: data.settings,
+    page: 'contact'
   });
 });
 

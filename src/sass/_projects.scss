@@ -1,4 +1,4 @@
-#projects-section {
+#projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -235,10 +235,11 @@
 }
 
 @media only screen and (max-width: 860px) {
-  #projects-section {
+  #projects {
     .project {
       flex: 1 1 auto;
       height: initial;
+      background-attachment: scroll;
 
       .project-body {
         flex-wrap: wrap;
@@ -252,8 +253,12 @@
           }
         }
 
-        .project-tech .tech {
-          text-align: center;
+        .project-tech {
+          padding: 2vh 0 0 0;
+
+          .tech {
+            text-align: center;
+          }
         }
       }
     }

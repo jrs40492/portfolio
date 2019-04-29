@@ -1,13 +1,12 @@
-#contact-section {
+#contact {
   display: flex;
   flex-wrap: wrap;
   color: white;
-  align-items: center;
   background-image: linear-gradient(
     to bottom left,
     rgba(255, 0, 0, 0.9),
     rgba(0, 0, 255, 0.7) 60%,
-    rgba(0, 255, 0, 0.6) 80%
+    rgba(0, 255, 0, 0.7) 80%
   );
 
   .contact-header {
@@ -37,7 +36,7 @@
 }
 
 @media only screen and (max-width: 860px) {
-  #contact-section {
+  #contact {
     #about-wrapper,
     #contact-wrapper {
       flex: 1 0 100%;

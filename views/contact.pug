@@ -1,7 +1,9 @@
 extends layout.pug
 
 block content
-  #contact-section.section.color-bg(data-color-direction="bottom left")
+  #contact.section.color-bg(data-page="contact")
+    include navigation.pug
+
     #about-wrapper
       h1.contact-header About Me
       p.

@@ -20,22 +20,9 @@
     text-decoration: underline;
     padding: 10px 0;
   }
-
-  #navigation {
-    padding: 2vh 0 0 0;
-    font-size: 1.1em;
-
-    a {
-      padding: 0 3vw 0 0;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
 }
 
-#introduction-section {
+#introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +33,7 @@
     to bottom right,
     rgba(255, 0, 0, 0.9),
     rgba(0, 0, 255, 0.7) 60%,
-    rgba(0, 255, 0, 0.6) 80%
+    rgba(0, 255, 0, 0.7) 80%
   );
 
   .intro-row {
@@ -65,8 +52,7 @@
     }
   }
 
-  #links,
-  #navigation {
+  #links {
     justify-content: center;
   }
 
