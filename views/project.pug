@@ -6,12 +6,13 @@
       if project.data.tech
         each tech in project.data.tech
           .tech= tech
-  .project-footer
-    if project.data.link && project.data.link !== "self"
-      .project-link
-        a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
-    if project.data.sourceLink
-      .project-source-link
-        a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
+  if project.data.link || project.data.sourceLink
+    .project-footer
+      if project.data.link && project.data.link !== "self"
+        .project-link
+          a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+      if project.data.sourceLink
+        .project-source-link
+          a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
 
 
