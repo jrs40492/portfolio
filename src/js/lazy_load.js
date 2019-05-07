@@ -13,16 +13,16 @@ Modernizr.on('webp', function(result) {
 });
 
 function BackgroundNode({ node, loadedClassName }) {
-  const src = node.getAttribute('data-background-image-url');
+  const imageName = node.getAttribute('data-background-image-url');
 
   // Check if webp is supported
   const type = options.webpSupported ? 'webp' : 'jpg';
 
+  const src = `${options.path}${imageName}.${type}`;
+
   const show = onComplete => {
     requestAnimationFrame(() => {
-      node.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${
-        options.path
-      }${src}.${type})`;
+      node.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${src})`;
       node.classList.add(loadedClassName);
       onComplete();
     });
