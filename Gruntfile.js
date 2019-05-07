@@ -165,6 +165,18 @@ module.exports = grunt => {
           }
         ]
       }
+    },
+    copy: {
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/images',
+            src: ['*.ico'],
+            dest: 'public/images/'
+          }
+        ]
+      }
     }
   });
 
@@ -177,15 +189,26 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-modernizr');
 
   grunt.registerTask('dev', [
-    'express',
     'uglify',
     'modernizr',
     'sass',
     'cssmin',
     'imagemin',
+    'copy',
+    'express',
     'watch'
+  ]);
+
+  grunt.registerTask('build', [
+    'uglify',
+    'modernizr',
+    'sass',
+    'cssmin',
+    'copy',
+    'imagemin'
   ]);
 };
