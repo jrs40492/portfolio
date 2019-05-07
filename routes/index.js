@@ -76,7 +76,6 @@ router.post(
       .trim()
   ],
   async (req, res) => {
-    console.log(req.body);
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -97,9 +96,11 @@ router.post(
 
     const options = {
       to: process.env.EMAIL,
-      fromEmail,
-      subject: `Portfolio Message from ${name}`,
-      html: req.body.message
+      from: `${name} <${fromEmail}>`,
+      subject: `Portfolio Message`,
+      html: `<p>Email from ${name} with email: ${fromEmail}.</p> <p>${
+        req.body.message
+      }</p>`
     };
 
     transporter.sendMail(options, (error, info) => {
