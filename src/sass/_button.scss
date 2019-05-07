@@ -15,7 +15,7 @@ button {
   margin: 0 10px 0 0;
   text-decoration: none;
 
-  .no-touchevents &:hover {
+  &:hover {
     cursor: pointer;
     color: $primary-color;
     background-color: $primary-font;
