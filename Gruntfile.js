@@ -64,7 +64,7 @@ module.exports = grunt => {
           '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       dist: {
-        src: ['src/js/*.js', '!src/js/main.js'],
+        src: ['src/js/*.js', '!src/js/modernizr.js', '!src/js/main.js'],
         dest: 'src/js/main.js'
       }
     },
@@ -107,6 +107,16 @@ module.exports = grunt => {
       ],
       options: {
         esversion: 6
+      }
+    },
+    modernizr: {
+      dist: {
+        crawl: false,
+        customTests: [],
+        dest: 'public/js/modernizr.js',
+        tests: ['touchevents', 'webp'],
+        options: ['setClasses', 'html5printshiv', 'addTest'],
+        uglify: true
       }
     },
     imagemin: {
@@ -167,10 +177,12 @@ module.exports = grunt => {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-modernizr');
 
   grunt.registerTask('dev', [
     'express',
     'uglify',
+    'modernizr',
     'sass',
     'cssmin',
     'imagemin',
