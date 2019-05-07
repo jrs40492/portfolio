@@ -397,56 +397,6 @@ h4 {
       flex: 1 0 50%;
       text-align: center; }
 
-.no-webp #ufsports {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.jpg"); }
-.no-webp #portfolio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.jpg"); }
-.no-webp #cookie-jar {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/cookies.jpg"); }
-.no-webp #data-table {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 50%), url("/images/data.jpg"); }
-.no-webp #marsh-tree {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marshtree.jpg"); }
-.no-webp #sales-form {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/salesform.jpg"); }
-.no-webp #comhs {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/school.jpg"); }
-.no-webp #tic-tac-toe {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/tic_tac_toe.jpg"); }
-.no-webp #blackjack {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/blackjack.jpg"); }
-.no-webp #big-fish {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.jpg"); }
-.no-webp #century-21 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.jpg"); }
-.no-webp #yori-wine {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/wine.jpg"); }
-
-.webp #ufsports {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7) 40%), url("/images/ufsports.webp"); }
-.webp #portfolio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/portfolio.webp"); }
-.webp #cookie-jar {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/cookies.webp"); }
-.webp #data-table {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) 50%), url("/images/data.webp"); }
-.webp #marsh-tree {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marshtree.webp"); }
-.webp #sales-form {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/salesform.webp"); }
-.webp #comhs {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/school.webp"); }
-.webp #tic-tac-toe {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/tic_tac_toe.webp"); }
-.webp #blackjack {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/blackjack.webp"); }
-.webp #big-fish {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/marathon.webp"); }
-.webp #century-21 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/houses.webp"); }
-.webp #yori-wine {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/wine.webp"); }
-
 #lucy-lane {
   display: none;
   background-color: #1a2254; }

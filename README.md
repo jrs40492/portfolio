@@ -21,6 +21,7 @@ Most developers will probably build their own site to showcase their talents but
 - description (String)
 - link (String) - Link to website
 - sourceLink (String) - Link to source code/repo
+- imageName (String) - File name located in public/images
 - tech (Array)
 - priority (Number - required) - Used to sort projects
 - startYear (Number - required) - Year the project was started

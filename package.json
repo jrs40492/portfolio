@@ -28,6 +28,7 @@
     "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-express-server": "^0.5.4",
+    "grunt-modernizr": "^2.0.1",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^6.0.0",
     "imagemin-webp": "^5.0.0"
