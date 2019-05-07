@@ -1,25 +1,13 @@
+const sass = require('node-sass');
 const webp = require('imagemin-webp');
 const png = require('imagemin-optipng');
 const jpeg = require('imagemin-jpegtran');
 
 module.exports = grunt => {
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    compass: {
-      dist: {
-        options: {
-          sassDir: 'src/sass',
-          cssDir: 'public/css',
-          environment: 'production'
-        }
-      },
-      dev: {
-        options: {
-          sassDir: 'src/sass',
-          cssDir: 'public/css'
-        }
-      }
-    },
     watch: {
       options: {
         livereload: true
@@ -42,9 +30,6 @@ module.exports = grunt => {
     },
     sass: {
       dist: {
-        options: {
-          compass: true
-        },
         files: [
           {
             expand: true,
@@ -54,6 +39,10 @@ module.exports = grunt => {
             ext: '.css'
           }
         ]
+      },
+      options: {
+        implementation: sass,
+        sourceMap: true
       }
     },
     concat: {
@@ -179,18 +168,6 @@ module.exports = grunt => {
       }
     }
   });
-
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify-es');
-  grunt.loadNpmTasks('grunt-express-server');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-modernizr');
 
   grunt.registerTask('dev', [
     'uglify',
