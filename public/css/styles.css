@@ -1,0 +1,508 @@
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }
+
+.button {
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 0 10px 0 0;
+  text-decoration: none; }
+  .button:hover {
+    cursor: pointer;
+    color: #0960a5;
+    background-color: white; }
+  .button.button-dark {
+    border: 1px solid #d8d8d8; }
+    .button.button-dark a {
+      color: black; }
+    .no-touchevents .button.button-dark:hover {
+      color: #0960a5;
+      background-color: white; }
+  .button:disabled {
+    color: #c0c0c0;
+    border-color: #c0c0c0;
+    cursor: initial; }
+    .button:disabled:hover {
+      color: #c0c0c0;
+      background-color: inherit; }
+
+a.link {
+  color: #0960a5; }
+
+.card-group {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+  flex: 0 0 23%;
+  overflow: hidden; }
+  .card .card-header,
+  .card .card-body {
+    padding: 10px 15px; }
+  .card .card-header {
+    font-size: 2vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #d8d8d8;
+    background-color: #0960a5;
+    flex: 0 0 auto; }
+  .card .card-body {
+    flex: 1 1 auto; }
+    .card .card-body .card-body-title {
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 2.5vh;
+      padding: 5px 0; }
+  .card .card-footer {
+    display: flex;
+    border-top: 1px solid #d8d8d8;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto; }
+    .card .card-footer .card-footer-left,
+    .card .card-footer .card-footer-right,
+    .card .card-footer .card-footer-full {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0; }
+    .card .card-footer .card-footer-left,
+    .card .card-footer .card-footer-right {
+      flex: 0 0 50%; }
+    .card .card-footer .card-footer-full {
+      flex: 0 0 100%; }
+    .card .card-footer .card-footer-left {
+      border-right: 1px solid #d8d8d8; }
+
+@media only screen and (max-width: 1200px) {
+  .card-group .card {
+    flex: 0 0 32%;
+    margin: 1vh 0; } }
+
+@media only screen and (max-width: 900px) {
+  .card-group .card {
+    flex: 0 0 47%;
+    margin: 1vh 0; } }
+
+@media only screen and (max-width: 600px) {
+  .card-group .card {
+    flex: 0 0 95%;
+    margin: 1vh 0; } }
+
+input,
+textarea {
+  border-radius: 0;
+  background: none;
+  font-size: 1em; }
+  input:focus,
+  textarea:focus {
+    outline: none; }
+
+.textfield {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 7px; }
+  .textfield label,
+  .textfield input {
+    border: 1px solid white;
+    color: white;
+    padding: 10px; }
+  .textfield label {
+    flex: 0 1 auto;
+    border-right: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    align-self: center; }
+  .textfield input {
+    flex: 1 0 auto;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; }
+    .textfield input.invalid {
+      border-color: #d8000c; }
+  .textfield .error {
+    display: none;
+    flex: 0 0 100%;
+    color: #d8000c;
+    padding: 5px 0; }
+
+.textarea {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 7px; }
+  .textarea label,
+  .textarea textarea {
+    flex: 1 0 100%;
+    padding: 10px;
+    color: white;
+    border: 1px solid white; }
+  .textarea label {
+    border-bottom: none;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px; }
+  .textarea textarea {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px; }
+    .textarea textarea.invalid {
+      border-color: #d8000c; }
+  .textarea .error {
+    display: none;
+    flex: 0 0 100%;
+    color: #d8000c;
+    padding: 5px 0; }
+
+#navigation {
+  display: flex;
+  height: 12vh;
+  font-size: 1.2em;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+  #navigation.color-bg {
+    background-image: linear-gradient(to right, blue, red); }
+  #navigation a {
+    padding: 0 2vw; }
+    #navigation a.active {
+      text-decoration: underline; }
+    #navigation a:hover {
+      text-decoration: underline; }
+
+@media only screen and (max-width: 700px) {
+  #navigation a {
+    padding: 0 4vw; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: initial;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 100%; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+p {
+  padding: 0 0 0.4rem 0; }
+
+ol,
+ul {
+  list-style: inside; }
+  ol li,
+  ul li {
+    padding: 3px 0; }
+
+.underline {
+  text-decoration: underline; }
+
+h1 {
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.4em; }
+
+h4 {
+  font-size: 1.2em; }
+
+#resume-wrapper {
+  font-size: 0.82rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(white, #0960a5);
+  padding: 25px 0;
+  min-height: 100vh; }
+  #resume-wrapper #resume {
+    width: 8.5in;
+    height: 11in;
+    max-width: 8.5in;
+    max-height: 11in;
+    background-color: white;
+    box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5); }
+    #resume-wrapper #resume header .resume-section {
+      flex: 0 0 auto;
+      padding: 12px 20px;
+      color: white; }
+    #resume-wrapper #resume header #intro {
+      display: flex;
+      background-color: #0960a5; }
+      #resume-wrapper #resume header #intro #personal-info {
+        flex: 0 1 auto;
+        align-self: center; }
+      #resume-wrapper #resume header #intro #contact-info {
+        flex: 1 0 auto; }
+        #resume-wrapper #resume header #intro #contact-info .contact-line:not(:first-child) {
+          padding: 10px 0 0 0; }
+        #resume-wrapper #resume header #intro #contact-info .contact-line {
+          display: flex;
+          align-items: center;
+          text-align: right; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line .icon {
+            flex: 0 1 auto;
+            padding: 0 0 0 8px; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line a {
+            flex: 1 0 auto; }
+            #resume-wrapper #resume header #intro #contact-info .contact-line a:hover {
+              text-decoration: underline; }
+    #resume-wrapper #resume #body .resume-section {
+      padding: 6px 15px; }
+      #resume-wrapper #resume #body .resume-section .sub-section {
+        padding: 0 0 0 15px; }
+    #resume-wrapper #resume #body .header {
+      color: #0960a5;
+      border-bottom: 1px solid #0960a5;
+      margin: 0 0 5px 0;
+      padding: 0 0 2px 0; }
+      #resume-wrapper #resume #body .header .icon {
+        font-size: 1.2em;
+        padding: 0 5px;
+        min-width: 30px; }
+    #resume-wrapper #resume #body .tools-wrapper label {
+      font-weight: 600; }
+    #resume-wrapper #resume #body .tools-wrapper .tools {
+      padding: 0 0 0 3px; }
+    #resume-wrapper #resume #body .employment {
+      padding: 5px 0; }
+      #resume-wrapper #resume #body .employment.bottom-border {
+        border-bottom: 1px solid #d8d8d8; }
+      #resume-wrapper #resume #body .employment .position-wrapper {
+        display: flex;
+        font-weight: 600; }
+        #resume-wrapper #resume #body .employment .position-wrapper .company,
+        #resume-wrapper #resume #body .employment .position-wrapper .dates {
+          align-self: center; }
+        #resume-wrapper #resume #body .employment .position-wrapper .position,
+        #resume-wrapper #resume #body .employment .position-wrapper .company {
+          flex: 0 1 auto; }
+        #resume-wrapper #resume #body .employment .position-wrapper .position {
+          font-size: 1.2em;
+          color: #0960a5;
+          padding: 0 3px 0 0; }
+        #resume-wrapper #resume #body .employment .position-wrapper .dates {
+          flex: 1 0 auto;
+          text-align: right; }
+      #resume-wrapper #resume #body .employment .duties {
+        padding: 0 0 0 15px; }
+        #resume-wrapper #resume #body .employment .duties li {
+          padding: 10px 0 0 0; }
+    #resume-wrapper #resume #body #education .college {
+      font-weight: 600; }
+    #resume-wrapper #resume #body #education .dates {
+      padding: 0 0 0 3px; }
+    #resume-wrapper #resume #body #projects .project-wrapper {
+      padding: 5px 0 0 0; }
+      #resume-wrapper #resume #body #projects .project-wrapper.bottom-border {
+        border-bottom: 1px solid #d8d8d8; }
+      #resume-wrapper #resume #body #projects .project-wrapper .project-line {
+        padding: 0 0 5px 0; }
+        #resume-wrapper #resume #body #projects .project-wrapper .project-line .project {
+          font-weight: bold; }
+        #resume-wrapper #resume #body #projects .project-wrapper .project-line a {
+          padding: 0 0 0 3px;
+          color: #0960a5; }
+      #resume-wrapper #resume #body #projects .project-wrapper .tools-wrapper {
+        padding-bottom: 5px; }
+    #resume-wrapper #resume #body #skills #skills-wrapper {
+      display: flex; }
+      #resume-wrapper #resume #body #skills #skills-wrapper .skills-group {
+        flex: 0 1 auto;
+        text-align: center; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group:not(:last-child) .skills-list {
+          border-right: 1px solid #d8d8d8; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-header {
+          flex: 1 0 100%;
+          color: #0960a5; }
+        #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-list {
+          display: flex;
+          flex-wrap: wrap; }
+          #resume-wrapper #resume #body #skills #skills-wrapper .skills-group .skills-list .skill {
+            flex: 1 0 50%;
+            padding: 3px 0; }
+
+@media only screen and (max-width: 1016px) {
+  #resume-wrapper {
+    padding: 60px 0 0 0; }
+    #resume-wrapper #resume {
+      width: 100%;
+      flex-direction: column;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none; } }
+
+@media only screen and (max-width: 520px) {
+  #resume-wrapper #resume header #intro {
+    flex-direction: column; }
+    #resume-wrapper #resume header #intro #personal-info {
+      align-self: initial; } }
+
+@media print {
+  #resume-wrapper {
+    background-image: none;
+    padding: 0; }
+    #resume-wrapper #resume {
+      box-shadow: none; } }
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  background-color: white;
+  color: white; }
+  #projects .project {
+    flex: 1 1 100%;
+    min-height: 50vh;
+    padding: 4vh 4vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    #projects .project .project-header,
+    #projects .project .project-body,
+    #projects .project .project-footer {
+      display: flex;
+      padding: 3vh 4vw; }
+    #projects .project .project-header {
+      align-items: center;
+      justify-content: center;
+      min-height: 10vh; }
+    #projects .project .project-body {
+      min-height: 25vh; }
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech {
+        flex: 1 0 50%; }
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech .tech {
+        font-family: 'Crimson Text', serif;
+        font-size: 1.2em; }
+      #projects .project .project-body .project-description {
+        line-height: 1.6em;
+        padding: 0 6vw 0 2vw; }
+      #projects .project .project-body .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4vw; }
+        #projects .project .project-body .project-tech .tech {
+          flex: 1 0 33%; }
+    #projects .project .project-footer .project-link,
+    #projects .project .project-footer .project-source-link {
+      flex: 1 0 50%;
+      text-align: center; }
+
+#lucy-lane {
+  display: none;
+  background-color: #1a2254; }
+
+#back-to-top-button {
+  opacity: 0;
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease-in; }
+  #back-to-top-button.show {
+    opacity: 1; }
+  #back-to-top-button:hover {
+    color: white;
+    background-color: initial; }
+
+@media only screen and (max-width: 860px) {
+  #projects .project {
+    flex: 1 1 auto;
+    height: initial;
+    background-attachment: scroll; }
+    #projects .project .project-body {
+      flex-wrap: wrap; }
+      #projects .project .project-body .project-description,
+      #projects .project .project-body .project-tech {
+        flex: 1 1 100%; }
+        #projects .project .project-body .project-description .tech,
+        #projects .project .project-body .project-tech .tech {
+          flex: 1 0 50%; }
+      #projects .project .project-body .project-tech {
+        padding: 4vh 0 0 0; }
+        #projects .project .project-body .project-tech .tech {
+          text-align: center; } }
+
+#contact {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  background-image: linear-gradient(to bottom left, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.7) 80%); }
+  #contact .contact-header {
+    padding: 0 0 5px 0; }
+  #contact #about-wrapper,
+  #contact #contact-wrapper {
+    padding: 4vh 4vw; }
+  #contact #about-wrapper {
+    flex: 1 0 60%; }
+    #contact #about-wrapper p {
+      font-family: 'Crimson Text', serif;
+      font-size: 1.2em;
+      line-height: 1.7em;
+      padding-bottom: 20px; }
+  #contact #contact-wrapper {
+    flex: 1 0 40%; }
+
+@media only screen and (max-width: 860px) {
+  #contact #about-wrapper,
+  #contact #contact-wrapper {
+    flex: 1 0 100%; } }
+
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
+  background-size: cover;
+  background-color: #0c7cd5; }
+  .section .section-header {
+    flex: 0 0 100%;
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+    text-decoration: underline;
+    padding: 10px 0; }
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.9), rgba(0, 0, 255, 0.7) 60%, rgba(0, 255, 0, 0.7) 80%); }
+  #introduction .intro-row {
+    flex: 1 0 33%;
+    display: flex;
+    align-items: center; }
+  #introduction #about {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+    #introduction #about h1 {
+      font-size: 5vh; }
+  #introduction #links {
+    justify-content: center; }
+  #introduction a.icon {
+    color: white;
+    padding-right: 10px; }
+    #introduction a.icon:hover {
+      color: #e2e6ea; }
+
+/*# sourceMappingURL=styles.css.map */

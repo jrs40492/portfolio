@@ -179,13 +179,4 @@ module.exports = grunt => {
     'express',
     'watch'
   ]);
-
-  grunt.registerTask('build', [
-    'uglify',
-    'modernizr',
-    'sass',
-    'cssmin',
-    'copy',
-    'imagemin'
-  ]);
 };
