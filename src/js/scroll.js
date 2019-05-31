@@ -1,5 +1,7 @@
 let call;
-let scrollRate = 10;
+const scrollRateDefault = 10;
+let scrollRate = scrollRateDefault;
+const className = 'scroll-btn';
 
 document.onwheel = () => {
   clearInterval(call);
@@ -9,14 +11,16 @@ const scrollTo = offset => {
   // Get difference between top of page and current offset
   const difference = offset - window.pageYOffset;
 
+  // Determine if we need to scroll up or down
   if (difference < 0 && scrollRate >= 0) {
     scrollRate *= -1;
   }
 
+  // Gradually increase scroll rate
   if (scrollRate >= 0) {
-    scrollRate += 0.5;
+    scrollRate += 1;
   } else {
-    scrollRate -= 0.5;
+    scrollRate -= 1;
   }
 
   if (difference < scrollRate && difference > 0) {
@@ -37,7 +41,7 @@ const scrollListener = e => {
   e.preventDefault();
 
   // Reset scroll rate
-  scrollRate = 25;
+  scrollRate = scrollRateDefault;
   const target = e.srcElement.dataset.id;
 
   // Get offset from top of page
@@ -45,10 +49,14 @@ const scrollListener = e => {
   call = setInterval(() => scrollTo(offset), 5);
 };
 
-const buttons = document.getElementsByClassName('scroll-btn');
+const buttons = document.getElementsByClassName(className);
 Array.from(buttons).forEach(element => {
   element.addEventListener('click', scrollListener);
 });
+
+/*
+  Helpers
+*/
 
 // Check if element is fully on screen
 const isOnScreen = elem => {
@@ -65,25 +73,3 @@ const isPastScreen = elem => {
   const bounding = elem.getBoundingClientRect();
   return bounding.top <= 0;
 };
-
-/*
-  Display the "Back to Top" button if scrolled past the third project
-*/
-let elem;
-const projects = document.querySelectorAll('.project');
-const backToTopButton = document.getElementById('back-to-top-button');
-
-projects.forEach((project, index) => {
-  if (index === 2) {
-    elem = project;
-  }
-});
-
-// Check if use has scrolled the third project onto the screen
-window.addEventListener('scroll', e => {
-  if (isOnScreen(elem) || isPastScreen(elem)) {
-    backToTopButton.classList.add('show');
-  } else {
-    backToTopButton.classList.remove('show');
-  }
-});
