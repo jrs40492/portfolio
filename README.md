@@ -2,31 +2,33 @@
 
 Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
 
-### Setup & Installation
+## Setup & Installation
+
+### Prerequisites
+
+Must have docker set up and running.
 
 ```
 1. Run "npm install"
-2. Create .env based on .env.example
-3. Set up settings.json file (see schema below)
-4. Add projects to projects dir (see schema below)
-5. Run "npm run build"
-6. Run "npm run server"
-7. Navigate to localhost:3000
+2. Set up settings.json file (see schema below)
+3. Add projects to projects dir (see schema below)
+4. Run `docker-compose -f docker-compose.dev.yml up -d`
+5. Navigate to 0.0.0.0:80
 ```
 
 ## Schema
 
 ### Settings (settings.js)
 
-- name (String)
+- name (String) - Your name
 - location (String) - County, State
-- email (String)
+- email (String) - Your email
 - job_title (String) - Desired/Current Job Title
-- motto (String)
-- portfolio (String) - Your portfolio
-- github (String - optional)
-- linkedin (String - optional)
-- stackoverflow (String - optional)
+- motto (String) - Your motto
+- portfolio (URL) - Your portfolio
+- github (URL - optional)
+- linkedin (URL - optional)
+- stackoverflow (URL - optional)
 
 ### Projects > {project}.js
 
@@ -37,7 +39,7 @@ Most developers will probably build their own site to showcase their talents but
 - tech (Array of Strings) - Tech used for the project
 - resume (Boolean - optional) - Display on the resume, default is false
 - hide (Boolean - optional) - Hide on projects page, default is false
-- link (String - optional) - Link to website
-- repo (String - optional) - Link to repo
+- link (URL - optional) - Link to website
+- repo (URL - optional) - Link to repo
 - start_year (Number - optional) - Year the project started
 - end_year (Number - optional) - Year the project ended

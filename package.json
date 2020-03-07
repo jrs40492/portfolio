@@ -5,7 +5,10 @@
     "type": "git",
     "url": "https://github.com/jrs40492/portfolio.git"
   },
-  "description": "Jacob Swanson's Portfolio",
+  "engines": {
+    "node": ">= 12.16.0"
+  },
+  "description": "Portfolio",
   "main": "server.js",
   "scripts": {
     "build": "gulp",
