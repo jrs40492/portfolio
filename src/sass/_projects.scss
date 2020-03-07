@@ -1,4 +1,4 @@
-#projects {
+#projects.section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -8,8 +8,8 @@
 
   .project {
     flex: 1 1 100%;
-    min-height: 50vh;
-    padding: 4vh 4vw;
+    min-height: 55vh;
+    padding: 5vh 4vw;
 
     background-attachment: fixed;
     background-position: center;
@@ -33,12 +33,12 @@
       min-height: 25vh;
 
       .project-description,
-      .project-tech {
+      .project-tool {
         flex: 1 0 50%;
       }
 
       .project-description,
-      .project-tech .tech {
+      .project-tool .tool {
         font-family: 'Crimson Text', serif;
         font-size: 1.2em;
       }
@@ -48,12 +48,12 @@
         padding: 0 6vw 0 2vw;
       }
 
-      .project-tech {
+      .project-tool {
         display: flex;
         flex-wrap: wrap;
         padding: 0 4vw;
 
-        .tech {
+        .tool {
           flex: 1 0 33%;
         }
       }
@@ -67,11 +67,6 @@
       }
     }
   }
-}
-
-#lucy-lane {
-  display: none;
-  background-color: #1a2254;
 }
 
 #back-to-top-button {
@@ -104,18 +99,18 @@
         flex-wrap: wrap;
 
         .project-description,
-        .project-tech {
+        .project-tool {
           flex: 1 1 100%;
 
-          .tech {
+          .tool {
             flex: 1 0 50%;
           }
         }
 
-        .project-tech {
+        .project-tool {
           padding: 4vh 0 0 0;
 
-          .tech {
+          .tool {
             text-align: center;
           }
         }

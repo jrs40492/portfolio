@@ -7,16 +7,16 @@ block content
         #intro.resume-section
           #personal-info
             h1= settings.name
-            h4= settings.jobTitle
+            h4= settings.job_title
           #contact-info
             .contact-line
-              a(href=`http://${settings.websiteUrl}` target="_blank" rel="noreferrer") #{settings.websiteUrl}
+              a(href=`${settings.portfolio}` target="_blank" rel="noreferrer") #{settings.portfolio}
               i.icon.fas.fa-link
             .contact-line
-              a(href=`https://${settings.githubUrl}` target="_blank" rel="noreferrer") #{settings.githubUrl}
+              a(href=`${settings.github}` target="_blank" rel="noreferrer") #{settings.github}
               i.icon.fab.fa-github
             .contact-line
-              a(href=`https://${settings.linkedinUrl}` target="_blank" rel="noreferrer") #{settings.linkedinUrl}
+              a(href=`${settings.linkedinUrl}` target="_blank" rel="noreferrer") #{settings.linkedin}
               i.icon.fab.fa-linkedin-in
             .contact-line
               a(href=`mailto:${settings.email}`) #{settings.email}
@@ -81,27 +81,15 @@ block content
         #projects.resume-section
           h2.header Projects
           .sub-section
-            .project-wrapper.bottom-border
-              .project-line
-                span.project Portfolio -
-                a(href="http://jacobrswanson.com" target="_blank" rel="noreferrer") jacobrswanson.com
-              .tools-wrapper
-                label Tools:
-                span.tools Node.js, NPM, Pug, Grunt, Firebase
-            .project-wrapper.bottom-border
-              .project-line
-                span.project Ultimate Fantasy Sports -
-                a(href="https://ufsports.com" target="blank" rel="noreferrer") ufsports.com
-              .tools-wrapper
-                label Tools:
-                span.tools HTML5, CSS3,Javascript/jQuery, custom SASS library, PHP, MySQL
-            .project-wrapper
-              .project-line
-                span.project Data Table -
-                a(href="https://britecore-prod.firebaseapp.com" target="blank" rel="noreferrer") britecore-prod.firebaseapp.com
-              .tools-wrapper
-                label Tools:
-                span.tools Vue.js, Vuex, Vue-router, NPM, Firebase, Jest, CSV Parser, Lodash
+            each project in projects
+              if project.resume
+                .project-wrapper.bottom-border
+                  .project-line
+                    span.project= project.title + ' -'
+                    a(href=`${project.link}` target="_blank" rel="noreferrer")= project.link
+                  .tools-wrapper
+                    label Tools:
+                    span.tools= project.tech.join(', ')
 
 
         #education.resume-section

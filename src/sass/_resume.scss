@@ -32,10 +32,11 @@ h4 {
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
 
     header {
+      color: $primary-font;
+      
       .resume-section {
         flex: 0 0 auto;
         padding: 12px 20px;
-        color: $primary-font;
       }
 
       #intro {
@@ -243,11 +244,6 @@ h4 {
 
           #personal-info {
             align-self: initial;
-          }
-
-          #contact-info {
-            .contact-line {
-            }
           }
         }
       }

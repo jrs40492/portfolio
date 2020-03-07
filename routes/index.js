@@ -1,61 +1,46 @@
 const express = require('express');
-const loadData = require('../db');
 const nodemailer = require('nodemailer');
 const { check, validationResult } = require('express-validator/check');
 
 const router = express.Router();
 
-let data;
+const projects = require('../projects.json');
+const settings = require('../settings.json');
 
 router.get('/', async (req, res) => {
-  if (!data) {
-    data = await loadData();
-  }
-
   res.render('index', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
-    settings: data.settings,
+    settings,
     page: 'home'
   });
 });
 
 router.get('/projects', async (req, res) => {
-  if (!data) {
-    data = await loadData();
-  }
-
   res.render('projects', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
-    projects: data.projects,
-    settings: data.settings,
+    projects,
+    settings,
     page: 'projects'
   });
 });
 
 router.get('/contact', async (req, res) => {
-  if (!data) {
-    data = await loadData();
-  }
-
   res.render('contact', {
     node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
-    settings: data.settings,
+    settings,
     page: 'contact'
   });
 });
 
 router.get('/resume', async (req, res) => {
-  if (!data) {
-    data = await loadData();
-  }
-
   res.render('resume', {
     node_env: process.env.NODE_ENV,
     page: 'Resume',
-    settings: data.settings
+    projects,
+    settings
   });
 });
 
@@ -100,7 +85,7 @@ router.post(
       subject: `Portfolio Message`,
       html: `<p>Email from ${name} with email: ${fromEmail}.</p> <p>${
         req.body.message
-      }</p>`
+        }</p>`
     };
 
     transporter.sendMail(options, (error, info) => {

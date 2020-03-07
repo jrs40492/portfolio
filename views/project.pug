@@ -1,18 +1,19 @@
-.project(id=`${project.data.id}`, data-background-image-url=`${project.data.imageName}`)
-  h1.project-header= project.data.title
-  .project-body
-    .project-description= project.data.description
-    .project-tech
-      if project.data.tech
-        each tech in project.data.tech
-          .tech= tech
-  if project.data.link || project.data.sourceLink
-    .project-footer
-      if project.data.link && project.data.link !== "self"
-        .project-link
-          a.button(href=`${project.data.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
-      if project.data.sourceLink
-        .project-source-link
-          a.button(href=`${project.data.sourceLink}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
+if !project.hide
+  .project(id=`${project.id}`, data-background-image-url=`${project.image}`)
+    h1.project-header= project.title
+    .project-body
+      .project-description= project.description
+      .project-tool
+        if project.tools
+          each tool in project.tools
+            .tool= tool
+    if project.link || project.source
+      .project-footer
+        if project.link
+          .project-link
+            a.button(href=`${project.link}`,target="_blank",rel="noopener") View <i class="fa fa-eye" aria-hidden="true"></i>
+        if project.source
+          .project-source-link
+            a.button(href=`${project.source}`,target="_blank",rel="noopener") Source <i class="fas fa-code-branch" aria-hidden="true"></i>
 
 
