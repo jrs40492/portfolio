@@ -1,5 +1,7 @@
 const app = require('./app');
 
-const server = app.listen(3000, () => {
-  console.log(`Express is running on port ${server.address().port}`);
-})
+const port = 8080;
+const host = '0.0.0.0';
+
+app.listen(port, host);
+console.log(`Express is running on http://${host}:${port}`);
