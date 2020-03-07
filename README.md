@@ -7,34 +7,36 @@ Most developers will probably build their own site to showcase their talents but
 ```
 1. Run "npm install"
 2. Create .env based on .env.example
-3. Set up Firebase (see schema below)
-4. Run "grunt dev"
-5. Navigate to localhost:3000
+3. Set up settings.json file (see schema below)
+4. Set up projects.json file (see schema below)
+5. Run "npm run dev"
+6. Navigate to localhost:3000
 ```
 
-## Firebase Schema
+## Schema
 
-### projects > [project name]
+### Projects (projects.json)
 
-- id (String) - Unique project ID, used for CSS styling
+- id (String - optional) - Unique project ID, used for CSS
 - title (String)
 - description (String)
-- link (String) - Link to website
-- sourceLink (String) - Link to source code/repo
-- imageName (String) - File name located in public/images
-- tech (Array)
-- priority (Number - required) - Used to sort projects
-- startYear (Number - required) - Year the project was started
-- endYear (Number - required) - Year the project was retired
+- image (String) - File name located in public/images
+- tech (Array of Strings) - Tech used for the project
+- resume (Boolean - optional) - Display on the resume, default is false
+- hide (Boolean - optional) - Hide on projects page, default is false
+- link (String - optional) - Link to website
+- repo (String - optional) - Link to repo
+- start_year (Number - optional) - Year the project started
+- end_year (Number - optional) - Year the project ended
 
-### settings > site
+### Settings (settings.json)
 
-- name (String) - Your name
-- email (String) - Your email
+- name (String)
 - location (String) - County, State
-- jobTitle (String) - Desired/Current Job Title
-- tagLine (String) - Your motto
-- githubUrl (String)
-- linkedinUrl (String)
-- websiteUrl (String) - Your portfolio
-- stackoverflowUrl (String)
+- email (String)
+- job_title (String) - Desired/Current Job Title
+- motto (String)
+- portfolio (String) - Your portfolio
+- github (String - optional)
+- linkedin (String - optional)
+- stackoverflow (String - optional)

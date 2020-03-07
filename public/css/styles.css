@@ -234,31 +234,32 @@ h4 {
     max-height: 11in;
     background-color: white;
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5); }
-    #resume-wrapper #resume header .resume-section {
-      flex: 0 0 auto;
-      padding: 12px 20px;
+    #resume-wrapper #resume header {
       color: white; }
-    #resume-wrapper #resume header #intro {
-      display: flex;
-      background-color: #0960a5; }
-      #resume-wrapper #resume header #intro #personal-info {
-        flex: 0 1 auto;
-        align-self: center; }
-      #resume-wrapper #resume header #intro #contact-info {
-        flex: 1 0 auto; }
-        #resume-wrapper #resume header #intro #contact-info .contact-line:not(:first-child) {
-          padding: 10px 0 0 0; }
-        #resume-wrapper #resume header #intro #contact-info .contact-line {
-          display: flex;
-          align-items: center;
-          text-align: right; }
-          #resume-wrapper #resume header #intro #contact-info .contact-line .icon {
-            flex: 0 1 auto;
-            padding: 0 0 0 8px; }
-          #resume-wrapper #resume header #intro #contact-info .contact-line a {
-            flex: 1 0 auto; }
-            #resume-wrapper #resume header #intro #contact-info .contact-line a:hover {
-              text-decoration: underline; }
+      #resume-wrapper #resume header .resume-section {
+        flex: 0 0 auto;
+        padding: 12px 20px; }
+      #resume-wrapper #resume header #intro {
+        display: flex;
+        background-color: #0960a5; }
+        #resume-wrapper #resume header #intro #personal-info {
+          flex: 0 1 auto;
+          align-self: center; }
+        #resume-wrapper #resume header #intro #contact-info {
+          flex: 1 0 auto; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line:not(:first-child) {
+            padding: 10px 0 0 0; }
+          #resume-wrapper #resume header #intro #contact-info .contact-line {
+            display: flex;
+            align-items: center;
+            text-align: right; }
+            #resume-wrapper #resume header #intro #contact-info .contact-line .icon {
+              flex: 0 1 auto;
+              padding: 0 0 0 8px; }
+            #resume-wrapper #resume header #intro #contact-info .contact-line a {
+              flex: 1 0 auto; }
+              #resume-wrapper #resume header #intro #contact-info .contact-line a:hover {
+                text-decoration: underline; }
     #resume-wrapper #resume #body .resume-section {
       padding: 6px 15px; }
       #resume-wrapper #resume #body .resume-section .sub-section {
@@ -357,56 +358,52 @@ h4 {
     #resume-wrapper #resume {
       box-shadow: none; } }
 
-#projects {
+#projects.section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
   background-color: white;
   color: white; }
-  #projects .project {
+  #projects.section .project {
     flex: 1 1 100%;
-    min-height: 50vh;
-    padding: 4vh 4vw;
+    min-height: 55vh;
+    padding: 5vh 4vw;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
-    #projects .project .project-header,
-    #projects .project .project-body,
-    #projects .project .project-footer {
+    #projects.section .project .project-header,
+    #projects.section .project .project-body,
+    #projects.section .project .project-footer {
       display: flex;
       padding: 3vh 4vw; }
-    #projects .project .project-header {
+    #projects.section .project .project-header {
       align-items: center;
       justify-content: center;
       min-height: 10vh; }
-    #projects .project .project-body {
+    #projects.section .project .project-body {
       min-height: 25vh; }
-      #projects .project .project-body .project-description,
-      #projects .project .project-body .project-tech {
+      #projects.section .project .project-body .project-description,
+      #projects.section .project .project-body .project-tool {
         flex: 1 0 50%; }
-      #projects .project .project-body .project-description,
-      #projects .project .project-body .project-tech .tech {
+      #projects.section .project .project-body .project-description,
+      #projects.section .project .project-body .project-tool .tool {
         font-family: 'Crimson Text', serif;
         font-size: 1.2em; }
-      #projects .project .project-body .project-description {
+      #projects.section .project .project-body .project-description {
         line-height: 1.6em;
         padding: 0 6vw 0 2vw; }
-      #projects .project .project-body .project-tech {
+      #projects.section .project .project-body .project-tool {
         display: flex;
         flex-wrap: wrap;
         padding: 0 4vw; }
-        #projects .project .project-body .project-tech .tech {
+        #projects.section .project .project-body .project-tool .tool {
           flex: 1 0 33%; }
-    #projects .project .project-footer .project-link,
-    #projects .project .project-footer .project-source-link {
+    #projects.section .project .project-footer .project-link,
+    #projects.section .project .project-footer .project-source-link {
       flex: 1 0 50%;
       text-align: center; }
-
-#lucy-lane {
-  display: none;
-  background-color: #1a2254; }
 
 #back-to-top-button {
   opacity: 0;
@@ -430,14 +427,14 @@ h4 {
     #projects .project .project-body {
       flex-wrap: wrap; }
       #projects .project .project-body .project-description,
-      #projects .project .project-body .project-tech {
+      #projects .project .project-body .project-tool {
         flex: 1 1 100%; }
-        #projects .project .project-body .project-description .tech,
-        #projects .project .project-body .project-tech .tech {
+        #projects .project .project-body .project-description .tool,
+        #projects .project .project-body .project-tool .tool {
           flex: 1 0 50%; }
-      #projects .project .project-body .project-tech {
+      #projects .project .project-body .project-tool {
         padding: 4vh 0 0 0; }
-        #projects .project .project-body .project-tech .tech {
+        #projects .project .project-body .project-tool .tool {
           text-align: center; } }
 
 #contact {
