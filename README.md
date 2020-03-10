@@ -2,15 +2,19 @@
 
 Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
 
-### Setup & Installation
+## Setup & Installation
+
+### Prerequisites
+
+Must have docker set up and running.
 
 ```
-1. Run "npm install"
-2. Create .env based on .env.example
-3. Set up settings.json file (see schema below)
-4. Set up projects.json file (see schema below)
-5. Run "npm run dev"
-6. Navigate to localhost:3000
+1. Create .env based on .env.example
+2. Set up settings.json file (see schema below)
+3. Set up projects.json file (see schema below)
+4. docker build -f Dockerfile.dev -t portfolio .
+5. docker run -p 4444:8080 -d portfolio
+5. Navigate to localhost:4444
 ```
 
 ## Schema

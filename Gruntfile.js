@@ -120,9 +120,9 @@ module.exports = grunt => {
         files: [
           {
             expand: true,
-            cwd: 'src/images/',
+            cwd: '/src/images/',
             src: ['**/*.{png,jpg,jpeg,gif}'],
-            dest: 'public/images',
+            dest: '/public/images',
             ext: '.webp'
           }
         ]
