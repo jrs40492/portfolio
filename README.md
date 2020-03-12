@@ -8,14 +8,14 @@ Most developers will probably build their own site to showcase their talents but
 1. Run "npm install"
 2. Create .env based on .env.example
 3. Set up settings.json file (see schema below)
-4. Set up projects.json file (see schema below)
+4. Add projects to projects directory (see schema below)
 5. Run "npm run dev"
 6. Navigate to localhost:3000
 ```
 
 ## Schema
 
-### Projects (projects.json)
+### Projects > {project}.js
 
 - id (String - optional) - Unique project ID, used for CSS
 - title (String)
