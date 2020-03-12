@@ -16,7 +16,7 @@ block content
               a(href=`${settings.github}` target="_blank" rel="noreferrer") #{settings.github}
               i.icon.fab.fa-github
             .contact-line
-              a(href=`${settings.linkedinUrl}` target="_blank" rel="noreferrer") #{settings.linkedin}
+              a(href=`${settings.linkedin}` target="_blank" rel="noreferrer") #{settings.linkedin}
               i.icon.fab.fa-linkedin-in
             .contact-line
               a(href=`mailto:${settings.email}`) #{settings.email}
@@ -89,7 +89,7 @@ block content
                     a(href=`${project.link}` target="_blank" rel="noreferrer")= project.link
                   .tools-wrapper
                     label Tools:
-                    span.tools= project.tech.join(', ')
+                    span.tools= project.tools.join(', ')
 
 
         #education.resume-section

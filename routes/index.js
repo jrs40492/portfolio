@@ -4,12 +4,11 @@ const { check, validationResult } = require('express-validator/check');
 
 const router = express.Router();
 
-const projects = require('../projects.json');
+const projects = require('../projects');
 const settings = require('../settings.json');
 
 router.get('/', async (req, res) => {
   res.render('index', {
-    node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
     settings,
     page: 'home'
@@ -18,7 +17,6 @@ router.get('/', async (req, res) => {
 
 router.get('/projects', async (req, res) => {
   res.render('projects', {
-    node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
     projects,
     settings,
@@ -28,7 +26,6 @@ router.get('/projects', async (req, res) => {
 
 router.get('/contact', async (req, res) => {
   res.render('contact', {
-    node_env: process.env.NODE_ENV,
     imagePath: process.env.IMAGE_PATH,
     settings,
     page: 'contact'
@@ -37,7 +34,6 @@ router.get('/contact', async (req, res) => {
 
 router.get('/resume', async (req, res) => {
   res.render('resume', {
-    node_env: process.env.NODE_ENV,
     page: 'Resume',
     projects,
     settings
