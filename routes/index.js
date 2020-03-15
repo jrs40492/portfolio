@@ -5,13 +5,16 @@ const { check, validationResult } = require('express-validator/check');
 const router = express.Router();
 
 const projects = require('../projects');
-const settings = require('../settings.json');
+const work = require('../work');
+const certificates = require('../certificates');
+const skills = require('../skills');
+const settings = require('../settings.js');
 
 router.get('/', async (req, res) => {
   res.render('index', {
     imagePath: process.env.IMAGE_PATH,
     settings,
-    page: 'home'
+    page: 'Home'
   });
 });
 
@@ -20,7 +23,7 @@ router.get('/projects', async (req, res) => {
     imagePath: process.env.IMAGE_PATH,
     projects,
     settings,
-    page: 'projects'
+    page: 'Projects'
   });
 });
 
@@ -28,14 +31,17 @@ router.get('/contact', async (req, res) => {
   res.render('contact', {
     imagePath: process.env.IMAGE_PATH,
     settings,
-    page: 'contact'
+    page: 'Contact'
   });
 });
 
 router.get('/resume', async (req, res) => {
-  res.render('resume', {
+  res.render('resume/index', {
     page: 'Resume',
     projects,
+    work,
+    certificates,
+    skills,
     settings
   });
 });
