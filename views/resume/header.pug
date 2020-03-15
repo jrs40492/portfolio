@@ -1,0 +1,17 @@
+#intro.resume-section
+  #personal-info
+    h1= settings.name
+    h4= settings.job_title
+  #contact-info
+    .contact-line
+      a(href=`${settings.portfolio}` target="_blank" rel="noreferrer") #{settings.portfolio}
+      i.icon.fas.fa-link
+    .contact-line
+      a(href=`${settings.github}` target="_blank" rel="noreferrer") #{settings.github}
+      i.icon.fab.fa-github
+    .contact-line
+      a(href=`${settings.linkedin}` target="_blank" rel="noreferrer") #{settings.linkedin}
+      i.icon.fab.fa-linkedin-in
+    .contact-line
+      a(href=`mailto:${settings.email}`) #{settings.email}
+      i.icon.fas.fa-envelope
