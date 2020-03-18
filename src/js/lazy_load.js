@@ -5,7 +5,7 @@ let options = {
   webpSupported: false
 };
 
-Modernizr.on('webp', function(result) {
+Modernizr.on('webp', function (result) {
   if (result) {
     options.webpSupported = true;
   }

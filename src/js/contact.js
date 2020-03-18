@@ -19,7 +19,7 @@ if (contactForm) {
 
     xhr.send(JSON.stringify(params));
 
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
       if (this.readyState != 4) {
         return;
       }
