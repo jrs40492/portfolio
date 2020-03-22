@@ -9,10 +9,10 @@ Modernizr.on('webp', function (result) {
   if (result) {
     options.webpSupported = true;
   }
-  BackgroundLazyLoader();
+  backgroundLazyLoader();
 });
 
-function BackgroundNode({ node, loadedClassName }) {
+function backgroundNode({ node, loadedClassName }) {
   const imageName = node.getAttribute('data-background-image-url');
 
   // Check if webp is supported
@@ -40,11 +40,11 @@ function BackgroundNode({ node, loadedClassName }) {
   };
 }
 
-function BackgroundLazyLoader({ selector, loadedClassName } = options) {
+function backgroundLazyLoader({ selector, loadedClassName } = options) {
   // Get all nodes that require lazy loading and put them into an array
   let nodes = [].slice
     .apply(document.querySelectorAll(selector))
-    .map(node => new BackgroundNode({ node, loadedClassName }));
+    .map(node => new backgroundNode({ node, loadedClassName }));
 
   const callback = (entries, observer) => {
     entries.forEach(({ target, isIntersecting }) => {
