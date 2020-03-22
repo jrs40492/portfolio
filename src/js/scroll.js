@@ -64,7 +64,7 @@ const isOnScreen = elem => {
   return (
     bounding.top >= 0 &&
     bounding.top <=
-      (window.innerHeight || document.documentElement.clientHeight)
+    (window.innerHeight || document.documentElement.clientHeight)
   );
 };
 

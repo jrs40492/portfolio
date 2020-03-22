@@ -8,12 +8,25 @@ Most developers will probably build their own site to showcase their talents but
 1. Run "npm install"
 2. Create .env based on .env.example
 3. Set up settings.json file (see schema below)
-4. Add projects to projects directory (see schema below)
-5. Run "npm run dev"
-6. Navigate to localhost:3000
+4. Add projects to projects dir (see schema below)
+5. Run "npm run build"
+6. Run "npm run server"
+7. Navigate to localhost:3000
 ```
 
 ## Schema
+
+### Settings (settings.js)
+
+- name (String)
+- location (String) - County, State
+- email (String)
+- job_title (String) - Desired/Current Job Title
+- motto (String)
+- portfolio (String) - Your portfolio
+- github (String - optional)
+- linkedin (String - optional)
+- stackoverflow (String - optional)
 
 ### Projects > {project}.js
 
@@ -28,15 +41,3 @@ Most developers will probably build their own site to showcase their talents but
 - repo (String - optional) - Link to repo
 - start_year (Number - optional) - Year the project started
 - end_year (Number - optional) - Year the project ended
-
-### Settings (settings.json)
-
-- name (String)
-- location (String) - County, State
-- email (String)
-- job_title (String) - Desired/Current Job Title
-- motto (String)
-- portfolio (String) - Your portfolio
-- github (String - optional)
-- linkedin (String - optional)
-- stackoverflow (String - optional)

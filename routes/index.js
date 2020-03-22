@@ -12,7 +12,7 @@ const settings = require('../settings.js');
 
 router.get('/', async (req, res) => {
   res.render('index', {
-    imagePath: process.env.IMAGE_PATH,
+    env: process.env,
     settings,
     page: 'Home'
   });
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
 
 router.get('/projects', async (req, res) => {
   res.render('projects', {
-    imagePath: process.env.IMAGE_PATH,
+    env: process.env,
     projects,
     settings,
     page: 'Projects'
@@ -29,7 +29,7 @@ router.get('/projects', async (req, res) => {
 
 router.get('/contact', async (req, res) => {
   res.render('contact', {
-    imagePath: process.env.IMAGE_PATH,
+    env: process.env,
     settings,
     page: 'Contact'
   });
