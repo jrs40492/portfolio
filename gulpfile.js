@@ -31,7 +31,7 @@ const paths = {
 };
 
 function clean() {
-  return del(['public/css/*', 'public/js/*', 'public/images/*']);
+  return del(['public/css/*', 'public/js/*']);
 }
 
 function styles() {
