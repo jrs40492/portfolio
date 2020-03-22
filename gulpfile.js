@@ -16,7 +16,8 @@ const paths = {
     dest: 'public/css/'
   },
   scripts: {
-    src: ['src/js/**/*.js', '!src/js/**/*.min.js'],
+    src: 'src/js/**/*.js',
+    exclude: ['src/js/**/*.js', '!src/js/**/*.min.js'],
     dest: 'public/js/'
   },
   images: {
@@ -45,13 +46,13 @@ function styles() {
 }
 
 function modernize() {
-  return gulp.src(paths.scripts.src)
+  return gulp.src(paths.scripts.exclude)
     .pipe(modernizr('1_modernizr.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('src/js/'));
 }
 
-function scripts() {
+function js() {
   return gulp.src(paths.scripts.src)
     .pipe(babel())
     .pipe(uglify())
@@ -76,14 +77,15 @@ function favicon() {
     .pipe(gulp.dest(paths.favicon.dest));
 }
 
+const scripts = gulp.series(modernize, js);
+const images = gulp.parallel(images_min, images_webp, favicon);
+
 function watch() {
-  gulp.watch(paths.scripts.src, gulp.series(modernize, scripts));
+  gulp.watch(paths.scripts.exclude, scripts);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.images.src, images);
 }
 
-const images = gulp.parallel(images_min, images_webp, favicon);
-
-const build = gulp.series(clean, modernize, gulp.parallel(styles, scripts, images), watch);
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images), watch);
 
 exports.default = build;

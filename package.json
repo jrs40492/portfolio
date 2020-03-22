@@ -38,8 +38,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-optipng": "^7.1.0",
     "node-sass": "^4.13.1"
   }
 }

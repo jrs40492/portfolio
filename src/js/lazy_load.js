@@ -5,12 +5,12 @@ let options = {
   webpSupported: false
 };
 
-Modernizr.on('webp', function (result) {
-  if (result) {
+const modernize = () => {
+  if (Modernizr.webp) {
     options.webpSupported = true;
-  }
-  backgroundLazyLoader();
-});
+    backgroundLazyLoader();
+  };
+};
 
 function backgroundNode({ node, loadedClassName }) {
   const imageName = node.getAttribute('data-background-image-url');
@@ -74,3 +74,7 @@ function backgroundLazyLoader({ selector, loadedClassName } = options) {
   const observer = new IntersectionObserver(callback);
   nodes.forEach(node => observer.observe(node.node));
 }
+
+window.addEventListener('load', () => {
+  modernize();
+});
