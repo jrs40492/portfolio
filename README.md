@@ -1,17 +1,19 @@
 # Portfolio
 
-Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
+I originally intended for my portfolio to be a repo that anyone could clone, modify a couple files, and then upload to a server of their choosing. However, after deciding to implement GitLab CI/CD and switch to a dockerized server, the setup became a bit too complex for the setup to be outlined here.
 
-## Setup & Installation
+If you do have interest in cloning and using my portfolio design, please feel free to reach out and we can discuss how to get it setup and working.
+
+## Local Setup & Installation
 
 ### Prerequisites
 
-Must have docker set up and running.
+Must have docker installed and running.
 
 ```
 1. Run "npm install"
-2. Set up settings.json file (see schema below)
-3. Add projects to projects dir (see schema below)
+2. Update settings.json file (see schema below)
+3. Add certificates, education, projects, skills, and work to their respective directories (see schemas below for each)
 4. Run `docker-compose -f docker-compose.dev.yml up -d`
 5. Navigate to 0.0.0.0:80
 ```
@@ -19,7 +21,6 @@ Must have docker set up and running.
 ## Schema
 
 ### Settings (settings.js)
-
 - name (String) - Your name
 - location (String) - County, State
 - email (String) - Your email
@@ -30,8 +31,16 @@ Must have docker set up and running.
 - linkedin (URL - optional)
 - stackoverflow (URL - optional)
 
-### Projects > {project}.js
+### Certificates > index.js
+- name (String) - Certificate name
+- company (String) - Certificate issuer
 
+### Education > index.js
+- degree (String)
+- college (String)
+- graduation_year (Int)
+
+### Projects > {project}.js
 - id (String - optional) - Unique project ID, used for CSS
 - title (String)
 - description (String)
@@ -43,3 +52,16 @@ Must have docker set up and running.
 - repo (URL - optional) - Link to repo
 - start_year (Number - optional) - Year the project started
 - end_year (Number - optional) - Year the project ended
+
+### Skills > index.js
+- languages (Array) - Programming languages you're familiar with
+- frameworks (Array) - Frameworks you're familiar with
+- databases (Array) - DBs you're familiar with
+
+### Work > {job}.js
+- position (String) - Your job title
+- company (String) - Company name
+- start_year (Int)
+- end_year (Int)
+- tools (Array) - Tools used while working there
+- duties (Array) - List of job duties

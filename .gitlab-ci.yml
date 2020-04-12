@@ -29,9 +29,9 @@ deploy_prod:
   stage: deploy
   environment:
     name: production
-    url: https://jacobrswanson.com
+    url: $URL
   when: manual
-  # only:
-  # - master
+  only:
+  - master
   script:
-    - ssh -o StrictHostKeyChecking=no root@157.245.255.74 'bash -s' <  ./scripts/deploy.sh $ACCESS_TOKEN $CI_COMMIT_SHORT_SHA
+    - ssh -o StrictHostKeyChecking=no root@$SERVER_IP 'bash -s' <  ./scripts/deploy.sh $ACCESS_TOKEN $CI_COMMIT_SHORT_SHA

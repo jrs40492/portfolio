@@ -12,6 +12,9 @@ block content
       if settings.github
         a.icon(href=`https://${settings.github}`,target="_blank",alt="GitHub",rel="noreferrer",title="GitHub")
           i.fab.fa-github-square.fa-3x
+      if settings.gitlab
+        a.icon(href=`https://${settings.gitlab}`,target="_blank",alt="GitLab",rel="noreferrer",title="GitLab")
+          i.fab.fa-gitlab-square.fa-3x
       if settings.stackoverflow
         a.icon(href=`https://${settings.stackoverflow}`,target="_blank",alt="Stack Overflow",rel="noreferrer",title="Stack Overflow")
           i.fab.fa-stack-overflow.fa-3x
