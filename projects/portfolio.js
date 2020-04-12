@@ -7,13 +7,14 @@ module.exports = {
   start_year: 2018,
   end_year: null,
   image: "portfolio",
-  "resume": true,
+  resume: true,
   tools: [
     "Pug",
     "Grunt",
-    "Apache",
+    "Gitlab CI/CD",
+    "Docker",
+    "Nginx",
     "Node.js",
-    "npm",
     "SASS"
   ]
 }

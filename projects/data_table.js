@@ -7,7 +7,7 @@ module.exports = {
   start_year: 2019,
   end_year: 2019,
   image: "data",
-  "resume": true,
+  resume: true,
   tools: [
     "Vue.js",
     "Vuex",
