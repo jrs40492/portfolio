@@ -1,9 +1,19 @@
 {
   "name": "jacobrswanson",
   "version": "1.0.0",
-  "description": "Portfolio Website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrs40492/portfolio.git"
+  },
+  "engines": {
+    "node": ">= 12.16.0"
+  },
+  "description": "Portfolio",
   "main": "server.js",
   "scripts": {
+    "build": "gulp",
+    "server": "node server.js",
+    "prod": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jacob Swanson",
@@ -11,23 +21,26 @@
   "dependencies": {
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
-    "firebase": "^5.8.1",
-    "serve-favicon": "^2.5.0",
-    "pug": "^2.0.3"
+    "express-validator": "^5.3.1",
+    "nodemailer": "^6.4.5",
+    "pug": "^2.0.3",
+    "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-contrib-compass": "^1.1.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-imagemin": "^3.1.0",
-    "grunt-contrib-jshint": "^2.0.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-express-server": "^0.5.4",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-webp": "^5.0.0"
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "core-js": "^3.6.4",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-modernizr": "^3.4.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^4.13.1"
   }
 }

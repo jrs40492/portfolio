@@ -1,0 +1,12 @@
+#projects.resume-section
+  h2.header Projects
+  .sub-section
+    each project in projects
+      if project.resume
+        .project-wrapper.bottom-border
+          .project-line
+            span.project= project.title + ' -'
+            a(href=`${project.link}` target="_blank" rel="noreferrer")= project.link
+          .tools-wrapper
+            label Tools:
+            span.tools= project.tools.join(', ')

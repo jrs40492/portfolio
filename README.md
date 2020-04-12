@@ -1,38 +1,67 @@
 # Portfolio
 
-Most developers will probably build their own site to showcase their talents but I decided to add mine to github for anyone to use. Hopefully this website will provide a good starting point for new developers or perhaps backend developers looking to expand.
+I originally intended for my portfolio to be a repo that anyone could clone, modify a couple files, and then upload to a server of their choosing. However, after deciding to implement GitLab CI/CD and switch to a dockerized server, the setup became a bit too complex for the setup to be outlined here.
 
-### Setup & Installation
+If you do have interest in cloning and using my portfolio design, please feel free to reach out and we can discuss how to get it setup and working.
+
+## Local Setup & Installation
+
+### Prerequisites
+
+Must have docker installed and running.
 
 ```
 1. Run "npm install"
-2. Create .env based on .env.example
-3. Set up Firebase (see schema below)
-4. Run "grunt dev"
-5. Navigate to localhost:3000
+2. Update settings.json file (see schema below)
+3. Add certificates, education, projects, skills, and work to their respective directories (see schemas below for each)
+4. Run `docker-compose -f docker-compose.dev.yml up -d`
+5. Navigate to 0.0.0.0:80
 ```
 
-## Firebase Schema
+## Schema
 
-### projects > [project name]
+### Settings (settings.js)
+- name (String) - Your name
+- location (String) - County, State
+- email (String) - Your email
+- job_title (String) - Desired/Current Job Title
+- motto (String) - Your motto
+- portfolio (URL) - Your portfolio
+- github (URL - optional)
+- linkedin (URL - optional)
+- stackoverflow (URL - optional)
 
-- id (String) - Unique project ID, used for CSS styling
+### Certificates > index.js
+- name (String) - Certificate name
+- company (String) - Certificate issuer
+
+### Education > index.js
+- degree (String)
+- college (String)
+- graduation_year (Int)
+
+### Projects > {project}.js
+- id (String - optional) - Unique project ID, used for CSS
 - title (String)
 - description (String)
-- link (String) - Link to website
-- sourceLink (String) - Link to source code/repo
-- tech (Array)
-- priority (Number - required) - Used to sort projects
-- startYear (Number - required) - Year the project was started
-- endYear (Number - required) - Year the project was retired
+- image (String) - File name located in public/images
+- tech (Array of Strings) - Tech used for the project
+- resume (Boolean - optional) - Display on the resume, default is false
+- hide (Boolean - optional) - Hide on projects page, default is false
+- link (URL - optional) - Link to website
+- repo (URL - optional) - Link to repo
+- start_year (Number - optional) - Year the project started
+- end_year (Number - optional) - Year the project ended
 
-### settings > site
+### Skills > index.js
+- languages (Array) - Programming languages you're familiar with
+- frameworks (Array) - Frameworks you're familiar with
+- databases (Array) - DBs you're familiar with
 
-- name (String) - Your name
-- email (String) - Your email
-- jobTitle (String) - Desired/Current Job Title
-- tagLine (String) - Your motto
-- githubUrl (String)
-- linkedinUrl (String)
-- websiteUrl (String) - Your portfolio
-- stackoverflowUrl (String)
+### Work > {job}.js
+- position (String) - Your job title
+- company (String) - Company name
+- start_year (Int)
+- end_year (Int)
+- tools (Array) - Tools used while working there
+- duties (Array) - List of job duties

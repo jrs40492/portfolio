@@ -1,0 +1,36 @@
+#navigation {
+  display: flex;
+  height: 12vh;
+  font-size: 1.2em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &.color-bg {
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 1),
+      rgba(255, 0, 0, 1)
+    );
+  }
+
+  a {
+    padding: 0 2vw;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #navigation {
+    a {
+      padding: 0 4vw;
+    }
+  }
+}

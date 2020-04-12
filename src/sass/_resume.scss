@@ -23,17 +23,6 @@ h4 {
   padding: 25px 0;
   min-height: 100vh;
 
-  #back-button {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 1.2rem;
-
-    i {
-      margin: 0 5px 0 0;
-    }
-  }
-
   #resume {
     width: 8.5in;
     height: 11in;
@@ -43,10 +32,11 @@ h4 {
     box-shadow: 5px 5px 25px 0px rgba(0, 0, 0, 0.5);
 
     header {
+      color: $primary-font;
+      
       .resume-section {
         flex: 0 0 auto;
         padding: 12px 20px;
-        color: $primary-font;
       }
 
       #intro {
@@ -235,11 +225,6 @@ h4 {
   #resume-wrapper {
     padding: 60px 0 0 0;
 
-    #back-button {
-      top: 10px;
-      left: 10px;
-    }
-
     #resume {
       width: 100%;
       flex-direction: column;
@@ -260,11 +245,6 @@ h4 {
           #personal-info {
             align-self: initial;
           }
-
-          #contact-info {
-            .contact-line {
-            }
-          }
         }
       }
     }
@@ -275,10 +255,6 @@ h4 {
   #resume-wrapper {
     background-image: none;
     padding: 0;
-
-    #back-button {
-      display: none;
-    }
 
     #resume {
       box-shadow: none;

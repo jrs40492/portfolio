@@ -1,0 +1,10 @@
+#skills.resume-section
+  h2.header Skills
+  #skills-wrapper
+    each skill_group, key in skills
+      .skills-group
+        h3.skills-header= key.charAt(0).toUpperCase() + key.slice(1)
+        .skills-list
+          each skill in skill_group
+            .skill= skill
+    

@@ -1,0 +1,17 @@
+#work.resume-section
+  h2.header Work History
+  .sub-section
+    each job in work
+      if !job.hide
+        .employment.bottom-border
+          .position-wrapper
+            span.position= job.position
+            if job.company
+              span.company= ' - ' + job.company
+            span.dates= job.start_year + ' to ' + job.end_year
+          .tools-wrapper
+            label Tools:
+            span.tools= job.tools.join(', ')
+          ul.duties
+            each duty in job.duties
+              li= duty
