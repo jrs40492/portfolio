@@ -5,7 +5,7 @@ docker stop portfolio
 docker rm portfolio
 
 docker run \
---detach \
+-d \
 --restart always \
 --name portfolio \
 --net nginx-proxy 
