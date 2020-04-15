@@ -14,8 +14,8 @@ Must have docker installed and running.
 1. Run "npm install"
 2. Update settings.json file (see schema below)
 3. Add certificates, education, projects, skills, and work to their respective directories (see schemas below for each)
-4. Run `docker-compose -f docker-compose.dev.yml up -d`
-5. Navigate to 0.0.0.0:80
+4. Run `docker-compose -f docker-compose.dev.yml up -d` (May need to change the port in the docker-compose.dev.yml file)
+5. Navigate to "localhost" 
 ```
 
 ## Schema

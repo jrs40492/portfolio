@@ -10,14 +10,14 @@ block content
     #links.intro-row
       a.button(href=`/images/resume.pdf`, role="button", target="_blank") Resumé
       if settings.github
-        a.icon(href=`https://${settings.github}`,target="_blank",alt="GitHub",rel="noreferrer",title="GitHub")
+        a.icon(href=`${settings.github}`,target="_blank",alt="GitHub",rel="noreferrer",title="GitHub")
           i.fab.fa-github-square.fa-3x
       if settings.gitlab
-        a.icon(href=`https://${settings.gitlab}`,target="_blank",alt="GitLab",rel="noreferrer",title="GitLab")
-          i.fab.fa-gitlab-square.fa-3x
+        a.icon(href=`${settings.gitlab}`,target="_blank",alt="GitLab",rel="noreferrer",title="GitLab")
+          i.fab.fa-gitlab.fa-3x
       if settings.stackoverflow
-        a.icon(href=`https://${settings.stackoverflow}`,target="_blank",alt="Stack Overflow",rel="noreferrer",title="Stack Overflow")
+        a.icon(href=`${settings.stackoverflow}`,target="_blank",alt="Stack Overflow",rel="noreferrer",title="Stack Overflow")
           i.fab.fa-stack-overflow.fa-3x
       if settings.linkedin
-        a.icon(href=`https://${settings.linkedin}`,target="_blank",alt="LinkedIn",rel="noreferrer",title="LinkedIn")
+        a.icon(href=`${settings.linkedin}`,target="_blank",alt="LinkedIn",rel="noreferrer",title="LinkedIn")
           i.fab.fa-linkedin.fa-3x
