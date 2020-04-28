@@ -1,5 +1,7 @@
 FROM node:slim
 
+ENV NODE_ENV=production
+
 WORKDIR /usr/src/app
 
 COPY package*.json ./
@@ -10,7 +12,6 @@ COPY . .
 
 EXPOSE 80
 
-ENV NODE_ENV=production
 ENV VIRTUAL_HOST=jacobrswanson.com
 ENV VIRTUAL_PORT=80
 ENV LETSENCRYPT_HOST=jacobrswanson.com
