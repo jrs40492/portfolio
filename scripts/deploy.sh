@@ -8,7 +8,7 @@ docker run \
 -d \
 --restart always \
 --name portfolio \
---net nginx-proxy 
+--net nginx-proxy \
 registry.gitlab.com/jrs40492/portfolio:$2
 
 docker image prune -a --force --filter "until=168h"
