@@ -12,8 +12,7 @@ COPY . .
 
 EXPOSE 80
 
-ENV VIRTUAL_HOST=jacobrswanson.com
-ENV VIRTUAL_PORT=80
+ENV VIRTUAL_HOST=jacobrswanson.com,www.jacobrswanson.com
 ENV LETSENCRYPT_HOST=jacobrswanson.com
 ENV LETSENCRYPT_EMAIL=jrs40492@gmail.com
 
