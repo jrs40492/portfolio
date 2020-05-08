@@ -37,6 +37,7 @@ router.get('/contact', async (req, res) => {
 
 router.get('/resume', async (req, res) => {
   res.render('resume/index', {
+    env: process.env,
     page: 'Resume',
     projects,
     work,
