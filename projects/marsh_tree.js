@@ -11,7 +11,9 @@ module.exports = {
     "SASS",
     "Node",
     "Webpack",
-    "Pug",
-    "PM2"
+    "Docker",
+    "Gitlab CI/CD",
+    "Nginx",
+    "Pug"
   ]
 }

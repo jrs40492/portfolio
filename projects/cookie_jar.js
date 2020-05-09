@@ -10,7 +10,9 @@ module.exports = {
   tools: [
     "PHP",
     "MySql",
-    "phpMyAdmin",
+    "Docker",
+    "Gitlab CI/CD",
+    "Nginx",
     "Material Design Lite"
   ]
 }

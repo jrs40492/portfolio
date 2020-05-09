@@ -6,6 +6,8 @@ docker rm portfolio
 
 docker run \
 -d \
+-e EMAIL=$3 \
+-e EMAIL_PASSWORD=$4 \
 --restart always \
 --name portfolio \
 --net nginx-proxy \

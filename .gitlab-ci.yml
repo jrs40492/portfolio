@@ -34,4 +34,4 @@ deploy_prod:
   only:
   - master
   script:
-    - ssh -o StrictHostKeyChecking=no $USER@$SERVER_IP 'bash -s' <  ./scripts/deploy.sh $ACCESS_TOKEN $CI_COMMIT_SHORT_SHA
+    - ssh -o StrictHostKeyChecking=no $USER@$SERVER_IP 'bash -s' <  ./scripts/deploy.sh $ACCESS_TOKEN $CI_COMMIT_SHORT_SHA $EMAIL $EMAIL_PASSWORD
