@@ -3,18 +3,21 @@ name: Build
 on:
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@master
-    - name: Build and Push Image to Registry
-      uses: docker/build-push-action@v3
-      with:
-        registry: ghcr.io
-        username: "jrs40492"
-        password: ${{ secrets.PAT }}
-        repository: jrs40492/portfolio
-        tags: latest
+      - uses: actions/checkout@master
+      - name: Login
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: jrs40492
+          password: ${{ secrets.PAT }}
+      - name: Build and Push Image to Registry
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          tags: latest
