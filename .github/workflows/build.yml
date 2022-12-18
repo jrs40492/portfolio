@@ -21,3 +21,4 @@ jobs:
         with:
           context: .
           tags: latest
+          push: true
