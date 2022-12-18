@@ -20,5 +20,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          tags: latest
+          tags: "ghcr.io/${{ github.repository_owner }}/portfolio:latest"
           push: true
