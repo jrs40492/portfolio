@@ -7,8 +7,4 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
-
-networks:
-  default:
-    external:
-      name: bridge
+    network_mode: bridge
