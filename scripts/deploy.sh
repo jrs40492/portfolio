@@ -10,7 +10,6 @@ docker run \
 -e EMAIL_PASSWORD=$4 \
 --restart always \
 --name portfolio \
---net bridge \
 registry.gitlab.com/jrs40492/portfolio:$2
 
 docker image prune -a --force --filter "until=168h"
